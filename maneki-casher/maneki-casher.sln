@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37710.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "maneki-casher", "maneki-casher.vbproj", "{53B91468-5749-4FD6-A11E-CF824F0C3719}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53B91468-5749-4FD6-A11E-CF824F0C3719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53B91468-5749-4FD6-A11E-CF824F0C3719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53B91468-5749-4FD6-A11E-CF824F0C3719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53B91468-5749-4FD6-A11E-CF824F0C3719}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0565ED6-7D5F-4B4A-818D-EA0DD4C9A5C0}
+	EndGlobalSection
+EndGlobal

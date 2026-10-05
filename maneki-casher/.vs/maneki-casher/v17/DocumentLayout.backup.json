@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\github_repository\\POS\\maneki-casher\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53B91468-5749-4FD6-A11E-CF824F0C3719}|maneki-casher.vbproj|c:\\github_repository\\pos\\maneki-casher\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{53B91468-5749-4FD6-A11E-CF824F0C3719}|maneki-casher.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B91468-5749-4FD6-A11E-CF824F0C3719}|maneki-casher.vbproj|c:\\github_repository\\pos\\maneki-casher\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{53B91468-5749-4FD6-A11E-CF824F0C3719}|maneki-casher.vbproj|solutionrelative:form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "C:\\github_repository\\POS\\maneki-casher\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\github_repository\\POS\\maneki-casher\\Form1.vb",
+              "RelativeToolTip": "Form1.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-10-05T02:42:31.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "DocumentMoniker": "C:\\github_repository\\POS\\maneki-casher\\Form1.vb",
+              "RelativeDocumentMoniker": "Form1.vb",
+              "ToolTip": "C:\\github_repository\\POS\\maneki-casher\\Form1.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "RelativeToolTip": "Form1.vb [\u30C7\u30B6\u30A4\u30F3]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-10-05T02:28:16.826Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
