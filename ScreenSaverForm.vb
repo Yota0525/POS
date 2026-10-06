@@ -111,6 +111,7 @@ Public Class ScreenSaverForm
         ' 
         ' ScreenSaverForm
         ' 
+        BackColor = Color.White
         ClientSize = New Size(1024, 768)
         Controls.Add(desc_label)
         Controls.Add(info_label)
