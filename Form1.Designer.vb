@@ -843,7 +843,7 @@ Partial Class Form1
         menu_button_0.Name = "menu_button_0"
         menu_button_0.Size = New Size(85, 63)
         menu_button_0.TabIndex = 0
-        menu_button_0.Text = "＊＊＊＊"
+        menu_button_0.Text = "入室"
         menu_button_0.UseVisualStyleBackColor = False
         ' 
         ' menu_button_1
@@ -857,7 +857,7 @@ Partial Class Form1
         menu_button_1.Name = "menu_button_1"
         menu_button_1.Size = New Size(85, 63)
         menu_button_1.TabIndex = 0
-        menu_button_1.Text = "＊＊＊＊"
+        menu_button_1.Text = "入室状況"
         menu_button_1.UseVisualStyleBackColor = False
         ' 
         ' menu_button_2
@@ -871,7 +871,7 @@ Partial Class Form1
         menu_button_2.Name = "menu_button_2"
         menu_button_2.Size = New Size(85, 63)
         menu_button_2.TabIndex = 0
-        menu_button_2.Text = "＊＊＊＊"
+        menu_button_2.Text = "売上速報"
         menu_button_2.UseVisualStyleBackColor = False
         ' 
         ' menu_button_3
@@ -885,7 +885,7 @@ Partial Class Form1
         menu_button_3.Name = "menu_button_3"
         menu_button_3.Size = New Size(85, 63)
         menu_button_3.TabIndex = 0
-        menu_button_3.Text = "＊＊＊＊"
+        menu_button_3.Text = "小売"
         menu_button_3.UseVisualStyleBackColor = False
         ' 
         ' menu_button_4
@@ -899,7 +899,7 @@ Partial Class Form1
         menu_button_4.Name = "menu_button_4"
         menu_button_4.Size = New Size(85, 63)
         menu_button_4.TabIndex = 0
-        menu_button_4.Text = "＊＊＊＊"
+        menu_button_4.Text = "清掃完了"
         menu_button_4.UseVisualStyleBackColor = False
         ' 
         ' menu_button_5
@@ -913,12 +913,12 @@ Partial Class Form1
         menu_button_5.Name = "menu_button_5"
         menu_button_5.Size = New Size(85, 63)
         menu_button_5.TabIndex = 0
-        menu_button_5.Text = "＊＊＊＊"
+        menu_button_5.Text = "予約"
         menu_button_5.UseVisualStyleBackColor = False
         ' 
         ' menu_button_6
         ' 
-        menu_button_6.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(255))
+        menu_button_6.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_6.BackgroundImageLayout = ImageLayout.None
         menu_button_6.FlatStyle = FlatStyle.Popup
         menu_button_6.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -927,7 +927,6 @@ Partial Class Form1
         menu_button_6.Name = "menu_button_6"
         menu_button_6.Size = New Size(85, 63)
         menu_button_6.TabIndex = 0
-        menu_button_6.Text = "＊＊＊＊"
         menu_button_6.UseVisualStyleBackColor = False
         ' 
         ' menu_button_7
@@ -941,7 +940,7 @@ Partial Class Form1
         menu_button_7.Name = "menu_button_7"
         menu_button_7.Size = New Size(85, 63)
         menu_button_7.TabIndex = 0
-        menu_button_7.Text = "＊＊＊＊"
+        menu_button_7.Text = "ロック"
         menu_button_7.UseVisualStyleBackColor = False
         ' 
         ' menu_button_8
@@ -955,7 +954,7 @@ Partial Class Form1
         menu_button_8.Name = "menu_button_8"
         menu_button_8.Size = New Size(85, 63)
         menu_button_8.TabIndex = 0
-        menu_button_8.Text = "＊＊＊＊"
+        menu_button_8.Text = "ﾌﾛｱ変更"
         menu_button_8.UseVisualStyleBackColor = False
         ' 
         ' date_time_timer
