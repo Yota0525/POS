@@ -26,6 +26,13 @@
             Dim avgFactor As Single = (factor.Width + factor.Height) / 2.0F
             ctrl.Font = New Font(ctrl.Font.FontFamily, ctrl.Font.Size * avgFactor, ctrl.Font.Style)
 
+            Dim multiLineBtn = TryCast(ctrl, MultiLineButton)
+            If multiLineBtn IsNot Nothing Then
+                For Each line In multiLineBtn.Lines
+                    line.Font = New Font(line.Font.FontFamily, line.Font.Size * avgFactor, line.Font.Style)
+                Next
+            End If
+
             If ctrl.Controls.Count > 0 Then
                 ScaleControls(ctrl, factor)
             End If

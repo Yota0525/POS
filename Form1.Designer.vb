@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         exit_button = New Button()
         date_time_label = New Label()
         store_no_label = New Label()
@@ -30,41 +31,41 @@ Partial Class Form1
         operation_date_label = New Label()
         operation_week_label = New Label()
         room_count_label = New Label()
-        Button1 = New Button()
-        Button2 = New Button()
-        Button3 = New Button()
-        Button4 = New Button()
-        Button5 = New Button()
-        Button6 = New Button()
-        Button7 = New Button()
-        Button8 = New Button()
-        Button9 = New Button()
-        Button10 = New Button()
-        Button11 = New Button()
-        Button12 = New Button()
-        Button13 = New Button()
-        Button14 = New Button()
-        Button15 = New Button()
-        Button16 = New Button()
-        Button17 = New Button()
-        Button18 = New Button()
-        Button19 = New Button()
-        Button20 = New Button()
-        Button21 = New Button()
-        Button22 = New Button()
-        Button23 = New Button()
-        Button24 = New Button()
-        Button25 = New Button()
-        Button26 = New Button()
-        Button27 = New Button()
-        Button28 = New Button()
-        Button29 = New Button()
-        Button30 = New Button()
-        Button31 = New Button()
-        Button32 = New Button()
-        Button33 = New Button()
-        Button34 = New Button()
-        Button35 = New Button()
+        Button1 = New MultiLineButton()
+        Button2 = New MultiLineButton()
+        Button3 = New MultiLineButton()
+        Button4 = New MultiLineButton()
+        Button5 = New MultiLineButton()
+        Button6 = New MultiLineButton()
+        Button7 = New MultiLineButton()
+        Button8 = New MultiLineButton()
+        Button9 = New MultiLineButton()
+        Button10 = New MultiLineButton()
+        Button11 = New MultiLineButton()
+        Button12 = New MultiLineButton()
+        Button13 = New MultiLineButton()
+        Button14 = New MultiLineButton()
+        Button15 = New MultiLineButton()
+        Button16 = New MultiLineButton()
+        Button17 = New MultiLineButton()
+        Button18 = New MultiLineButton()
+        Button19 = New MultiLineButton()
+        Button20 = New MultiLineButton()
+        Button21 = New MultiLineButton()
+        Button22 = New MultiLineButton()
+        Button23 = New MultiLineButton()
+        Button24 = New MultiLineButton()
+        Button25 = New MultiLineButton()
+        Button26 = New MultiLineButton()
+        Button27 = New MultiLineButton()
+        Button28 = New MultiLineButton()
+        Button29 = New MultiLineButton()
+        Button30 = New MultiLineButton()
+        Button31 = New MultiLineButton()
+        Button32 = New MultiLineButton()
+        Button33 = New MultiLineButton()
+        Button34 = New MultiLineButton()
+        Button35 = New MultiLineButton()
         SuspendLayout()
         ' 
         ' exit_button
@@ -166,493 +167,458 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
-        Button1.BackColor = Color.Gray
+        Button1.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button1.Location = New Point(11, 57)
         Button1.Margin = New Padding(0)
         Button1.Name = "Button1"
         Button1.Size = New Size(200, 90)
         Button1.TabIndex = 3
-        Button1.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button1.TextAlign = ContentAlignment.TopLeft
+        Button1.TextAlignment = StringAlignment.Near
         Button1.UseVisualStyleBackColor = False
+        Button1.VerticalPadding = 6F
         ' 
         ' Button2
         ' 
-        Button2.BackColor = Color.Gray
+        Button2.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button2.Location = New Point(211, 57)
         Button2.Margin = New Padding(0)
         Button2.Name = "Button2"
         Button2.Size = New Size(200, 90)
         Button2.TabIndex = 3
-        Button2.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button2.TextAlign = ContentAlignment.TopLeft
+        Button2.TextAlignment = StringAlignment.Near
         Button2.UseVisualStyleBackColor = False
+        Button2.VerticalPadding = 6F
         ' 
         ' Button3
         ' 
-        Button3.BackColor = Color.Gray
+        Button3.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button3.FlatStyle = FlatStyle.Flat
-        Button3.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button3.Location = New Point(411, 57)
         Button3.Margin = New Padding(0)
         Button3.Name = "Button3"
         Button3.Size = New Size(200, 90)
         Button3.TabIndex = 3
-        Button3.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button3.TextAlign = ContentAlignment.TopLeft
+        Button3.TextAlignment = StringAlignment.Near
         Button3.UseVisualStyleBackColor = False
+        Button3.VerticalPadding = 6F
         ' 
         ' Button4
         ' 
-        Button4.BackColor = Color.Gray
+        Button4.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button4.FlatStyle = FlatStyle.Flat
-        Button4.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button4.Location = New Point(611, 57)
         Button4.Margin = New Padding(0)
         Button4.Name = "Button4"
         Button4.Size = New Size(200, 90)
         Button4.TabIndex = 3
-        Button4.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button4.TextAlign = ContentAlignment.TopLeft
+        Button4.TextAlignment = StringAlignment.Near
         Button4.UseVisualStyleBackColor = False
+        Button4.VerticalPadding = 6F
         ' 
         ' Button5
         ' 
-        Button5.BackColor = Color.Gray
+        Button5.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button5.FlatStyle = FlatStyle.Flat
-        Button5.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button5.Location = New Point(811, 57)
         Button5.Margin = New Padding(0)
         Button5.Name = "Button5"
         Button5.Size = New Size(200, 90)
         Button5.TabIndex = 3
-        Button5.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button5.TextAlign = ContentAlignment.TopLeft
+        Button5.TextAlignment = StringAlignment.Near
         Button5.UseVisualStyleBackColor = False
+        Button5.VerticalPadding = 6F
         ' 
         ' Button6
         ' 
-        Button6.BackColor = Color.Gray
+        Button6.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button6.FlatStyle = FlatStyle.Flat
-        Button6.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button6.Location = New Point(11, 147)
         Button6.Margin = New Padding(0)
         Button6.Name = "Button6"
         Button6.Size = New Size(200, 90)
         Button6.TabIndex = 3
-        Button6.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button6.TextAlign = ContentAlignment.TopLeft
+        Button6.TextAlignment = StringAlignment.Near
         Button6.UseVisualStyleBackColor = False
+        Button6.VerticalPadding = 6F
         ' 
         ' Button7
         ' 
-        Button7.BackColor = Color.Gray
+        Button7.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button7.FlatStyle = FlatStyle.Flat
-        Button7.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button7.Location = New Point(411, 147)
         Button7.Margin = New Padding(0)
         Button7.Name = "Button7"
         Button7.Size = New Size(200, 90)
         Button7.TabIndex = 3
-        Button7.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button7.TextAlign = ContentAlignment.TopLeft
+        Button7.TextAlignment = StringAlignment.Near
         Button7.UseVisualStyleBackColor = False
+        Button7.VerticalPadding = 6F
         ' 
         ' Button8
         ' 
-        Button8.BackColor = Color.Gray
+        Button8.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button8.FlatStyle = FlatStyle.Flat
-        Button8.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button8.Location = New Point(211, 147)
         Button8.Margin = New Padding(0)
         Button8.Name = "Button8"
         Button8.Size = New Size(200, 90)
         Button8.TabIndex = 3
-        Button8.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button8.TextAlign = ContentAlignment.TopLeft
+        Button8.TextAlignment = StringAlignment.Near
         Button8.UseVisualStyleBackColor = False
+        Button8.VerticalPadding = 6F
         ' 
         ' Button9
         ' 
-        Button9.BackColor = Color.Gray
+        Button9.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button9.FlatStyle = FlatStyle.Flat
-        Button9.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button9.Location = New Point(611, 147)
         Button9.Margin = New Padding(0)
         Button9.Name = "Button9"
         Button9.Size = New Size(200, 90)
         Button9.TabIndex = 3
-        Button9.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button9.TextAlign = ContentAlignment.TopLeft
+        Button9.TextAlignment = StringAlignment.Near
         Button9.UseVisualStyleBackColor = False
+        Button9.VerticalPadding = 6F
         ' 
         ' Button10
         ' 
-        Button10.BackColor = Color.Gray
+        Button10.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button10.FlatStyle = FlatStyle.Flat
-        Button10.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button10.Location = New Point(811, 147)
         Button10.Margin = New Padding(0)
         Button10.Name = "Button10"
         Button10.Size = New Size(200, 90)
         Button10.TabIndex = 3
-        Button10.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button10.TextAlign = ContentAlignment.TopLeft
+        Button10.TextAlignment = StringAlignment.Near
         Button10.UseVisualStyleBackColor = False
+        Button10.VerticalPadding = 6F
         ' 
         ' Button11
         ' 
-        Button11.BackColor = Color.Gray
+        Button11.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button11.FlatStyle = FlatStyle.Flat
-        Button11.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button11.Location = New Point(11, 237)
         Button11.Margin = New Padding(0)
         Button11.Name = "Button11"
         Button11.Size = New Size(200, 90)
         Button11.TabIndex = 3
-        Button11.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button11.TextAlign = ContentAlignment.TopLeft
+        Button11.TextAlignment = StringAlignment.Near
         Button11.UseVisualStyleBackColor = False
+        Button11.VerticalPadding = 6F
         ' 
         ' Button12
         ' 
-        Button12.BackColor = Color.Gray
+        Button12.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button12.FlatStyle = FlatStyle.Flat
-        Button12.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button12.Location = New Point(411, 237)
         Button12.Margin = New Padding(0)
         Button12.Name = "Button12"
         Button12.Size = New Size(200, 90)
         Button12.TabIndex = 3
-        Button12.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button12.TextAlign = ContentAlignment.TopLeft
+        Button12.TextAlignment = StringAlignment.Near
         Button12.UseVisualStyleBackColor = False
+        Button12.VerticalPadding = 6F
         ' 
         ' Button13
         ' 
-        Button13.BackColor = Color.Gray
+        Button13.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button13.FlatStyle = FlatStyle.Flat
-        Button13.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button13.Location = New Point(211, 237)
         Button13.Margin = New Padding(0)
         Button13.Name = "Button13"
         Button13.Size = New Size(200, 90)
         Button13.TabIndex = 3
-        Button13.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button13.TextAlign = ContentAlignment.TopLeft
+        Button13.TextAlignment = StringAlignment.Near
         Button13.UseVisualStyleBackColor = False
+        Button13.VerticalPadding = 6F
         ' 
         ' Button14
         ' 
-        Button14.BackColor = Color.Gray
+        Button14.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button14.FlatStyle = FlatStyle.Flat
-        Button14.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button14.Location = New Point(611, 237)
         Button14.Margin = New Padding(0)
         Button14.Name = "Button14"
         Button14.Size = New Size(200, 90)
         Button14.TabIndex = 3
-        Button14.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button14.TextAlign = ContentAlignment.TopLeft
+        Button14.TextAlignment = StringAlignment.Near
         Button14.UseVisualStyleBackColor = False
+        Button14.VerticalPadding = 6F
         ' 
         ' Button15
         ' 
-        Button15.BackColor = Color.Gray
+        Button15.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button15.FlatStyle = FlatStyle.Flat
-        Button15.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button15.Location = New Point(811, 237)
         Button15.Margin = New Padding(0)
         Button15.Name = "Button15"
         Button15.Size = New Size(200, 90)
         Button15.TabIndex = 3
-        Button15.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button15.TextAlign = ContentAlignment.TopLeft
+        Button15.TextAlignment = StringAlignment.Near
         Button15.UseVisualStyleBackColor = False
+        Button15.VerticalPadding = 6F
         ' 
         ' Button16
         ' 
-        Button16.BackColor = Color.Gray
+        Button16.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button16.FlatStyle = FlatStyle.Flat
-        Button16.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button16.Location = New Point(11, 327)
         Button16.Margin = New Padding(0)
         Button16.Name = "Button16"
         Button16.Size = New Size(200, 90)
         Button16.TabIndex = 3
-        Button16.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button16.TextAlign = ContentAlignment.TopLeft
+        Button16.TextAlignment = StringAlignment.Near
         Button16.UseVisualStyleBackColor = False
+        Button16.VerticalPadding = 6F
         ' 
         ' Button17
         ' 
-        Button17.BackColor = Color.Gray
+        Button17.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button17.FlatStyle = FlatStyle.Flat
-        Button17.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button17.Location = New Point(411, 327)
         Button17.Margin = New Padding(0)
         Button17.Name = "Button17"
         Button17.Size = New Size(200, 90)
         Button17.TabIndex = 3
-        Button17.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button17.TextAlign = ContentAlignment.TopLeft
+        Button17.TextAlignment = StringAlignment.Near
         Button17.UseVisualStyleBackColor = False
+        Button17.VerticalPadding = 6F
         ' 
         ' Button18
         ' 
-        Button18.BackColor = Color.Gray
+        Button18.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button18.FlatStyle = FlatStyle.Flat
-        Button18.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button18.Location = New Point(211, 327)
         Button18.Margin = New Padding(0)
         Button18.Name = "Button18"
         Button18.Size = New Size(200, 90)
         Button18.TabIndex = 3
-        Button18.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button18.TextAlign = ContentAlignment.TopLeft
+        Button18.TextAlignment = StringAlignment.Near
         Button18.UseVisualStyleBackColor = False
+        Button18.VerticalPadding = 6F
         ' 
         ' Button19
         ' 
-        Button19.BackColor = Color.Gray
+        Button19.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button19.FlatStyle = FlatStyle.Flat
-        Button19.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button19.Location = New Point(611, 327)
         Button19.Margin = New Padding(0)
         Button19.Name = "Button19"
         Button19.Size = New Size(200, 90)
         Button19.TabIndex = 3
-        Button19.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button19.TextAlign = ContentAlignment.TopLeft
+        Button19.TextAlignment = StringAlignment.Near
         Button19.UseVisualStyleBackColor = False
+        Button19.VerticalPadding = 6F
         ' 
         ' Button20
         ' 
-        Button20.BackColor = Color.Gray
+        Button20.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button20.FlatStyle = FlatStyle.Flat
-        Button20.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button20.Location = New Point(811, 327)
         Button20.Margin = New Padding(0)
         Button20.Name = "Button20"
         Button20.Size = New Size(200, 90)
         Button20.TabIndex = 3
-        Button20.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button20.TextAlign = ContentAlignment.TopLeft
+        Button20.TextAlignment = StringAlignment.Near
         Button20.UseVisualStyleBackColor = False
+        Button20.VerticalPadding = 6F
         ' 
         ' Button21
         ' 
-        Button21.BackColor = Color.Gray
+        Button21.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button21.FlatStyle = FlatStyle.Flat
-        Button21.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button21.Location = New Point(11, 417)
         Button21.Margin = New Padding(0)
         Button21.Name = "Button21"
         Button21.Size = New Size(200, 90)
         Button21.TabIndex = 3
-        Button21.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button21.TextAlign = ContentAlignment.TopLeft
+        Button21.TextAlignment = StringAlignment.Near
         Button21.UseVisualStyleBackColor = False
+        Button21.VerticalPadding = 6F
         ' 
         ' Button22
         ' 
-        Button22.BackColor = Color.Gray
+        Button22.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button22.FlatStyle = FlatStyle.Flat
-        Button22.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button22.Location = New Point(411, 417)
         Button22.Margin = New Padding(0)
         Button22.Name = "Button22"
         Button22.Size = New Size(200, 90)
         Button22.TabIndex = 3
-        Button22.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button22.TextAlign = ContentAlignment.TopLeft
+        Button22.TextAlignment = StringAlignment.Near
         Button22.UseVisualStyleBackColor = False
+        Button22.VerticalPadding = 6F
         ' 
         ' Button23
         ' 
-        Button23.BackColor = Color.Gray
+        Button23.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button23.FlatStyle = FlatStyle.Flat
-        Button23.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button23.Location = New Point(211, 417)
         Button23.Margin = New Padding(0)
         Button23.Name = "Button23"
         Button23.Size = New Size(200, 90)
         Button23.TabIndex = 3
-        Button23.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button23.TextAlign = ContentAlignment.TopLeft
+        Button23.TextAlignment = StringAlignment.Near
         Button23.UseVisualStyleBackColor = False
+        Button23.VerticalPadding = 6F
         ' 
         ' Button24
         ' 
-        Button24.BackColor = Color.Gray
+        Button24.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button24.FlatStyle = FlatStyle.Flat
-        Button24.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button24.Location = New Point(611, 417)
         Button24.Margin = New Padding(0)
         Button24.Name = "Button24"
         Button24.Size = New Size(200, 90)
         Button24.TabIndex = 3
-        Button24.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button24.TextAlign = ContentAlignment.TopLeft
+        Button24.TextAlignment = StringAlignment.Near
         Button24.UseVisualStyleBackColor = False
+        Button24.VerticalPadding = 6F
         ' 
         ' Button25
         ' 
-        Button25.BackColor = Color.Gray
+        Button25.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button25.FlatStyle = FlatStyle.Flat
-        Button25.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button25.Location = New Point(811, 417)
         Button25.Margin = New Padding(0)
         Button25.Name = "Button25"
         Button25.Size = New Size(200, 90)
         Button25.TabIndex = 3
-        Button25.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button25.TextAlign = ContentAlignment.TopLeft
+        Button25.TextAlignment = StringAlignment.Near
         Button25.UseVisualStyleBackColor = False
+        Button25.VerticalPadding = 6F
         ' 
         ' Button26
         ' 
-        Button26.BackColor = Color.Gray
+        Button26.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button26.FlatStyle = FlatStyle.Flat
-        Button26.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button26.Location = New Point(11, 507)
         Button26.Margin = New Padding(0)
         Button26.Name = "Button26"
         Button26.Size = New Size(200, 90)
         Button26.TabIndex = 3
-        Button26.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button26.TextAlign = ContentAlignment.TopLeft
+        Button26.TextAlignment = StringAlignment.Near
         Button26.UseVisualStyleBackColor = False
+        Button26.VerticalPadding = 6F
         ' 
         ' Button27
         ' 
-        Button27.BackColor = Color.Gray
+        Button27.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button27.FlatStyle = FlatStyle.Flat
-        Button27.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button27.Location = New Point(411, 507)
         Button27.Margin = New Padding(0)
         Button27.Name = "Button27"
         Button27.Size = New Size(200, 90)
         Button27.TabIndex = 3
-        Button27.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button27.TextAlign = ContentAlignment.TopLeft
+        Button27.TextAlignment = StringAlignment.Near
         Button27.UseVisualStyleBackColor = False
+        Button27.VerticalPadding = 6F
         ' 
         ' Button28
         ' 
-        Button28.BackColor = Color.Gray
+        Button28.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button28.FlatStyle = FlatStyle.Flat
-        Button28.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button28.Location = New Point(211, 507)
         Button28.Margin = New Padding(0)
         Button28.Name = "Button28"
         Button28.Size = New Size(200, 90)
         Button28.TabIndex = 3
-        Button28.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button28.TextAlign = ContentAlignment.TopLeft
+        Button28.TextAlignment = StringAlignment.Near
         Button28.UseVisualStyleBackColor = False
+        Button28.VerticalPadding = 6F
         ' 
         ' Button29
         ' 
-        Button29.BackColor = Color.Gray
+        Button29.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button29.FlatStyle = FlatStyle.Flat
-        Button29.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button29.Location = New Point(611, 507)
         Button29.Margin = New Padding(0)
         Button29.Name = "Button29"
         Button29.Size = New Size(200, 90)
         Button29.TabIndex = 3
-        Button29.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button29.TextAlign = ContentAlignment.TopLeft
+        Button29.TextAlignment = StringAlignment.Near
         Button29.UseVisualStyleBackColor = False
+        Button29.VerticalPadding = 6F
         ' 
         ' Button30
         ' 
-        Button30.BackColor = Color.Gray
+        Button30.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button30.FlatStyle = FlatStyle.Flat
-        Button30.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button30.Location = New Point(811, 507)
         Button30.Margin = New Padding(0)
         Button30.Name = "Button30"
         Button30.Size = New Size(200, 90)
         Button30.TabIndex = 3
-        Button30.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button30.TextAlign = ContentAlignment.TopLeft
+        Button30.TextAlignment = StringAlignment.Near
         Button30.UseVisualStyleBackColor = False
+        Button30.VerticalPadding = 6F
         ' 
         ' Button31
         ' 
-        Button31.BackColor = Color.Gray
+        Button31.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button31.FlatStyle = FlatStyle.Flat
-        Button31.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button31.Location = New Point(11, 597)
         Button31.Margin = New Padding(0)
         Button31.Name = "Button31"
         Button31.Size = New Size(200, 90)
         Button31.TabIndex = 3
-        Button31.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button31.TextAlign = ContentAlignment.TopLeft
+        Button31.TextAlignment = StringAlignment.Near
         Button31.UseVisualStyleBackColor = False
+        Button31.VerticalPadding = 6F
         ' 
         ' Button32
         ' 
-        Button32.BackColor = Color.Gray
+        Button32.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button32.FlatStyle = FlatStyle.Flat
-        Button32.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button32.Location = New Point(411, 597)
         Button32.Margin = New Padding(0)
         Button32.Name = "Button32"
         Button32.Size = New Size(200, 90)
         Button32.TabIndex = 3
-        Button32.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button32.TextAlign = ContentAlignment.TopLeft
+        Button32.TextAlignment = StringAlignment.Near
         Button32.UseVisualStyleBackColor = False
+        Button32.VerticalPadding = 6F
         ' 
         ' Button33
         ' 
-        Button33.BackColor = Color.Gray
+        Button33.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button33.FlatStyle = FlatStyle.Flat
-        Button33.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button33.Location = New Point(211, 597)
         Button33.Margin = New Padding(0)
         Button33.Name = "Button33"
         Button33.Size = New Size(200, 90)
         Button33.TabIndex = 3
-        Button33.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button33.TextAlign = ContentAlignment.TopLeft
+        Button33.TextAlignment = StringAlignment.Near
         Button33.UseVisualStyleBackColor = False
+        Button33.VerticalPadding = 6F
         ' 
         ' Button34
         ' 
-        Button34.BackColor = Color.Gray
+        Button34.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button34.FlatStyle = FlatStyle.Flat
-        Button34.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button34.Location = New Point(611, 597)
         Button34.Margin = New Padding(0)
         Button34.Name = "Button34"
         Button34.Size = New Size(200, 90)
         Button34.TabIndex = 3
-        Button34.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button34.TextAlign = ContentAlignment.TopLeft
+        Button34.TextAlignment = StringAlignment.Near
         Button34.UseVisualStyleBackColor = False
+        Button34.VerticalPadding = 6F
         ' 
         ' Button35
         ' 
-        Button35.BackColor = Color.Gray
+        Button35.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
         Button35.FlatStyle = FlatStyle.Flat
-        Button35.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         Button35.Location = New Point(811, 597)
         Button35.Margin = New Padding(0)
         Button35.Name = "Button35"
         Button35.Size = New Size(200, 90)
         Button35.TabIndex = 3
-        Button35.Text = "00 ＊＊＊　＊＊" & vbCrLf & " 00:00～00:00　000分" & vbCrLf & "  0人( 00- 00)" & vbCrLf & " ＊"
-        Button35.TextAlign = ContentAlignment.TopLeft
+        Button35.TextAlignment = StringAlignment.Near
         Button35.UseVisualStyleBackColor = False
+        Button35.VerticalPadding = 6F
         ' 
         ' Form1
         ' 
@@ -722,40 +688,40 @@ Partial Class Form1
     Friend WithEvents operation_date_label As Label
     Friend WithEvents operation_week_label As Label
     Friend WithEvents room_count_label As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Button16 As Button
-    Friend WithEvents Button17 As Button
-    Friend WithEvents Button18 As Button
-    Friend WithEvents Button19 As Button
-    Friend WithEvents Button20 As Button
-    Friend WithEvents Button21 As Button
-    Friend WithEvents Button22 As Button
-    Friend WithEvents Button23 As Button
-    Friend WithEvents Button24 As Button
-    Friend WithEvents Button25 As Button
-    Friend WithEvents Button26 As Button
-    Friend WithEvents Button27 As Button
-    Friend WithEvents Button28 As Button
-    Friend WithEvents Button29 As Button
-    Friend WithEvents Button30 As Button
-    Friend WithEvents Button31 As Button
-    Friend WithEvents Button32 As Button
-    Friend WithEvents Button33 As Button
-    Friend WithEvents Button34 As Button
-    Friend WithEvents Button35 As Button
+    Friend WithEvents Button1 As MultiLineButton
+    Friend WithEvents Button2 As MultiLineButton
+    Friend WithEvents Button3 As MultiLineButton
+    Friend WithEvents Button4 As MultiLineButton
+    Friend WithEvents Button5 As MultiLineButton
+    Friend WithEvents Button6 As MultiLineButton
+    Friend WithEvents Button7 As MultiLineButton
+    Friend WithEvents Button8 As MultiLineButton
+    Friend WithEvents Button9 As MultiLineButton
+    Friend WithEvents Button10 As MultiLineButton
+    Friend WithEvents Button11 As MultiLineButton
+    Friend WithEvents Button12 As MultiLineButton
+    Friend WithEvents Button13 As MultiLineButton
+    Friend WithEvents Button14 As MultiLineButton
+    Friend WithEvents Button15 As MultiLineButton
+    Friend WithEvents Button16 As MultiLineButton
+    Friend WithEvents Button17 As MultiLineButton
+    Friend WithEvents Button18 As MultiLineButton
+    Friend WithEvents Button19 As MultiLineButton
+    Friend WithEvents Button20 As MultiLineButton
+    Friend WithEvents Button21 As MultiLineButton
+    Friend WithEvents Button22 As MultiLineButton
+    Friend WithEvents Button23 As MultiLineButton
+    Friend WithEvents Button24 As MultiLineButton
+    Friend WithEvents Button25 As MultiLineButton
+    Friend WithEvents Button26 As MultiLineButton
+    Friend WithEvents Button27 As MultiLineButton
+    Friend WithEvents Button28 As MultiLineButton
+    Friend WithEvents Button29 As MultiLineButton
+    Friend WithEvents Button30 As MultiLineButton
+    Friend WithEvents Button31 As MultiLineButton
+    Friend WithEvents Button32 As MultiLineButton
+    Friend WithEvents Button33 As MultiLineButton
+    Friend WithEvents Button34 As MultiLineButton
+    Friend WithEvents Button35 As MultiLineButton
 
 End Class
