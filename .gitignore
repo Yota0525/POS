@@ -1,0 +1,21 @@
+## Visual Studio / .NET 標準の除外設定
+
+# ユーザー固有のVisual Studioファイル
+.vs/
+*.user
+*.suo
+
+# ビルド生成物
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+# NuGet
+packages/
+*.nupkg
+
+# その他IDE/OS生成物
+*.DotSettings.user
+Thumbs.db
+.DS_Store
