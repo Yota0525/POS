@@ -29,17 +29,19 @@ Partial Class ScreenSaverPromptForm
         ' 
         ' codeTextBox
         ' 
-        codeTextBox.Font = New Font("ＭＳ ゴシック", 12F)
-        codeTextBox.Location = New Point(20, 64)
+        codeTextBox.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        codeTextBox.Location = New Point(20, 46)
+        codeTextBox.MaximumSize = New Size(320, 50)
+        codeTextBox.MinimumSize = New Size(320, 50)
         codeTextBox.Name = "codeTextBox"
-        codeTextBox.Size = New Size(320, 23)
+        codeTextBox.Size = New Size(320, 50)
         codeTextBox.TabIndex = 0
         ' 
         ' closeButton
         ' 
         closeButton.BackColor = Color.White
         closeButton.FlatStyle = FlatStyle.Flat
-        closeButton.Location = New Point(142, 120)
+        closeButton.Location = New Point(144, 120)
         closeButton.Name = "closeButton"
         closeButton.Size = New Size(72, 68)
         closeButton.TabIndex = 1
@@ -49,7 +51,7 @@ Partial Class ScreenSaverPromptForm
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Silver
-        Label1.Location = New Point(-12, -4)
+        Label1.Location = New Point(-10, -22)
         Label1.Name = "Label1"
         Label1.Padding = New Padding(380, 50, 0, 0)
         Label1.Size = New Size(380, 65)
