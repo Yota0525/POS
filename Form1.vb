@@ -1,6 +1,6 @@
 ﻿Imports System.Linq
 
-Public Class Form1
+Public Class MainForm
 
     ' デザイナーで配置した時の基準サイズ（Form1.Designer.vb の ClientSize と合わせる）
     Private ReadOnly DesignSize As New Size(1024, 768)

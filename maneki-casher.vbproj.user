@@ -10,5 +10,11 @@
     <Compile Update="MultiLineButton.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="ScreenSaver.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScreenSaverForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

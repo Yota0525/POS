@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -32,40 +32,40 @@ Partial Class Form1
         operation_week_label = New Label()
         room_count_label = New Label()
         room_button_0 = New MultiLineButton()
-        Button2 = New MultiLineButton()
-        Button3 = New MultiLineButton()
-        Button4 = New MultiLineButton()
-        Button5 = New MultiLineButton()
-        Button6 = New MultiLineButton()
-        Button7 = New MultiLineButton()
-        Button8 = New MultiLineButton()
-        Button9 = New MultiLineButton()
-        Button10 = New MultiLineButton()
-        Button11 = New MultiLineButton()
-        Button12 = New MultiLineButton()
-        Button13 = New MultiLineButton()
-        Button14 = New MultiLineButton()
-        Button15 = New MultiLineButton()
-        Button16 = New MultiLineButton()
-        Button17 = New MultiLineButton()
-        Button18 = New MultiLineButton()
-        Button19 = New MultiLineButton()
-        Button20 = New MultiLineButton()
-        Button21 = New MultiLineButton()
-        Button22 = New MultiLineButton()
-        Button23 = New MultiLineButton()
-        Button24 = New MultiLineButton()
-        Button25 = New MultiLineButton()
-        Button26 = New MultiLineButton()
-        Button27 = New MultiLineButton()
-        Button28 = New MultiLineButton()
-        Button29 = New MultiLineButton()
-        Button30 = New MultiLineButton()
-        Button31 = New MultiLineButton()
-        Button32 = New MultiLineButton()
-        Button33 = New MultiLineButton()
-        Button34 = New MultiLineButton()
-        Button35 = New MultiLineButton()
+        room_button_1 = New MultiLineButton()
+        room_button_2 = New MultiLineButton()
+        room_button_3 = New MultiLineButton()
+        room_button_4 = New MultiLineButton()
+        room_button_5 = New MultiLineButton()
+        room_button_7 = New MultiLineButton()
+        room_button_6 = New MultiLineButton()
+        room_button_8 = New MultiLineButton()
+        room_button_9 = New MultiLineButton()
+        room_button_10 = New MultiLineButton()
+        room_button_12 = New MultiLineButton()
+        room_button_11 = New MultiLineButton()
+        room_button_13 = New MultiLineButton()
+        room_button_14 = New MultiLineButton()
+        room_button_15 = New MultiLineButton()
+        room_button_17 = New MultiLineButton()
+        room_button_16 = New MultiLineButton()
+        room_button_18 = New MultiLineButton()
+        room_button_19 = New MultiLineButton()
+        room_button_20 = New MultiLineButton()
+        room_button_22 = New MultiLineButton()
+        room_button_21 = New MultiLineButton()
+        room_button_23 = New MultiLineButton()
+        room_button_24 = New MultiLineButton()
+        room_button_25 = New MultiLineButton()
+        room_button_27 = New MultiLineButton()
+        room_button_26 = New MultiLineButton()
+        room_button_28 = New MultiLineButton()
+        room_button_29 = New MultiLineButton()
+        room_button_30 = New MultiLineButton()
+        room_button_32 = New MultiLineButton()
+        room_button_31 = New MultiLineButton()
+        room_button_33 = New MultiLineButton()
+        room_button_34 = New MultiLineButton()
         menu_next_button = New Button()
         menu_button_0 = New Button()
         menu_button_1 = New Button()
@@ -196,627 +196,627 @@ Partial Class Form1
         room_button_0.UseVisualStyleBackColor = False
         room_button_0.VerticalPadding = 6F
         ' 
-        ' Button2
-        ' 
-        Button2.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
-        Button2.BevelStyle = Border3DStyle.SunkenOuter
-        Button2.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button2.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button2.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Location = New Point(213, 57)
-        Button2.Margin = New Padding(0)
-        Button2.Name = "Button2"
-        Button2.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button2.Size = New Size(200, 91)
-        Button2.TabIndex = 3
-        Button2.TextAlignment = StringAlignment.Near
-        Button2.UseVisualStyleBackColor = False
-        Button2.VerticalPadding = 6F
-        ' 
-        ' Button3
-        ' 
-        Button3.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
-        Button3.BevelStyle = Border3DStyle.SunkenOuter
-        Button3.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button3.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button3.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button3.FlatStyle = FlatStyle.Flat
-        Button3.Location = New Point(413, 57)
-        Button3.Margin = New Padding(0)
-        Button3.Name = "Button3"
-        Button3.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button3.Size = New Size(200, 91)
-        Button3.TabIndex = 3
-        Button3.TextAlignment = StringAlignment.Near
-        Button3.UseVisualStyleBackColor = False
-        Button3.VerticalPadding = 6F
-        ' 
-        ' Button4
-        ' 
-        Button4.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
-        Button4.BevelStyle = Border3DStyle.SunkenOuter
-        Button4.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button4.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button4.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button4.FlatStyle = FlatStyle.Flat
-        Button4.Location = New Point(613, 57)
-        Button4.Margin = New Padding(0)
-        Button4.Name = "Button4"
-        Button4.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button4.Size = New Size(200, 91)
-        Button4.TabIndex = 3
-        Button4.TextAlignment = StringAlignment.Near
-        Button4.UseVisualStyleBackColor = False
-        Button4.VerticalPadding = 6F
-        ' 
-        ' Button5
-        ' 
-        Button5.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
-        Button5.BevelStyle = Border3DStyle.SunkenOuter
-        Button5.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button5.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button5.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button5.FlatStyle = FlatStyle.Flat
-        Button5.Location = New Point(813, 57)
-        Button5.Margin = New Padding(0)
-        Button5.Name = "Button5"
-        Button5.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button5.Size = New Size(200, 91)
-        Button5.TabIndex = 3
-        Button5.TextAlignment = StringAlignment.Near
-        Button5.UseVisualStyleBackColor = False
-        Button5.VerticalPadding = 6F
-        ' 
-        ' Button6
-        ' 
-        Button6.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
-        Button6.BevelStyle = Border3DStyle.SunkenOuter
-        Button6.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button6.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button6.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button6.FlatStyle = FlatStyle.Flat
-        Button6.Location = New Point(13, 148)
-        Button6.Margin = New Padding(0)
-        Button6.Name = "Button6"
-        Button6.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button6.Size = New Size(200, 91)
-        Button6.TabIndex = 3
-        Button6.TextAlignment = StringAlignment.Near
-        Button6.UseVisualStyleBackColor = False
-        Button6.VerticalPadding = 6F
-        ' 
-        ' Button7
-        ' 
-        Button7.BackColor = Color.White
-        Button7.BevelStyle = Border3DStyle.SunkenOuter
-        Button7.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button7.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button7.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button7.FlatStyle = FlatStyle.Flat
-        Button7.Location = New Point(413, 148)
-        Button7.Margin = New Padding(0)
-        Button7.Name = "Button7"
-        Button7.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button7.Size = New Size(200, 91)
-        Button7.TabIndex = 3
-        Button7.TextAlignment = StringAlignment.Near
-        Button7.UseVisualStyleBackColor = False
-        Button7.VerticalPadding = 6F
-        ' 
-        ' Button8
-        ' 
-        Button8.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
-        Button8.BevelStyle = Border3DStyle.SunkenOuter
-        Button8.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button8.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button8.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button8.FlatStyle = FlatStyle.Flat
-        Button8.Location = New Point(213, 148)
-        Button8.Margin = New Padding(0)
-        Button8.Name = "Button8"
-        Button8.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button8.Size = New Size(200, 91)
-        Button8.TabIndex = 3
-        Button8.TextAlignment = StringAlignment.Near
-        Button8.UseVisualStyleBackColor = False
-        Button8.VerticalPadding = 6F
-        ' 
-        ' Button9
-        ' 
-        Button9.BackColor = Color.White
-        Button9.BevelStyle = Border3DStyle.SunkenOuter
-        Button9.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button9.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button9.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button9.FlatStyle = FlatStyle.Flat
-        Button9.Location = New Point(613, 148)
-        Button9.Margin = New Padding(0)
-        Button9.Name = "Button9"
-        Button9.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button9.Size = New Size(200, 91)
-        Button9.TabIndex = 3
-        Button9.TextAlignment = StringAlignment.Near
-        Button9.UseVisualStyleBackColor = False
-        Button9.VerticalPadding = 6F
-        ' 
-        ' Button10
-        ' 
-        Button10.BackColor = Color.White
-        Button10.BevelStyle = Border3DStyle.SunkenOuter
-        Button10.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button10.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button10.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button10.FlatStyle = FlatStyle.Flat
-        Button10.Location = New Point(813, 148)
-        Button10.Margin = New Padding(0)
-        Button10.Name = "Button10"
-        Button10.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button10.Size = New Size(200, 91)
-        Button10.TabIndex = 3
-        Button10.TextAlignment = StringAlignment.Near
-        Button10.UseVisualStyleBackColor = False
-        Button10.VerticalPadding = 6F
-        ' 
-        ' Button11
-        ' 
-        Button11.BackColor = Color.White
-        Button11.BevelStyle = Border3DStyle.SunkenOuter
-        Button11.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button11.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button11.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button11.FlatStyle = FlatStyle.Flat
-        Button11.Location = New Point(13, 239)
-        Button11.Margin = New Padding(0)
-        Button11.Name = "Button11"
-        Button11.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button11.Size = New Size(200, 91)
-        Button11.TabIndex = 3
-        Button11.TextAlignment = StringAlignment.Near
-        Button11.UseVisualStyleBackColor = False
-        Button11.VerticalPadding = 6F
-        ' 
-        ' Button12
-        ' 
-        Button12.BackColor = Color.White
-        Button12.BevelStyle = Border3DStyle.SunkenOuter
-        Button12.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button12.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button12.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button12.FlatStyle = FlatStyle.Flat
-        Button12.Location = New Point(413, 239)
-        Button12.Margin = New Padding(0)
-        Button12.Name = "Button12"
-        Button12.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button12.Size = New Size(200, 91)
-        Button12.TabIndex = 3
-        Button12.TextAlignment = StringAlignment.Near
-        Button12.UseVisualStyleBackColor = False
-        Button12.VerticalPadding = 6F
-        ' 
-        ' Button13
-        ' 
-        Button13.BackColor = Color.White
-        Button13.BevelStyle = Border3DStyle.SunkenOuter
-        Button13.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button13.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button13.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button13.FlatStyle = FlatStyle.Flat
-        Button13.Location = New Point(213, 239)
-        Button13.Margin = New Padding(0)
-        Button13.Name = "Button13"
-        Button13.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button13.Size = New Size(200, 91)
-        Button13.TabIndex = 3
-        Button13.TextAlignment = StringAlignment.Near
-        Button13.UseVisualStyleBackColor = False
-        Button13.VerticalPadding = 6F
-        ' 
-        ' Button14
-        ' 
-        Button14.BackColor = Color.White
-        Button14.BevelStyle = Border3DStyle.SunkenOuter
-        Button14.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button14.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button14.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button14.FlatStyle = FlatStyle.Flat
-        Button14.Location = New Point(613, 239)
-        Button14.Margin = New Padding(0)
-        Button14.Name = "Button14"
-        Button14.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button14.Size = New Size(200, 91)
-        Button14.TabIndex = 3
-        Button14.TextAlignment = StringAlignment.Near
-        Button14.UseVisualStyleBackColor = False
-        Button14.VerticalPadding = 6F
-        ' 
-        ' Button15
-        ' 
-        Button15.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
-        Button15.BevelStyle = Border3DStyle.SunkenOuter
-        Button15.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button15.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button15.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button15.FlatStyle = FlatStyle.Flat
-        Button15.Location = New Point(813, 239)
-        Button15.Margin = New Padding(0)
-        Button15.Name = "Button15"
-        Button15.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button15.Size = New Size(200, 91)
-        Button15.TabIndex = 3
-        Button15.TextAlignment = StringAlignment.Near
-        Button15.UseVisualStyleBackColor = False
-        Button15.VerticalPadding = 6F
-        ' 
-        ' Button16
-        ' 
-        Button16.BackColor = Color.White
-        Button16.BevelStyle = Border3DStyle.SunkenOuter
-        Button16.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button16.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button16.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button16.FlatStyle = FlatStyle.Flat
-        Button16.Location = New Point(13, 330)
-        Button16.Margin = New Padding(0)
-        Button16.Name = "Button16"
-        Button16.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button16.Size = New Size(200, 91)
-        Button16.TabIndex = 3
-        Button16.TextAlignment = StringAlignment.Near
-        Button16.UseVisualStyleBackColor = False
-        Button16.VerticalPadding = 6F
-        ' 
-        ' Button17
-        ' 
-        Button17.BackColor = Color.White
-        Button17.BevelStyle = Border3DStyle.SunkenOuter
-        Button17.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button17.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button17.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button17.FlatStyle = FlatStyle.Flat
-        Button17.Location = New Point(413, 330)
-        Button17.Margin = New Padding(0)
-        Button17.Name = "Button17"
-        Button17.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button17.Size = New Size(200, 91)
-        Button17.TabIndex = 3
-        Button17.TextAlignment = StringAlignment.Near
-        Button17.UseVisualStyleBackColor = False
-        Button17.VerticalPadding = 6F
-        ' 
-        ' Button18
-        ' 
-        Button18.BackColor = Color.White
-        Button18.BevelStyle = Border3DStyle.SunkenOuter
-        Button18.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button18.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button18.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button18.FlatStyle = FlatStyle.Flat
-        Button18.Location = New Point(213, 330)
-        Button18.Margin = New Padding(0)
-        Button18.Name = "Button18"
-        Button18.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button18.Size = New Size(200, 91)
-        Button18.TabIndex = 3
-        Button18.TextAlignment = StringAlignment.Near
-        Button18.UseVisualStyleBackColor = False
-        Button18.VerticalPadding = 6F
-        ' 
-        ' Button19
-        ' 
-        Button19.BackColor = Color.White
-        Button19.BevelStyle = Border3DStyle.SunkenOuter
-        Button19.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button19.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button19.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button19.FlatStyle = FlatStyle.Flat
-        Button19.Location = New Point(613, 330)
-        Button19.Margin = New Padding(0)
-        Button19.Name = "Button19"
-        Button19.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button19.Size = New Size(200, 91)
-        Button19.TabIndex = 3
-        Button19.TextAlignment = StringAlignment.Near
-        Button19.UseVisualStyleBackColor = False
-        Button19.VerticalPadding = 6F
-        ' 
-        ' Button20
-        ' 
-        Button20.BackColor = Color.White
-        Button20.BevelStyle = Border3DStyle.SunkenOuter
-        Button20.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button20.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button20.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button20.FlatStyle = FlatStyle.Flat
-        Button20.Location = New Point(813, 330)
-        Button20.Margin = New Padding(0)
-        Button20.Name = "Button20"
-        Button20.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button20.Size = New Size(200, 91)
-        Button20.TabIndex = 3
-        Button20.TextAlignment = StringAlignment.Near
-        Button20.UseVisualStyleBackColor = False
-        Button20.VerticalPadding = 6F
-        ' 
-        ' Button21
-        ' 
-        Button21.BackColor = Color.White
-        Button21.BevelStyle = Border3DStyle.SunkenOuter
-        Button21.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button21.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button21.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button21.FlatStyle = FlatStyle.Flat
-        Button21.Location = New Point(13, 421)
-        Button21.Margin = New Padding(0)
-        Button21.Name = "Button21"
-        Button21.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button21.Size = New Size(200, 91)
-        Button21.TabIndex = 3
-        Button21.TextAlignment = StringAlignment.Near
-        Button21.UseVisualStyleBackColor = False
-        Button21.VerticalPadding = 6F
-        ' 
-        ' Button22
-        ' 
-        Button22.BackColor = Color.White
-        Button22.BevelStyle = Border3DStyle.SunkenOuter
-        Button22.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button22.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button22.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button22.FlatStyle = FlatStyle.Flat
-        Button22.Location = New Point(413, 421)
-        Button22.Margin = New Padding(0)
-        Button22.Name = "Button22"
-        Button22.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button22.Size = New Size(200, 91)
-        Button22.TabIndex = 3
-        Button22.TextAlignment = StringAlignment.Near
-        Button22.UseVisualStyleBackColor = False
-        Button22.VerticalPadding = 6F
-        ' 
-        ' Button23
-        ' 
-        Button23.BackColor = Color.White
-        Button23.BevelStyle = Border3DStyle.SunkenOuter
-        Button23.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button23.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button23.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button23.FlatStyle = FlatStyle.Flat
-        Button23.Location = New Point(213, 421)
-        Button23.Margin = New Padding(0)
-        Button23.Name = "Button23"
-        Button23.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button23.Size = New Size(200, 91)
-        Button23.TabIndex = 3
-        Button23.TextAlignment = StringAlignment.Near
-        Button23.UseVisualStyleBackColor = False
-        Button23.VerticalPadding = 6F
-        ' 
-        ' Button24
-        ' 
-        Button24.BackColor = Color.White
-        Button24.BevelStyle = Border3DStyle.SunkenOuter
-        Button24.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button24.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button24.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button24.FlatStyle = FlatStyle.Flat
-        Button24.Location = New Point(613, 421)
-        Button24.Margin = New Padding(0)
-        Button24.Name = "Button24"
-        Button24.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button24.Size = New Size(200, 91)
-        Button24.TabIndex = 3
-        Button24.TextAlignment = StringAlignment.Near
-        Button24.UseVisualStyleBackColor = False
-        Button24.VerticalPadding = 6F
-        ' 
-        ' Button25
-        ' 
-        Button25.BackColor = Color.White
-        Button25.BevelStyle = Border3DStyle.SunkenOuter
-        Button25.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
-        Button25.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button25.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button25.FlatStyle = FlatStyle.Flat
-        Button25.Location = New Point(813, 421)
-        Button25.Margin = New Padding(0)
-        Button25.Name = "Button25"
-        Button25.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button25.Size = New Size(200, 91)
-        Button25.TabIndex = 3
-        Button25.TextAlignment = StringAlignment.Near
-        Button25.UseVisualStyleBackColor = False
-        Button25.VerticalPadding = 6F
-        ' 
-        ' Button26
-        ' 
-        Button26.BackColor = Color.Silver
-        Button26.BevelStyle = Border3DStyle.SunkenOuter
-        Button26.DisplayText = ""
-        Button26.Enabled = False
-        Button26.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button26.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button26.FlatStyle = FlatStyle.Flat
-        Button26.Location = New Point(13, 512)
-        Button26.Margin = New Padding(0)
-        Button26.Name = "Button26"
-        Button26.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button26.Size = New Size(200, 91)
-        Button26.TabIndex = 3
-        Button26.TextAlignment = StringAlignment.Near
-        Button26.UseVisualStyleBackColor = False
-        Button26.VerticalPadding = 6F
-        ' 
-        ' Button27
-        ' 
-        Button27.BackColor = Color.Silver
-        Button27.BevelStyle = Border3DStyle.SunkenOuter
-        Button27.DisplayText = ""
-        Button27.Enabled = False
-        Button27.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button27.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button27.FlatStyle = FlatStyle.Flat
-        Button27.Location = New Point(413, 512)
-        Button27.Margin = New Padding(0)
-        Button27.Name = "Button27"
-        Button27.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button27.Size = New Size(200, 91)
-        Button27.TabIndex = 3
-        Button27.TextAlignment = StringAlignment.Near
-        Button27.UseVisualStyleBackColor = False
-        Button27.VerticalPadding = 6F
-        ' 
-        ' Button28
-        ' 
-        Button28.BackColor = Color.Silver
-        Button28.BevelStyle = Border3DStyle.SunkenOuter
-        Button28.DisplayText = ""
-        Button28.Enabled = False
-        Button28.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button28.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button28.FlatStyle = FlatStyle.Flat
-        Button28.Location = New Point(213, 512)
-        Button28.Margin = New Padding(0)
-        Button28.Name = "Button28"
-        Button28.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button28.Size = New Size(200, 91)
-        Button28.TabIndex = 3
-        Button28.TextAlignment = StringAlignment.Near
-        Button28.UseVisualStyleBackColor = False
-        Button28.VerticalPadding = 6F
-        ' 
-        ' Button29
-        ' 
-        Button29.BackColor = Color.Silver
-        Button29.BevelStyle = Border3DStyle.SunkenOuter
-        Button29.DisplayText = ""
-        Button29.Enabled = False
-        Button29.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button29.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button29.FlatStyle = FlatStyle.Flat
-        Button29.Location = New Point(613, 512)
-        Button29.Margin = New Padding(0)
-        Button29.Name = "Button29"
-        Button29.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button29.Size = New Size(200, 91)
-        Button29.TabIndex = 3
-        Button29.TextAlignment = StringAlignment.Near
-        Button29.UseVisualStyleBackColor = False
-        Button29.VerticalPadding = 6F
-        ' 
-        ' Button30
-        ' 
-        Button30.BackColor = Color.Silver
-        Button30.BevelStyle = Border3DStyle.SunkenOuter
-        Button30.DisplayText = ""
-        Button30.Enabled = False
-        Button30.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button30.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button30.FlatStyle = FlatStyle.Flat
-        Button30.Location = New Point(813, 512)
-        Button30.Margin = New Padding(0)
-        Button30.Name = "Button30"
-        Button30.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button30.Size = New Size(200, 91)
-        Button30.TabIndex = 3
-        Button30.TextAlignment = StringAlignment.Near
-        Button30.UseVisualStyleBackColor = False
-        Button30.VerticalPadding = 6F
-        ' 
-        ' Button31
-        ' 
-        Button31.BackColor = Color.Silver
-        Button31.BevelStyle = Border3DStyle.SunkenOuter
-        Button31.DisplayText = ""
-        Button31.Enabled = False
-        Button31.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button31.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button31.FlatStyle = FlatStyle.Flat
-        Button31.Location = New Point(13, 603)
-        Button31.Margin = New Padding(0)
-        Button31.Name = "Button31"
-        Button31.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button31.Size = New Size(200, 91)
-        Button31.TabIndex = 3
-        Button31.TextAlignment = StringAlignment.Near
-        Button31.UseVisualStyleBackColor = False
-        Button31.VerticalPadding = 6F
-        ' 
-        ' Button32
-        ' 
-        Button32.BackColor = Color.Silver
-        Button32.BevelStyle = Border3DStyle.SunkenOuter
-        Button32.DisplayText = ""
-        Button32.Enabled = False
-        Button32.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button32.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button32.FlatStyle = FlatStyle.Flat
-        Button32.Location = New Point(413, 603)
-        Button32.Margin = New Padding(0)
-        Button32.Name = "Button32"
-        Button32.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button32.Size = New Size(200, 91)
-        Button32.TabIndex = 3
-        Button32.TextAlignment = StringAlignment.Near
-        Button32.UseVisualStyleBackColor = False
-        Button32.VerticalPadding = 6F
-        ' 
-        ' Button33
-        ' 
-        Button33.BackColor = Color.Silver
-        Button33.BevelStyle = Border3DStyle.SunkenOuter
-        Button33.DisplayText = ""
-        Button33.Enabled = False
-        Button33.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button33.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button33.FlatStyle = FlatStyle.Flat
-        Button33.Location = New Point(213, 603)
-        Button33.Margin = New Padding(0)
-        Button33.Name = "Button33"
-        Button33.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button33.Size = New Size(200, 91)
-        Button33.TabIndex = 3
-        Button33.TextAlignment = StringAlignment.Near
-        Button33.UseVisualStyleBackColor = False
-        Button33.VerticalPadding = 6F
-        ' 
-        ' Button34
-        ' 
-        Button34.BackColor = Color.Silver
-        Button34.BevelStyle = Border3DStyle.SunkenOuter
-        Button34.DisplayText = ""
-        Button34.Enabled = False
-        Button34.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button34.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button34.FlatStyle = FlatStyle.Flat
-        Button34.Location = New Point(613, 603)
-        Button34.Margin = New Padding(0)
-        Button34.Name = "Button34"
-        Button34.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button34.Size = New Size(200, 91)
-        Button34.TabIndex = 3
-        Button34.TextAlignment = StringAlignment.Near
-        Button34.UseVisualStyleBackColor = False
-        Button34.VerticalPadding = 6F
-        ' 
-        ' Button35
-        ' 
-        Button35.BackColor = Color.Silver
-        Button35.BevelStyle = Border3DStyle.SunkenOuter
-        Button35.DisplayText = ""
-        Button35.Enabled = False
-        Button35.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
-        Button35.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        Button35.FlatStyle = FlatStyle.Flat
-        Button35.Location = New Point(813, 603)
-        Button35.Margin = New Padding(0)
-        Button35.Name = "Button35"
-        Button35.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
-        Button35.Size = New Size(200, 91)
-        Button35.TabIndex = 3
-        Button35.TextAlignment = StringAlignment.Near
-        Button35.UseVisualStyleBackColor = False
-        Button35.VerticalPadding = 6F
+        ' room_button_1
+        ' 
+        room_button_1.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_1.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_1.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_1.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_1.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_1.FlatStyle = FlatStyle.Flat
+        room_button_1.Location = New Point(213, 57)
+        room_button_1.Margin = New Padding(0)
+        room_button_1.Name = "room_button_1"
+        room_button_1.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_1.Size = New Size(200, 91)
+        room_button_1.TabIndex = 3
+        room_button_1.TextAlignment = StringAlignment.Near
+        room_button_1.UseVisualStyleBackColor = False
+        room_button_1.VerticalPadding = 6F
+        ' 
+        ' room_button_2
+        ' 
+        room_button_2.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_2.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_2.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_2.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_2.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_2.FlatStyle = FlatStyle.Flat
+        room_button_2.Location = New Point(413, 57)
+        room_button_2.Margin = New Padding(0)
+        room_button_2.Name = "room_button_2"
+        room_button_2.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_2.Size = New Size(200, 91)
+        room_button_2.TabIndex = 3
+        room_button_2.TextAlignment = StringAlignment.Near
+        room_button_2.UseVisualStyleBackColor = False
+        room_button_2.VerticalPadding = 6F
+        ' 
+        ' room_button_3
+        ' 
+        room_button_3.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_3.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_3.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_3.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_3.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_3.FlatStyle = FlatStyle.Flat
+        room_button_3.Location = New Point(613, 57)
+        room_button_3.Margin = New Padding(0)
+        room_button_3.Name = "room_button_3"
+        room_button_3.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_3.Size = New Size(200, 91)
+        room_button_3.TabIndex = 3
+        room_button_3.TextAlignment = StringAlignment.Near
+        room_button_3.UseVisualStyleBackColor = False
+        room_button_3.VerticalPadding = 6F
+        ' 
+        ' room_button_4
+        ' 
+        room_button_4.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_4.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_4.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_4.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_4.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_4.FlatStyle = FlatStyle.Flat
+        room_button_4.Location = New Point(813, 57)
+        room_button_4.Margin = New Padding(0)
+        room_button_4.Name = "room_button_4"
+        room_button_4.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_4.Size = New Size(200, 91)
+        room_button_4.TabIndex = 3
+        room_button_4.TextAlignment = StringAlignment.Near
+        room_button_4.UseVisualStyleBackColor = False
+        room_button_4.VerticalPadding = 6F
+        ' 
+        ' room_button_5
+        ' 
+        room_button_5.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_5.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_5.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_5.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_5.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_5.FlatStyle = FlatStyle.Flat
+        room_button_5.Location = New Point(13, 148)
+        room_button_5.Margin = New Padding(0)
+        room_button_5.Name = "room_button_5"
+        room_button_5.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_5.Size = New Size(200, 91)
+        room_button_5.TabIndex = 3
+        room_button_5.TextAlignment = StringAlignment.Near
+        room_button_5.UseVisualStyleBackColor = False
+        room_button_5.VerticalPadding = 6F
+        ' 
+        ' room_button_7
+        ' 
+        room_button_7.BackColor = Color.White
+        room_button_7.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_7.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_7.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_7.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_7.FlatStyle = FlatStyle.Flat
+        room_button_7.Location = New Point(413, 148)
+        room_button_7.Margin = New Padding(0)
+        room_button_7.Name = "room_button_7"
+        room_button_7.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_7.Size = New Size(200, 91)
+        room_button_7.TabIndex = 3
+        room_button_7.TextAlignment = StringAlignment.Near
+        room_button_7.UseVisualStyleBackColor = False
+        room_button_7.VerticalPadding = 6F
+        ' 
+        ' room_button_6
+        ' 
+        room_button_6.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_6.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_6.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_6.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_6.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_6.FlatStyle = FlatStyle.Flat
+        room_button_6.Location = New Point(213, 148)
+        room_button_6.Margin = New Padding(0)
+        room_button_6.Name = "room_button_6"
+        room_button_6.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_6.Size = New Size(200, 91)
+        room_button_6.TabIndex = 3
+        room_button_6.TextAlignment = StringAlignment.Near
+        room_button_6.UseVisualStyleBackColor = False
+        room_button_6.VerticalPadding = 6F
+        ' 
+        ' room_button_8
+        ' 
+        room_button_8.BackColor = Color.White
+        room_button_8.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_8.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_8.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_8.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_8.FlatStyle = FlatStyle.Flat
+        room_button_8.Location = New Point(613, 148)
+        room_button_8.Margin = New Padding(0)
+        room_button_8.Name = "room_button_8"
+        room_button_8.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_8.Size = New Size(200, 91)
+        room_button_8.TabIndex = 3
+        room_button_8.TextAlignment = StringAlignment.Near
+        room_button_8.UseVisualStyleBackColor = False
+        room_button_8.VerticalPadding = 6F
+        ' 
+        ' room_button_9
+        ' 
+        room_button_9.BackColor = Color.White
+        room_button_9.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_9.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_9.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_9.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_9.FlatStyle = FlatStyle.Flat
+        room_button_9.Location = New Point(813, 148)
+        room_button_9.Margin = New Padding(0)
+        room_button_9.Name = "room_button_9"
+        room_button_9.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_9.Size = New Size(200, 91)
+        room_button_9.TabIndex = 3
+        room_button_9.TextAlignment = StringAlignment.Near
+        room_button_9.UseVisualStyleBackColor = False
+        room_button_9.VerticalPadding = 6F
+        ' 
+        ' room_button_10
+        ' 
+        room_button_10.BackColor = Color.White
+        room_button_10.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_10.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_10.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_10.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_10.FlatStyle = FlatStyle.Flat
+        room_button_10.Location = New Point(13, 239)
+        room_button_10.Margin = New Padding(0)
+        room_button_10.Name = "room_button_10"
+        room_button_10.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_10.Size = New Size(200, 91)
+        room_button_10.TabIndex = 3
+        room_button_10.TextAlignment = StringAlignment.Near
+        room_button_10.UseVisualStyleBackColor = False
+        room_button_10.VerticalPadding = 6F
+        ' 
+        ' room_button_12
+        ' 
+        room_button_12.BackColor = Color.White
+        room_button_12.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_12.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_12.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_12.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_12.FlatStyle = FlatStyle.Flat
+        room_button_12.Location = New Point(413, 239)
+        room_button_12.Margin = New Padding(0)
+        room_button_12.Name = "room_button_12"
+        room_button_12.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_12.Size = New Size(200, 91)
+        room_button_12.TabIndex = 3
+        room_button_12.TextAlignment = StringAlignment.Near
+        room_button_12.UseVisualStyleBackColor = False
+        room_button_12.VerticalPadding = 6F
+        ' 
+        ' room_button_11
+        ' 
+        room_button_11.BackColor = Color.White
+        room_button_11.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_11.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_11.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_11.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_11.FlatStyle = FlatStyle.Flat
+        room_button_11.Location = New Point(213, 239)
+        room_button_11.Margin = New Padding(0)
+        room_button_11.Name = "room_button_11"
+        room_button_11.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_11.Size = New Size(200, 91)
+        room_button_11.TabIndex = 3
+        room_button_11.TextAlignment = StringAlignment.Near
+        room_button_11.UseVisualStyleBackColor = False
+        room_button_11.VerticalPadding = 6F
+        ' 
+        ' room_button_13
+        ' 
+        room_button_13.BackColor = Color.White
+        room_button_13.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_13.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_13.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_13.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_13.FlatStyle = FlatStyle.Flat
+        room_button_13.Location = New Point(613, 239)
+        room_button_13.Margin = New Padding(0)
+        room_button_13.Name = "room_button_13"
+        room_button_13.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_13.Size = New Size(200, 91)
+        room_button_13.TabIndex = 3
+        room_button_13.TextAlignment = StringAlignment.Near
+        room_button_13.UseVisualStyleBackColor = False
+        room_button_13.VerticalPadding = 6F
+        ' 
+        ' room_button_14
+        ' 
+        room_button_14.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
+        room_button_14.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_14.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_14.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_14.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_14.FlatStyle = FlatStyle.Flat
+        room_button_14.Location = New Point(813, 239)
+        room_button_14.Margin = New Padding(0)
+        room_button_14.Name = "room_button_14"
+        room_button_14.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_14.Size = New Size(200, 91)
+        room_button_14.TabIndex = 3
+        room_button_14.TextAlignment = StringAlignment.Near
+        room_button_14.UseVisualStyleBackColor = False
+        room_button_14.VerticalPadding = 6F
+        ' 
+        ' room_button_15
+        ' 
+        room_button_15.BackColor = Color.White
+        room_button_15.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_15.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_15.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_15.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_15.FlatStyle = FlatStyle.Flat
+        room_button_15.Location = New Point(13, 330)
+        room_button_15.Margin = New Padding(0)
+        room_button_15.Name = "room_button_15"
+        room_button_15.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_15.Size = New Size(200, 91)
+        room_button_15.TabIndex = 3
+        room_button_15.TextAlignment = StringAlignment.Near
+        room_button_15.UseVisualStyleBackColor = False
+        room_button_15.VerticalPadding = 6F
+        ' 
+        ' room_button_17
+        ' 
+        room_button_17.BackColor = Color.White
+        room_button_17.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_17.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_17.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_17.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_17.FlatStyle = FlatStyle.Flat
+        room_button_17.Location = New Point(413, 330)
+        room_button_17.Margin = New Padding(0)
+        room_button_17.Name = "room_button_17"
+        room_button_17.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_17.Size = New Size(200, 91)
+        room_button_17.TabIndex = 3
+        room_button_17.TextAlignment = StringAlignment.Near
+        room_button_17.UseVisualStyleBackColor = False
+        room_button_17.VerticalPadding = 6F
+        ' 
+        ' room_button_16
+        ' 
+        room_button_16.BackColor = Color.White
+        room_button_16.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_16.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_16.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_16.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_16.FlatStyle = FlatStyle.Flat
+        room_button_16.Location = New Point(213, 330)
+        room_button_16.Margin = New Padding(0)
+        room_button_16.Name = "room_button_16"
+        room_button_16.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_16.Size = New Size(200, 91)
+        room_button_16.TabIndex = 3
+        room_button_16.TextAlignment = StringAlignment.Near
+        room_button_16.UseVisualStyleBackColor = False
+        room_button_16.VerticalPadding = 6F
+        ' 
+        ' room_button_18
+        ' 
+        room_button_18.BackColor = Color.White
+        room_button_18.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_18.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_18.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_18.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_18.FlatStyle = FlatStyle.Flat
+        room_button_18.Location = New Point(613, 330)
+        room_button_18.Margin = New Padding(0)
+        room_button_18.Name = "room_button_18"
+        room_button_18.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_18.Size = New Size(200, 91)
+        room_button_18.TabIndex = 3
+        room_button_18.TextAlignment = StringAlignment.Near
+        room_button_18.UseVisualStyleBackColor = False
+        room_button_18.VerticalPadding = 6F
+        ' 
+        ' room_button_19
+        ' 
+        room_button_19.BackColor = Color.White
+        room_button_19.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_19.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_19.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_19.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_19.FlatStyle = FlatStyle.Flat
+        room_button_19.Location = New Point(813, 330)
+        room_button_19.Margin = New Padding(0)
+        room_button_19.Name = "room_button_19"
+        room_button_19.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_19.Size = New Size(200, 91)
+        room_button_19.TabIndex = 3
+        room_button_19.TextAlignment = StringAlignment.Near
+        room_button_19.UseVisualStyleBackColor = False
+        room_button_19.VerticalPadding = 6F
+        ' 
+        ' room_button_20
+        ' 
+        room_button_20.BackColor = Color.White
+        room_button_20.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_20.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_20.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_20.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_20.FlatStyle = FlatStyle.Flat
+        room_button_20.Location = New Point(13, 421)
+        room_button_20.Margin = New Padding(0)
+        room_button_20.Name = "room_button_20"
+        room_button_20.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_20.Size = New Size(200, 91)
+        room_button_20.TabIndex = 3
+        room_button_20.TextAlignment = StringAlignment.Near
+        room_button_20.UseVisualStyleBackColor = False
+        room_button_20.VerticalPadding = 6F
+        ' 
+        ' room_button_22
+        ' 
+        room_button_22.BackColor = Color.White
+        room_button_22.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_22.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_22.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_22.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_22.FlatStyle = FlatStyle.Flat
+        room_button_22.Location = New Point(413, 421)
+        room_button_22.Margin = New Padding(0)
+        room_button_22.Name = "room_button_22"
+        room_button_22.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_22.Size = New Size(200, 91)
+        room_button_22.TabIndex = 3
+        room_button_22.TextAlignment = StringAlignment.Near
+        room_button_22.UseVisualStyleBackColor = False
+        room_button_22.VerticalPadding = 6F
+        ' 
+        ' room_button_21
+        ' 
+        room_button_21.BackColor = Color.White
+        room_button_21.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_21.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_21.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_21.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_21.FlatStyle = FlatStyle.Flat
+        room_button_21.Location = New Point(213, 421)
+        room_button_21.Margin = New Padding(0)
+        room_button_21.Name = "room_button_21"
+        room_button_21.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_21.Size = New Size(200, 91)
+        room_button_21.TabIndex = 3
+        room_button_21.TextAlignment = StringAlignment.Near
+        room_button_21.UseVisualStyleBackColor = False
+        room_button_21.VerticalPadding = 6F
+        ' 
+        ' room_button_23
+        ' 
+        room_button_23.BackColor = Color.White
+        room_button_23.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_23.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_23.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_23.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_23.FlatStyle = FlatStyle.Flat
+        room_button_23.Location = New Point(613, 421)
+        room_button_23.Margin = New Padding(0)
+        room_button_23.Name = "room_button_23"
+        room_button_23.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_23.Size = New Size(200, 91)
+        room_button_23.TabIndex = 3
+        room_button_23.TextAlignment = StringAlignment.Near
+        room_button_23.UseVisualStyleBackColor = False
+        room_button_23.VerticalPadding = 6F
+        ' 
+        ' room_button_24
+        ' 
+        room_button_24.BackColor = Color.White
+        room_button_24.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_24.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
+        room_button_24.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_24.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_24.FlatStyle = FlatStyle.Flat
+        room_button_24.Location = New Point(813, 421)
+        room_button_24.Margin = New Padding(0)
+        room_button_24.Name = "room_button_24"
+        room_button_24.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_24.Size = New Size(200, 91)
+        room_button_24.TabIndex = 3
+        room_button_24.TextAlignment = StringAlignment.Near
+        room_button_24.UseVisualStyleBackColor = False
+        room_button_24.VerticalPadding = 6F
+        ' 
+        ' room_button_25
+        ' 
+        room_button_25.BackColor = Color.Silver
+        room_button_25.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_25.DisplayText = ""
+        room_button_25.Enabled = False
+        room_button_25.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_25.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_25.FlatStyle = FlatStyle.Flat
+        room_button_25.Location = New Point(13, 512)
+        room_button_25.Margin = New Padding(0)
+        room_button_25.Name = "room_button_25"
+        room_button_25.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_25.Size = New Size(200, 91)
+        room_button_25.TabIndex = 3
+        room_button_25.TextAlignment = StringAlignment.Near
+        room_button_25.UseVisualStyleBackColor = False
+        room_button_25.VerticalPadding = 6F
+        ' 
+        ' room_button_27
+        ' 
+        room_button_27.BackColor = Color.Silver
+        room_button_27.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_27.DisplayText = ""
+        room_button_27.Enabled = False
+        room_button_27.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_27.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_27.FlatStyle = FlatStyle.Flat
+        room_button_27.Location = New Point(413, 512)
+        room_button_27.Margin = New Padding(0)
+        room_button_27.Name = "room_button_27"
+        room_button_27.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_27.Size = New Size(200, 91)
+        room_button_27.TabIndex = 3
+        room_button_27.TextAlignment = StringAlignment.Near
+        room_button_27.UseVisualStyleBackColor = False
+        room_button_27.VerticalPadding = 6F
+        ' 
+        ' room_button_26
+        ' 
+        room_button_26.BackColor = Color.Silver
+        room_button_26.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_26.DisplayText = ""
+        room_button_26.Enabled = False
+        room_button_26.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_26.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_26.FlatStyle = FlatStyle.Flat
+        room_button_26.Location = New Point(213, 512)
+        room_button_26.Margin = New Padding(0)
+        room_button_26.Name = "room_button_26"
+        room_button_26.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_26.Size = New Size(200, 91)
+        room_button_26.TabIndex = 3
+        room_button_26.TextAlignment = StringAlignment.Near
+        room_button_26.UseVisualStyleBackColor = False
+        room_button_26.VerticalPadding = 6F
+        ' 
+        ' room_button_28
+        ' 
+        room_button_28.BackColor = Color.Silver
+        room_button_28.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_28.DisplayText = ""
+        room_button_28.Enabled = False
+        room_button_28.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_28.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_28.FlatStyle = FlatStyle.Flat
+        room_button_28.Location = New Point(613, 512)
+        room_button_28.Margin = New Padding(0)
+        room_button_28.Name = "room_button_28"
+        room_button_28.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_28.Size = New Size(200, 91)
+        room_button_28.TabIndex = 3
+        room_button_28.TextAlignment = StringAlignment.Near
+        room_button_28.UseVisualStyleBackColor = False
+        room_button_28.VerticalPadding = 6F
+        ' 
+        ' room_button_29
+        ' 
+        room_button_29.BackColor = Color.Silver
+        room_button_29.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_29.DisplayText = ""
+        room_button_29.Enabled = False
+        room_button_29.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_29.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_29.FlatStyle = FlatStyle.Flat
+        room_button_29.Location = New Point(813, 512)
+        room_button_29.Margin = New Padding(0)
+        room_button_29.Name = "room_button_29"
+        room_button_29.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_29.Size = New Size(200, 91)
+        room_button_29.TabIndex = 3
+        room_button_29.TextAlignment = StringAlignment.Near
+        room_button_29.UseVisualStyleBackColor = False
+        room_button_29.VerticalPadding = 6F
+        ' 
+        ' room_button_30
+        ' 
+        room_button_30.BackColor = Color.Silver
+        room_button_30.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_30.DisplayText = ""
+        room_button_30.Enabled = False
+        room_button_30.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_30.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_30.FlatStyle = FlatStyle.Flat
+        room_button_30.Location = New Point(13, 603)
+        room_button_30.Margin = New Padding(0)
+        room_button_30.Name = "room_button_30"
+        room_button_30.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_30.Size = New Size(200, 91)
+        room_button_30.TabIndex = 3
+        room_button_30.TextAlignment = StringAlignment.Near
+        room_button_30.UseVisualStyleBackColor = False
+        room_button_30.VerticalPadding = 6F
+        ' 
+        ' room_button_32
+        ' 
+        room_button_32.BackColor = Color.Silver
+        room_button_32.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_32.DisplayText = ""
+        room_button_32.Enabled = False
+        room_button_32.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_32.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_32.FlatStyle = FlatStyle.Flat
+        room_button_32.Location = New Point(413, 603)
+        room_button_32.Margin = New Padding(0)
+        room_button_32.Name = "room_button_32"
+        room_button_32.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_32.Size = New Size(200, 91)
+        room_button_32.TabIndex = 3
+        room_button_32.TextAlignment = StringAlignment.Near
+        room_button_32.UseVisualStyleBackColor = False
+        room_button_32.VerticalPadding = 6F
+        ' 
+        ' room_button_31
+        ' 
+        room_button_31.BackColor = Color.Silver
+        room_button_31.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_31.DisplayText = ""
+        room_button_31.Enabled = False
+        room_button_31.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_31.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_31.FlatStyle = FlatStyle.Flat
+        room_button_31.Location = New Point(213, 603)
+        room_button_31.Margin = New Padding(0)
+        room_button_31.Name = "room_button_31"
+        room_button_31.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_31.Size = New Size(200, 91)
+        room_button_31.TabIndex = 3
+        room_button_31.TextAlignment = StringAlignment.Near
+        room_button_31.UseVisualStyleBackColor = False
+        room_button_31.VerticalPadding = 6F
+        ' 
+        ' room_button_33
+        ' 
+        room_button_33.BackColor = Color.Silver
+        room_button_33.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_33.DisplayText = ""
+        room_button_33.Enabled = False
+        room_button_33.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_33.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_33.FlatStyle = FlatStyle.Flat
+        room_button_33.Location = New Point(613, 603)
+        room_button_33.Margin = New Padding(0)
+        room_button_33.Name = "room_button_33"
+        room_button_33.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_33.Size = New Size(200, 91)
+        room_button_33.TabIndex = 3
+        room_button_33.TextAlignment = StringAlignment.Near
+        room_button_33.UseVisualStyleBackColor = False
+        room_button_33.VerticalPadding = 6F
+        ' 
+        ' room_button_34
+        ' 
+        room_button_34.BackColor = Color.Silver
+        room_button_34.BevelStyle = Border3DStyle.SunkenOuter
+        room_button_34.DisplayText = ""
+        room_button_34.Enabled = False
+        room_button_34.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
+        room_button_34.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        room_button_34.FlatStyle = FlatStyle.Flat
+        room_button_34.Location = New Point(813, 603)
+        room_button_34.Margin = New Padding(0)
+        room_button_34.Name = "room_button_34"
+        room_button_34.OtherLineFont = New Font("ＭＳ ゴシック", 10F, FontStyle.Bold)
+        room_button_34.Size = New Size(200, 91)
+        room_button_34.TabIndex = 3
+        room_button_34.TextAlignment = StringAlignment.Near
+        room_button_34.UseVisualStyleBackColor = False
+        room_button_34.VerticalPadding = 6F
         ' 
         ' menu_next_button
         ' 
@@ -974,70 +974,70 @@ Partial Class Form1
         Label1.TabIndex = 2
         Label1.Text = "フロア1"
         ' 
-        ' Form1
+        ' MainForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Black
         ClientSize = New Size(1024, 768)
-        Controls.Add(Button35)
-        Controls.Add(Button5)
+        Controls.Add(room_button_34)
+        Controls.Add(room_button_4)
         Controls.Add(operation_week_label)
-        Controls.Add(Button34)
+        Controls.Add(room_button_33)
         Controls.Add(operation_date_label)
-        Controls.Add(Button4)
+        Controls.Add(room_button_3)
         Controls.Add(Label1)
-        Controls.Add(Button30)
+        Controls.Add(room_button_29)
         Controls.Add(room_count_label)
-        Controls.Add(Button2)
+        Controls.Add(room_button_1)
         Controls.Add(register_no_label)
-        Controls.Add(Button29)
+        Controls.Add(room_button_28)
         Controls.Add(store_name_label)
-        Controls.Add(Button3)
+        Controls.Add(room_button_2)
         Controls.Add(store_no_label)
-        Controls.Add(Button25)
+        Controls.Add(room_button_24)
         Controls.Add(date_time_label)
         Controls.Add(room_button_0)
-        Controls.Add(Button24)
+        Controls.Add(room_button_23)
         Controls.Add(menu_button_8)
-        Controls.Add(Button20)
+        Controls.Add(room_button_19)
         Controls.Add(menu_button_7)
-        Controls.Add(Button19)
+        Controls.Add(room_button_18)
         Controls.Add(menu_button_6)
-        Controls.Add(Button33)
+        Controls.Add(room_button_31)
         Controls.Add(menu_button_5)
-        Controls.Add(Button15)
+        Controls.Add(room_button_14)
         Controls.Add(menu_button_4)
-        Controls.Add(Button28)
+        Controls.Add(room_button_26)
         Controls.Add(menu_button_3)
-        Controls.Add(Button14)
+        Controls.Add(room_button_13)
         Controls.Add(menu_button_2)
-        Controls.Add(Button23)
+        Controls.Add(room_button_21)
         Controls.Add(menu_button_1)
-        Controls.Add(Button10)
+        Controls.Add(room_button_9)
         Controls.Add(menu_button_0)
-        Controls.Add(Button18)
+        Controls.Add(room_button_16)
         Controls.Add(menu_next_button)
-        Controls.Add(Button32)
+        Controls.Add(room_button_32)
         Controls.Add(menu_exit_button)
-        Controls.Add(Button9)
-        Controls.Add(Button6)
-        Controls.Add(Button27)
-        Controls.Add(Button11)
-        Controls.Add(Button13)
-        Controls.Add(Button7)
-        Controls.Add(Button22)
-        Controls.Add(Button16)
-        Controls.Add(Button17)
-        Controls.Add(Button21)
-        Controls.Add(Button31)
-        Controls.Add(Button12)
-        Controls.Add(Button8)
-        Controls.Add(Button26)
+        Controls.Add(room_button_8)
+        Controls.Add(room_button_5)
+        Controls.Add(room_button_27)
+        Controls.Add(room_button_10)
+        Controls.Add(room_button_11)
+        Controls.Add(room_button_7)
+        Controls.Add(room_button_22)
+        Controls.Add(room_button_15)
+        Controls.Add(room_button_17)
+        Controls.Add(room_button_20)
+        Controls.Add(room_button_30)
+        Controls.Add(room_button_12)
+        Controls.Add(room_button_6)
+        Controls.Add(room_button_25)
         FormBorderStyle = FormBorderStyle.None
         KeyPreview = True
         Margin = New Padding(1)
-        Name = "Form1"
+        Name = "MainForm"
         Text = "Form1"
         TopMost = True
         WindowState = FormWindowState.Maximized
@@ -1054,40 +1054,40 @@ Partial Class Form1
     Friend WithEvents operation_week_label As Label
     Friend WithEvents room_count_label As Label
     Friend WithEvents room_button_0 As MultiLineButton
-    Friend WithEvents Button2 As MultiLineButton
-    Friend WithEvents Button3 As MultiLineButton
-    Friend WithEvents Button4 As MultiLineButton
-    Friend WithEvents Button5 As MultiLineButton
-    Friend WithEvents Button6 As MultiLineButton
-    Friend WithEvents Button7 As MultiLineButton
-    Friend WithEvents Button8 As MultiLineButton
-    Friend WithEvents Button9 As MultiLineButton
-    Friend WithEvents Button10 As MultiLineButton
-    Friend WithEvents Button11 As MultiLineButton
-    Friend WithEvents Button12 As MultiLineButton
-    Friend WithEvents Button13 As MultiLineButton
-    Friend WithEvents Button14 As MultiLineButton
-    Friend WithEvents Button15 As MultiLineButton
-    Friend WithEvents Button16 As MultiLineButton
-    Friend WithEvents Button17 As MultiLineButton
-    Friend WithEvents Button18 As MultiLineButton
-    Friend WithEvents Button19 As MultiLineButton
-    Friend WithEvents Button20 As MultiLineButton
-    Friend WithEvents Button21 As MultiLineButton
-    Friend WithEvents Button22 As MultiLineButton
-    Friend WithEvents Button23 As MultiLineButton
-    Friend WithEvents Button24 As MultiLineButton
-    Friend WithEvents Button25 As MultiLineButton
-    Friend WithEvents Button26 As MultiLineButton
-    Friend WithEvents Button27 As MultiLineButton
-    Friend WithEvents Button28 As MultiLineButton
-    Friend WithEvents Button29 As MultiLineButton
-    Friend WithEvents Button30 As MultiLineButton
-    Friend WithEvents Button31 As MultiLineButton
-    Friend WithEvents Button32 As MultiLineButton
-    Friend WithEvents Button33 As MultiLineButton
-    Friend WithEvents Button34 As MultiLineButton
-    Friend WithEvents Button35 As MultiLineButton
+    Friend WithEvents room_button_1 As MultiLineButton
+    Friend WithEvents room_button_2 As MultiLineButton
+    Friend WithEvents room_button_3 As MultiLineButton
+    Friend WithEvents room_button_4 As MultiLineButton
+    Friend WithEvents room_button_5 As MultiLineButton
+    Friend WithEvents room_button_7 As MultiLineButton
+    Friend WithEvents room_button_6 As MultiLineButton
+    Friend WithEvents room_button_8 As MultiLineButton
+    Friend WithEvents room_button_9 As MultiLineButton
+    Friend WithEvents room_button_10 As MultiLineButton
+    Friend WithEvents room_button_12 As MultiLineButton
+    Friend WithEvents room_button_11 As MultiLineButton
+    Friend WithEvents room_button_13 As MultiLineButton
+    Friend WithEvents room_button_14 As MultiLineButton
+    Friend WithEvents room_button_15 As MultiLineButton
+    Friend WithEvents room_button_17 As MultiLineButton
+    Friend WithEvents room_button_16 As MultiLineButton
+    Friend WithEvents room_button_18 As MultiLineButton
+    Friend WithEvents room_button_19 As MultiLineButton
+    Friend WithEvents room_button_20 As MultiLineButton
+    Friend WithEvents room_button_22 As MultiLineButton
+    Friend WithEvents room_button_21 As MultiLineButton
+    Friend WithEvents room_button_23 As MultiLineButton
+    Friend WithEvents room_button_24 As MultiLineButton
+    Friend WithEvents room_button_25 As MultiLineButton
+    Friend WithEvents room_button_27 As MultiLineButton
+    Friend WithEvents room_button_26 As MultiLineButton
+    Friend WithEvents room_button_28 As MultiLineButton
+    Friend WithEvents room_button_29 As MultiLineButton
+    Friend WithEvents room_button_30 As MultiLineButton
+    Friend WithEvents room_button_32 As MultiLineButton
+    Friend WithEvents room_button_31 As MultiLineButton
+    Friend WithEvents room_button_33 As MultiLineButton
+    Friend WithEvents room_button_34 As MultiLineButton
     Friend WithEvents menu_next_button As Button
     Friend WithEvents menu_button_0 As Button
     Friend WithEvents menu_button_1 As Button
