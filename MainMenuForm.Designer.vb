@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class MainForm
+Partial Class MainMenuForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -974,7 +974,7 @@ Partial Class MainForm
         Label1.TabIndex = 2
         Label1.Text = "フロア1"
         ' 
-        ' MainForm
+        ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -1037,7 +1037,7 @@ Partial Class MainForm
         FormBorderStyle = FormBorderStyle.None
         KeyPreview = True
         Margin = New Padding(1)
-        Name = "MainForm"
+        Name = "Form1"
         Text = "Form1"
         TopMost = True
         WindowState = FormWindowState.Maximized

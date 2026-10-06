@@ -1,6 +1,6 @@
 ﻿Imports System.Linq
 
-Public Class MainForm
+Public Class MainMenuForm
 
     ' デザイナーで配置した時の基準サイズ（Form1.Designer.vb の ClientSize と合わせる）
     Private ReadOnly DesignSize As New Size(1024, 768)
@@ -97,5 +97,13 @@ Public Class MainForm
             Me.TopMost = True
             UpdateRoomButtonTexts()
         End If
+    End Sub
+
+    Private Sub menu_button_7_Click(sender As Object, e As EventArgs) Handles menu_button_7.Click
+        Dim saver As New ScreenSaverForm()
+        AddHandler saver.Dismissed, Sub(senderArg, eArg)
+                                        ' 操作を検知したときに実行したい処理
+                                    End Sub
+        saver.Show(Me)   ' ShowDialogではなくShowを使う
     End Sub
 End Class
