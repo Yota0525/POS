@@ -46,7 +46,14 @@
         End If
     End Sub
 
-    Private Sub exit_button_Click(sender As Object, e As EventArgs) Handles exit_button.Click, Button36.Click, Button37.Click, Button38.Click, Button39.Click, Button40.Click, Button41.Click, Button42.Click, Button43.Click, Button44.Click, Button45.Click
-        Application.Exit
+    Private Sub exit_button_Click(sender As Object, e As EventArgs) Handles menu_exit_button.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub date_time_timer_Tick(sender As Object, e As EventArgs) Handles date_time_timer.Tick
+        Dim now_time As DateTime
+
+        now_time = DateTime.Now
+        date_time_label.Text = Format(now_time, "yyyy年MM月dd日 HH時mm分ss秒")
     End Sub
 End Class
