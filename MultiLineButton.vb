@@ -25,8 +25,12 @@ Public Class MultiLineButton
     Public Property FirstLineFont As New Font("ＭＳ ゴシック", 12, FontStyle.Bold)
     Public Property OtherLineFont As New Font("ＭＳ ゴシック", 10, FontStyle.Bold)
 
+    ' ボタンの枠を立体的な彫り込み/浮き出しスタイルで描画する（写真のようなへこんだ見た目にはSunkenOuterやEtchedが近い）
+    Public Property BevelStyle As Border3DStyle = Border3DStyle.SunkenOuter
+
     Public Sub New()
         Me.Text = "" ' 標準のテキスト描画は使わず、Linesを自前で描画する
+        Me.FlatAppearance.BorderSize = 0 ' 標準のフラット枠と二重にならないようにする
     End Sub
 
     ''' 改行区切りの1つの文字列からLinesを組み立てる（1行目=FirstLineFont、2行目以降=OtherLineFont）
@@ -47,7 +51,10 @@ Public Class MultiLineButton
     End Property
 
     Protected Overrides Sub OnPaint(e As PaintEventArgs)
-        MyBase.OnPaint(e) ' 背景・枠は標準描画のまま使う
+        MyBase.OnPaint(e) ' 背景（押下時のハイライト等）は標準描画のまま使う
+
+        ' 彫り込み/浮き出しの立体枠を描画する
+        ControlPaint.DrawBorder3D(e.Graphics, Me.ClientRectangle, BevelStyle)
 
         If Lines.Count = 0 Then Return
 
