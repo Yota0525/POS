@@ -25,43 +25,67 @@ Partial Class ScreenSaverPromptForm
         codeTextBox = New TextBox()
         closeButton = New Button()
         Label1 = New Label()
+        Label2 = New Label()
         SuspendLayout()
         ' 
         ' codeTextBox
         ' 
-        codeTextBox.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
-        codeTextBox.Location = New Point(20, 46)
-        codeTextBox.MaximumSize = New Size(320, 50)
-        codeTextBox.MinimumSize = New Size(320, 50)
+        codeTextBox.BorderStyle = BorderStyle.FixedSingle
+        codeTextBox.Font = New Font("ＭＳ ゴシック", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        codeTextBox.Location = New Point(227, 156)
+        codeTextBox.Margin = New Padding(0)
+        codeTextBox.MaximumSize = New Size(0, 29)
+        codeTextBox.MinimumSize = New Size(0, 29)
         codeTextBox.Name = "codeTextBox"
-        codeTextBox.Size = New Size(320, 50)
+        codeTextBox.Size = New Size(224, 29)
         codeTextBox.TabIndex = 0
         ' 
         ' closeButton
         ' 
         closeButton.BackColor = Color.White
-        closeButton.FlatStyle = FlatStyle.Flat
-        closeButton.Location = New Point(144, 120)
+        closeButton.Font = New Font("ＭＳ ゴシック", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        closeButton.Location = New Point(212, 230)
         closeButton.Name = "closeButton"
-        closeButton.Size = New Size(72, 68)
+        closeButton.Size = New Size(170, 68)
         closeButton.TabIndex = 1
+        closeButton.Text = "戻る"
         closeButton.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.BackColor = Color.Silver
-        Label1.Location = New Point(-10, -22)
+        Label1.BackColor = Color.White
+        Label1.BorderStyle = BorderStyle.FixedSingle
+        Label1.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        Label1.ForeColor = Color.Red
+        Label1.Location = New Point(31, 34)
         Label1.Name = "Label1"
-        Label1.Padding = New Padding(380, 50, 0, 0)
-        Label1.Size = New Size(380, 65)
+        Label1.Padding = New Padding(20, 40, 20, 40)
+        Label1.Size = New Size(532, 106)
         Label1.TabIndex = 2
+        Label1.Text = "担当者バーコードをスキャンしてください。"
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = Color.Silver
+        Label2.BorderStyle = BorderStyle.FixedSingle
+        Label2.Font = New Font("ＭＳ ゴシック", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        Label2.Location = New Point(126, 156)
+        Label2.Margin = New Padding(0)
+        Label2.Name = "Label2"
+        Label2.Padding = New Padding(10, 3, 10, 3)
+        Label2.Size = New Size(101, 29)
+        Label2.TabIndex = 3
+        Label2.Text = "担当者"
         ' 
         ' ScreenSaverPromptForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(360, 200)
+        BackColor = Color.White
+        ClientSize = New Size(595, 328)
+        Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(closeButton)
         Controls.Add(codeTextBox)
@@ -79,5 +103,6 @@ Partial Class ScreenSaverPromptForm
     Friend WithEvents codeTextBox As TextBox
     Friend WithEvents closeButton As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
 
 End Class

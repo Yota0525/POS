@@ -54,8 +54,36 @@ Public Module Database
                         FOREIGN KEY (room_type_code) REFERENCES room_types(room_type_code),
                         FOREIGN KEY (model_code) REFERENCES models(model_code)
                     );
+
+                    CREATE TABLE IF NOT EXISTS menu_buttons (
+                        sort_order INTEGER PRIMARY KEY,
+                        display_name TEXT NOT NULL,
+                        back_color TEXT NOT NULL,
+                        is_enabled INTEGER NOT NULL DEFAULT 1
+                    );
                 "
                 cmd.ExecuteNonQuery()
+            End Using
+
+            ' 既存のDBファイルで menu_buttons テーブルが is_enabled 列を持たないまま作成されている場合に備えた移行処理
+            Using cmd = conn.CreateCommand()
+                cmd.CommandText = "PRAGMA table_info(menu_buttons)"
+                Dim hasIsEnabled As Boolean = False
+                Using reader = cmd.ExecuteReader()
+                    While reader.Read()
+                        If reader("name").ToString() = "is_enabled" Then
+                            hasIsEnabled = True
+                            Exit While
+                        End If
+                    End While
+                End Using
+
+                If Not hasIsEnabled Then
+                    Using alterCmd = conn.CreateCommand()
+                        alterCmd.CommandText = "ALTER TABLE menu_buttons ADD COLUMN is_enabled INTEGER NOT NULL DEFAULT 1"
+                        alterCmd.ExecuteNonQuery()
+                    End Using
+                End If
             End Using
         End Using
     End Sub
@@ -233,6 +261,60 @@ Public Module Database
                 Return CInt(cmd.ExecuteScalar())
             End Using
         End Using
+    End Function
+
+    Public Function GetNextMenuButtonSortOrder() As Integer
+        Using conn = GetConnection()
+            Using cmd = conn.CreateCommand()
+                cmd.CommandText = "SELECT IFNULL(MAX(sort_order), -1) + 1 FROM menu_buttons"
+                Return CInt(cmd.ExecuteScalar())
+            End Using
+        End Using
+    End Function
+
+    ' --- メニューボタン用メソッド ---
+
+    Public Sub InsertMenuButton(sortOrder As Integer, displayName As String, backColor As String, isEnabled As Boolean)
+        Using conn = GetConnection()
+            Using cmd = conn.CreateCommand()
+                cmd.CommandText = "INSERT INTO menu_buttons (sort_order, display_name, back_color, is_enabled) VALUES ($order, $name, $color, $enabled)"
+                cmd.Parameters.AddWithValue("$order", sortOrder)
+                cmd.Parameters.AddWithValue("$name", displayName)
+                cmd.Parameters.AddWithValue("$color", backColor)
+                cmd.Parameters.AddWithValue("$enabled", If(isEnabled, 1, 0))
+                cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
+    ''' 表示順(主キー)自体の変更にも対応するため、更新対象を特定するoldSortOrderと、
+    ''' 新しく設定したい値newSortOrderを分けて受け取る
+    Public Sub UpdateMenuButton(oldSortOrder As Integer, newSortOrder As Integer, displayName As String, backColor As String, isEnabled As Boolean)
+        Using conn = GetConnection()
+            Using cmd = conn.CreateCommand()
+                cmd.CommandText = "UPDATE menu_buttons SET sort_order = $newOrder, display_name = $name, back_color = $color, is_enabled = $enabled WHERE sort_order = $oldOrder"
+                cmd.Parameters.AddWithValue("$oldOrder", oldSortOrder)
+                cmd.Parameters.AddWithValue("$newOrder", newSortOrder)
+                cmd.Parameters.AddWithValue("$name", displayName)
+                cmd.Parameters.AddWithValue("$color", backColor)
+                cmd.Parameters.AddWithValue("$enabled", If(isEnabled, 1, 0))
+                cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
+    Public Sub DeleteMenuButton(sortOrder As Integer)
+        Using conn = GetConnection()
+            Using cmd = conn.CreateCommand()
+                cmd.CommandText = "DELETE FROM menu_buttons WHERE sort_order = $order"
+                cmd.Parameters.AddWithValue("$order", sortOrder)
+                cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
+    Public Function GetAllMenuButtons() As DataTable
+        Return GetTable("SELECT sort_order, display_name, back_color, is_enabled FROM menu_buttons ORDER BY sort_order")
     End Function
 
     ' --- 一覧取得用メソッド ---

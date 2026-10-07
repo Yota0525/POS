@@ -5,9 +5,14 @@ Public Class MainMenuForm
     ' デザイナーで配置した時の基準サイズ（Form1.Designer.vb の ClientSize と合わせる）
     Private ReadOnly DesignSize As New Size(1024, 768)
 
+    ' メニューボタンの現在表示中のページ番号(0始まり)。1ページにつきボタン9個分
+    Private currentMenuPage As Integer = 0
+    Private Const MenuButtonsPerPage As Integer = 9
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Database.InitializeDatabase()
         UpdateRoomButtonTexts()
+        RefreshMenuButtons()
 
         ' 端末ごとに解像度が違うため、配置はそのままに実際の画面サイズへ拡大・縮小する
         Dim targetSize As Size = Screen.PrimaryScreen.Bounds.Size
@@ -68,6 +73,45 @@ Public Class MainMenuForm
         Next
     End Sub
 
+    ''' DBのメニューボタン情報(表示名・背景色)をもとに、現在のページ分(9個)をmenu_button_0〜8に反映する。
+    ''' 登録数がボタン数に満たないスロットは非表示相当(無効化・空表示)にする。
+    Private Sub RefreshMenuButtons()
+        Dim buttons() As Button = {
+            menu_button_0, menu_button_1, menu_button_2,
+            menu_button_3, menu_button_4, menu_button_5,
+            menu_button_6, menu_button_7, menu_button_8
+        }
+
+        Dim menuItems = Database.GetAllMenuButtons() ' sort_orderの昇順
+        Dim startIndex = currentMenuPage * MenuButtonsPerPage
+
+        For i = 0 To buttons.Length - 1
+            Dim rowIndex = startIndex + i
+            Dim btn = buttons(i)
+
+            If rowIndex < menuItems.Rows.Count Then
+                Dim row = menuItems.Rows(rowIndex)
+                btn.Text = row("display_name").ToString()
+                ' 無効として登録されたボタンでも背景色だけは反映し、クリックだけできないようにする
+                btn.BackColor = ColorTranslator.FromHtml(row("back_color").ToString())
+                btn.Enabled = CInt(row("is_enabled")) <> 0
+            Else
+                btn.Text = ""
+                btn.BackColor = SystemColors.Control
+                btn.Enabled = False
+            End If
+        Next
+    End Sub
+
+    Private Sub menu_next_button_Click(sender As Object, e As EventArgs) Handles menu_next_button.Click
+        Dim menuItems = Database.GetAllMenuButtons()
+        Dim totalPages = CInt(Math.Ceiling(menuItems.Rows.Count / CDbl(MenuButtonsPerPage)))
+        If totalPages <= 1 Then Return ' 1ページ以下しかない場合は何もしない
+
+        currentMenuPage = (currentMenuPage + 1) Mod totalPages
+        RefreshMenuButtons()
+    End Sub
+
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
         ' Alt+F4やタスクバー経由の終了操作を無効化し、業務フローからの明示的な終了のみ許可する
         If e.CloseReason = CloseReason.UserClosing Then
@@ -84,6 +128,19 @@ Public Class MainMenuForm
 
         now_time = DateTime.Now
         date_time_label.Text = Format(now_time, "yyyy年MM月dd日 HH時mm分ss秒")
+
+        operation_date_label.Text = "営業設定日:" & Format(now_time, "yyyy/MM/dd")
+
+        Select Case CInt(now_time.DayOfWeek)
+            Case 1 To 4
+                operation_week_label.Text = "曜日区分:月～木"
+            Case 5
+                operation_week_label.Text = "曜日区分:金"
+            Case 6
+                operation_week_label.Text = "曜日区分:土・祝中"
+            Case 0
+                operation_week_label.Text = "曜日区分:日・祝"
+        End Select
     End Sub
 
     ' 実際のPOS画面には配置しないマスタ管理画面を、Ctrl+Shift+Mで開く
@@ -96,14 +153,27 @@ Public Class MainMenuForm
             End Using
             Me.TopMost = True
             UpdateRoomButtonTexts()
+            RefreshMenuButtons()
         End If
     End Sub
 
     Private Sub menu_button_7_Click(sender As Object, e As EventArgs) Handles menu_button_7.Click
-        Dim saver As New ScreenSaverForm()
-        AddHandler saver.Dismissed, Sub(senderArg, eArg)
-                                        ' 操作を検知したときに実行したい処理
-                                    End Sub
-        saver.Show(Me)   ' ShowDialogではなくShowを使う
+        Select Case currentMenuPage
+            Case 0
+                Dim saver As New ScreenSaverForm()
+                AddHandler saver.Dismissed, Sub(senderArg, eArg)
+                                                ' 操作を検知したときに実行したい処理
+                                            End Sub
+                saver.Show(Me)   ' ShowDialogではなくShowを使う
+        End Select
+    End Sub
+
+    Private Sub menu_button_6_Click(sender As Object, e As EventArgs) Handles menu_button_6.Click
+        Select Case currentMenuPage
+            Case 3
+                Using cashCountForm As New CashCountCheckForm()
+                    cashCountForm.ShowDialog(Me)
+                End Using
+        End Select
     End Sub
 End Class

@@ -180,7 +180,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_0
         ' 
-        room_button_0.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
+        room_button_0.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_0.BevelStyle = Border3DStyle.SunkenOuter
         room_button_0.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_0.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -198,7 +198,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_1
         ' 
-        room_button_1.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_1.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_1.BevelStyle = Border3DStyle.SunkenOuter
         room_button_1.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_1.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -216,7 +216,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_2
         ' 
-        room_button_2.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_2.BevelStyle = Border3DStyle.SunkenOuter
         room_button_2.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_2.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -234,7 +234,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_3
         ' 
-        room_button_3.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_3.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_3.BevelStyle = Border3DStyle.SunkenOuter
         room_button_3.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_3.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -252,7 +252,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_4
         ' 
-        room_button_4.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_4.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_4.BevelStyle = Border3DStyle.SunkenOuter
         room_button_4.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_4.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -270,7 +270,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_5
         ' 
-        room_button_5.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_5.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_5.BevelStyle = Border3DStyle.SunkenOuter
         room_button_5.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_5.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -288,7 +288,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_7
         ' 
-        room_button_7.BackColor = Color.White
+        room_button_7.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_7.BevelStyle = Border3DStyle.SunkenOuter
         room_button_7.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_7.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -306,7 +306,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_6
         ' 
-        room_button_6.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        room_button_6.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_6.BevelStyle = Border3DStyle.SunkenOuter
         room_button_6.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_6.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -324,7 +324,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_8
         ' 
-        room_button_8.BackColor = Color.White
+        room_button_8.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_8.BevelStyle = Border3DStyle.SunkenOuter
         room_button_8.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_8.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -342,7 +342,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_9
         ' 
-        room_button_9.BackColor = Color.White
+        room_button_9.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_9.BevelStyle = Border3DStyle.SunkenOuter
         room_button_9.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_9.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -360,7 +360,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_10
         ' 
-        room_button_10.BackColor = Color.White
+        room_button_10.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_10.BevelStyle = Border3DStyle.SunkenOuter
         room_button_10.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_10.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -378,7 +378,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_12
         ' 
-        room_button_12.BackColor = Color.White
+        room_button_12.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_12.BevelStyle = Border3DStyle.SunkenOuter
         room_button_12.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_12.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -396,7 +396,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_11
         ' 
-        room_button_11.BackColor = Color.White
+        room_button_11.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_11.BevelStyle = Border3DStyle.SunkenOuter
         room_button_11.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_11.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -414,7 +414,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_13
         ' 
-        room_button_13.BackColor = Color.White
+        room_button_13.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_13.BevelStyle = Border3DStyle.SunkenOuter
         room_button_13.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_13.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -432,7 +432,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_14
         ' 
-        room_button_14.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(192))
+        room_button_14.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_14.BevelStyle = Border3DStyle.SunkenOuter
         room_button_14.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_14.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -450,7 +450,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_15
         ' 
-        room_button_15.BackColor = Color.White
+        room_button_15.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_15.BevelStyle = Border3DStyle.SunkenOuter
         room_button_15.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_15.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -468,7 +468,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_17
         ' 
-        room_button_17.BackColor = Color.White
+        room_button_17.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_17.BevelStyle = Border3DStyle.SunkenOuter
         room_button_17.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_17.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -486,7 +486,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_16
         ' 
-        room_button_16.BackColor = Color.White
+        room_button_16.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_16.BevelStyle = Border3DStyle.SunkenOuter
         room_button_16.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_16.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -504,7 +504,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_18
         ' 
-        room_button_18.BackColor = Color.White
+        room_button_18.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_18.BevelStyle = Border3DStyle.SunkenOuter
         room_button_18.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_18.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -522,7 +522,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_19
         ' 
-        room_button_19.BackColor = Color.White
+        room_button_19.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_19.BevelStyle = Border3DStyle.SunkenOuter
         room_button_19.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_19.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -540,7 +540,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_20
         ' 
-        room_button_20.BackColor = Color.White
+        room_button_20.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_20.BevelStyle = Border3DStyle.SunkenOuter
         room_button_20.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_20.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -558,7 +558,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_22
         ' 
-        room_button_22.BackColor = Color.White
+        room_button_22.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_22.BevelStyle = Border3DStyle.SunkenOuter
         room_button_22.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_22.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -576,7 +576,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_21
         ' 
-        room_button_21.BackColor = Color.White
+        room_button_21.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_21.BevelStyle = Border3DStyle.SunkenOuter
         room_button_21.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_21.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -594,7 +594,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_23
         ' 
-        room_button_23.BackColor = Color.White
+        room_button_23.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_23.BevelStyle = Border3DStyle.SunkenOuter
         room_button_23.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_23.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -612,7 +612,7 @@ Partial Class MainMenuForm
         ' 
         ' room_button_24
         ' 
-        room_button_24.BackColor = Color.White
+        room_button_24.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_24.BevelStyle = Border3DStyle.SunkenOuter
         room_button_24.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_24.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
@@ -630,10 +630,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_25
         ' 
-        room_button_25.BackColor = Color.Silver
+        room_button_25.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_25.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_25.DisplayText = ""
-        room_button_25.Enabled = False
+        room_button_25.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_25.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_25.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_25.FlatStyle = FlatStyle.Flat
@@ -649,10 +648,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_27
         ' 
-        room_button_27.BackColor = Color.Silver
+        room_button_27.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_27.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_27.DisplayText = ""
-        room_button_27.Enabled = False
+        room_button_27.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_27.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_27.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_27.FlatStyle = FlatStyle.Flat
@@ -668,10 +666,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_26
         ' 
-        room_button_26.BackColor = Color.Silver
+        room_button_26.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_26.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_26.DisplayText = ""
-        room_button_26.Enabled = False
+        room_button_26.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_26.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_26.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_26.FlatStyle = FlatStyle.Flat
@@ -687,10 +684,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_28
         ' 
-        room_button_28.BackColor = Color.Silver
+        room_button_28.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_28.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_28.DisplayText = ""
-        room_button_28.Enabled = False
+        room_button_28.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_28.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_28.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_28.FlatStyle = FlatStyle.Flat
@@ -706,10 +702,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_29
         ' 
-        room_button_29.BackColor = Color.Silver
+        room_button_29.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_29.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_29.DisplayText = ""
-        room_button_29.Enabled = False
+        room_button_29.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_29.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_29.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_29.FlatStyle = FlatStyle.Flat
@@ -725,10 +720,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_30
         ' 
-        room_button_30.BackColor = Color.Silver
+        room_button_30.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_30.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_30.DisplayText = ""
-        room_button_30.Enabled = False
+        room_button_30.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_30.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_30.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_30.FlatStyle = FlatStyle.Flat
@@ -744,10 +738,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_32
         ' 
-        room_button_32.BackColor = Color.Silver
+        room_button_32.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_32.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_32.DisplayText = ""
-        room_button_32.Enabled = False
+        room_button_32.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_32.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_32.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_32.FlatStyle = FlatStyle.Flat
@@ -763,10 +756,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_31
         ' 
-        room_button_31.BackColor = Color.Silver
+        room_button_31.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_31.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_31.DisplayText = ""
-        room_button_31.Enabled = False
+        room_button_31.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_31.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_31.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_31.FlatStyle = FlatStyle.Flat
@@ -782,10 +774,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_33
         ' 
-        room_button_33.BackColor = Color.Silver
+        room_button_33.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_33.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_33.DisplayText = ""
-        room_button_33.Enabled = False
+        room_button_33.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_33.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_33.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_33.FlatStyle = FlatStyle.Flat
@@ -801,10 +792,9 @@ Partial Class MainMenuForm
         ' 
         ' room_button_34
         ' 
-        room_button_34.BackColor = Color.Silver
+        room_button_34.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_34.BevelStyle = Border3DStyle.SunkenOuter
-        room_button_34.DisplayText = ""
-        room_button_34.Enabled = False
+        room_button_34.DisplayText = "00 ＊＊＊　＊＊" & vbLf & " 00:00～00:00　000分" & vbLf & "  0人( 00- 00)" & vbLf & " ＊"
         room_button_34.FirstLineFont = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         room_button_34.FlatAppearance.BorderColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         room_button_34.FlatStyle = FlatStyle.Flat
@@ -834,8 +824,9 @@ Partial Class MainMenuForm
         ' 
         ' menu_button_0
         ' 
-        menu_button_0.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(255))
+        menu_button_0.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_0.BackgroundImageLayout = ImageLayout.None
+        menu_button_0.Enabled = False
         menu_button_0.FlatStyle = FlatStyle.Popup
         menu_button_0.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         menu_button_0.Location = New Point(122, 695)
@@ -843,13 +834,14 @@ Partial Class MainMenuForm
         menu_button_0.Name = "menu_button_0"
         menu_button_0.Size = New Size(85, 63)
         menu_button_0.TabIndex = 0
-        menu_button_0.Text = "入室"
+        menu_button_0.Text = "＊＊＊＊" & vbCrLf & "＊＊＊＊"
         menu_button_0.UseVisualStyleBackColor = False
         ' 
         ' menu_button_1
         ' 
-        menu_button_1.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(255))
+        menu_button_1.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_1.BackgroundImageLayout = ImageLayout.None
+        menu_button_1.Enabled = False
         menu_button_1.FlatStyle = FlatStyle.Popup
         menu_button_1.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         menu_button_1.Location = New Point(209, 695)
@@ -857,13 +849,14 @@ Partial Class MainMenuForm
         menu_button_1.Name = "menu_button_1"
         menu_button_1.Size = New Size(85, 63)
         menu_button_1.TabIndex = 0
-        menu_button_1.Text = "入室状況"
+        menu_button_1.Text = "＊＊＊＊" & vbCrLf & "＊＊＊＊"
         menu_button_1.UseVisualStyleBackColor = False
         ' 
         ' menu_button_2
         ' 
-        menu_button_2.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(255))
+        menu_button_2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_2.BackgroundImageLayout = ImageLayout.None
+        menu_button_2.Enabled = False
         menu_button_2.FlatStyle = FlatStyle.Popup
         menu_button_2.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         menu_button_2.Location = New Point(296, 695)
@@ -871,13 +864,14 @@ Partial Class MainMenuForm
         menu_button_2.Name = "menu_button_2"
         menu_button_2.Size = New Size(85, 63)
         menu_button_2.TabIndex = 0
-        menu_button_2.Text = "売上速報"
+        menu_button_2.Text = "＊＊＊＊" & vbCrLf & "＊＊＊＊"
         menu_button_2.UseVisualStyleBackColor = False
         ' 
         ' menu_button_3
         ' 
-        menu_button_3.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(255))
+        menu_button_3.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_3.BackgroundImageLayout = ImageLayout.None
+        menu_button_3.Enabled = False
         menu_button_3.FlatStyle = FlatStyle.Popup
         menu_button_3.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         menu_button_3.Location = New Point(383, 695)
@@ -885,13 +879,14 @@ Partial Class MainMenuForm
         menu_button_3.Name = "menu_button_3"
         menu_button_3.Size = New Size(85, 63)
         menu_button_3.TabIndex = 0
-        menu_button_3.Text = "小売"
+        menu_button_3.Text = "＊＊＊＊" & vbCrLf & "＊＊＊＊"
         menu_button_3.UseVisualStyleBackColor = False
         ' 
         ' menu_button_4
         ' 
-        menu_button_4.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(255))
+        menu_button_4.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_4.BackgroundImageLayout = ImageLayout.None
+        menu_button_4.Enabled = False
         menu_button_4.FlatStyle = FlatStyle.Popup
         menu_button_4.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         menu_button_4.Location = New Point(470, 695)
@@ -899,13 +894,14 @@ Partial Class MainMenuForm
         menu_button_4.Name = "menu_button_4"
         menu_button_4.Size = New Size(85, 63)
         menu_button_4.TabIndex = 0
-        menu_button_4.Text = "清掃完了"
+        menu_button_4.Text = "＊＊＊＊" & vbCrLf & "＊＊＊＊"
         menu_button_4.UseVisualStyleBackColor = False
         ' 
         ' menu_button_5
         ' 
-        menu_button_5.BackColor = Color.FromArgb(CByte(192), CByte(255), CByte(255))
+        menu_button_5.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_5.BackgroundImageLayout = ImageLayout.None
+        menu_button_5.Enabled = False
         menu_button_5.FlatStyle = FlatStyle.Popup
         menu_button_5.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         menu_button_5.Location = New Point(557, 695)
@@ -913,13 +909,14 @@ Partial Class MainMenuForm
         menu_button_5.Name = "menu_button_5"
         menu_button_5.Size = New Size(85, 63)
         menu_button_5.TabIndex = 0
-        menu_button_5.Text = "予約"
+        menu_button_5.Text = "＊＊＊＊" & vbCrLf & "＊＊＊＊"
         menu_button_5.UseVisualStyleBackColor = False
         ' 
         ' menu_button_6
         ' 
         menu_button_6.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_6.BackgroundImageLayout = ImageLayout.None
+        menu_button_6.Enabled = False
         menu_button_6.FlatStyle = FlatStyle.Popup
         menu_button_6.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         menu_button_6.Location = New Point(644, 695)
@@ -927,12 +924,14 @@ Partial Class MainMenuForm
         menu_button_6.Name = "menu_button_6"
         menu_button_6.Size = New Size(85, 63)
         menu_button_6.TabIndex = 0
+        menu_button_6.Text = "＊＊＊＊" & vbCrLf & "＊＊＊＊"
         menu_button_6.UseVisualStyleBackColor = False
         ' 
         ' menu_button_7
         ' 
-        menu_button_7.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
+        menu_button_7.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_7.BackgroundImageLayout = ImageLayout.None
+        menu_button_7.Enabled = False
         menu_button_7.FlatStyle = FlatStyle.Popup
         menu_button_7.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         menu_button_7.Location = New Point(731, 695)
@@ -940,13 +939,14 @@ Partial Class MainMenuForm
         menu_button_7.Name = "menu_button_7"
         menu_button_7.Size = New Size(85, 63)
         menu_button_7.TabIndex = 0
-        menu_button_7.Text = "ロック"
+        menu_button_7.Text = "＊＊＊＊" & vbCrLf & "＊＊＊＊"
         menu_button_7.UseVisualStyleBackColor = False
         ' 
         ' menu_button_8
         ' 
-        menu_button_8.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
+        menu_button_8.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         menu_button_8.BackgroundImageLayout = ImageLayout.None
+        menu_button_8.Enabled = False
         menu_button_8.FlatStyle = FlatStyle.Popup
         menu_button_8.Font = New Font("ＭＳ ゴシック", 12F, FontStyle.Bold)
         menu_button_8.Location = New Point(818, 695)
@@ -954,7 +954,7 @@ Partial Class MainMenuForm
         menu_button_8.Name = "menu_button_8"
         menu_button_8.Size = New Size(85, 63)
         menu_button_8.TabIndex = 0
-        menu_button_8.Text = "ﾌﾛｱ変更"
+        menu_button_8.Text = "＊＊＊＊" & vbCrLf & "＊＊＊＊"
         menu_button_8.UseVisualStyleBackColor = False
         ' 
         ' date_time_timer
@@ -974,7 +974,7 @@ Partial Class MainMenuForm
         Label1.TabIndex = 2
         Label1.Text = "フロア1"
         ' 
-        ' Form1
+        ' MainMenuForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -1037,7 +1037,7 @@ Partial Class MainMenuForm
         FormBorderStyle = FormBorderStyle.None
         KeyPreview = True
         Margin = New Padding(1)
-        Name = "Form1"
+        Name = "MainMenuForm"
         Text = "Form1"
         TopMost = True
         WindowState = FormWindowState.Maximized

@@ -31,6 +31,17 @@ Public Class MasterForm
     Private roomCapMinNumeric As NumericUpDown
     Private roomCapMaxNumeric As NumericUpDown
 
+    ' --- メニューボタンタブ ---
+    Private menuGrid As DataGridView
+    Private menuSortOrderText As TextBox
+    Private menuNameText As TextBox
+    Private menuColorHexText As TextBox
+    Private menuColorPreviewPanel As Panel
+    Private menuSelectedColor As Color = Color.White
+    Private menuEnabledCheck As CheckBox
+    ' グリッドで選択中の行の表示順(元の値)。更新時に主キーを特定するために使う。新規時はNothing
+    Private editingMenuSortOrder As Integer?
+
     Public Sub New()
         Me.Text = "マスタ管理"
         Me.Size = New Size(920, 650)
@@ -44,11 +55,13 @@ Public Class MasterForm
         BuildModelTab()
         BuildRoomTypeTab()
         BuildRoomTab()
+        BuildMenuButtonTab()
 
         ReloadManufacturers()
         ReloadModels()
         ReloadRoomTypes()
         ReloadRooms()
+        ReloadMenuButtons()
     End Sub
 
     Private Sub ApplyHeader(grid As DataGridView, columnName As String, header As String)
@@ -502,6 +515,159 @@ Public Class MasterForm
             Database.DeleteRoom(CInt(roomNoNumeric.Value))
             ReloadRooms()
             ClearRoomFields()
+        Catch ex As Exception
+            MessageBox.Show("削除に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    ' =====================================================================
+    ' メニューボタン管理
+    ' =====================================================================
+
+    Private Sub BuildMenuButtonTab()
+        Dim page As New TabPage("メニューボタン管理")
+        tabControl.TabPages.Add(page)
+
+        Dim editPanel = MakeEditPanel()
+
+        Dim lblOrder As New Label() With {.Text = "表示順", .Location = New Point(10, 13), .AutoSize = True}
+        menuSortOrderText = New TextBox() With {.Location = New Point(70, 10), .Width = 50} ' 任意の数値を手入力できる
+
+        Dim lblName As New Label() With {.Text = "表示名", .Location = New Point(140, 13), .AutoSize = True}
+        menuNameText = New TextBox() With {.Location = New Point(200, 10), .Width = 200}
+
+        Dim lblColor As New Label() With {.Text = "背景色", .Location = New Point(420, 13), .AutoSize = True}
+        menuColorHexText = New TextBox() With {.Location = New Point(470, 10), .Width = 80, .Text = ColorTranslator.ToHtml(menuSelectedColor)} ' 色コード(#RRGGBB)を直接入力できる
+        AddHandler menuColorHexText.Leave, AddressOf MenuColorHexText_Leave
+        menuColorPreviewPanel = New Panel() With {
+            .Location = New Point(560, 10),
+            .Size = New Size(30, 26),
+            .BackColor = menuSelectedColor,
+            .BorderStyle = BorderStyle.FixedSingle
+        }
+        Dim btnColorPick As New Button() With {.Text = "色を選択...", .Location = New Point(600, 8), .Width = 90}
+        AddHandler btnColorPick.Click, AddressOf MenuColorPick_Click
+
+        ' 無効(クリックできない)なボタンでも背景色だけは設定して登録できるようにするためのチェック
+        menuEnabledCheck = New CheckBox() With {.Text = "有効", .Location = New Point(700, 12), .AutoSize = True, .Checked = True}
+
+        Dim btnNew As New Button() With {.Text = "新規登録", .Location = New Point(10, 48), .Width = 100}
+        Dim btnUpdate As New Button() With {.Text = "更新", .Location = New Point(120, 48), .Width = 100}
+        Dim btnDelete As New Button() With {.Text = "削除", .Location = New Point(230, 48), .Width = 100}
+        Dim btnClear As New Button() With {.Text = "クリア", .Location = New Point(340, 48), .Width = 100}
+
+        AddHandler btnNew.Click, AddressOf MenuNew_Click
+        AddHandler btnUpdate.Click, AddressOf MenuUpdate_Click
+        AddHandler btnDelete.Click, AddressOf MenuDelete_Click
+        AddHandler btnClear.Click, Sub() ClearMenuButtonFields()
+
+        editPanel.Controls.AddRange({lblOrder, menuSortOrderText, lblName, menuNameText, lblColor, menuColorHexText, menuColorPreviewPanel, btnColorPick, menuEnabledCheck, btnNew, btnUpdate, btnDelete, btnClear})
+        page.Controls.Add(editPanel)
+
+        menuGrid = MakeGrid()
+        AddHandler menuGrid.SelectionChanged, AddressOf MenuGrid_SelectionChanged
+        page.Controls.Add(menuGrid)
+    End Sub
+
+    Private Sub ReloadMenuButtons()
+        menuGrid.DataSource = Database.GetAllMenuButtons()
+        ApplyHeader(menuGrid, "sort_order", "表示順")
+        ApplyHeader(menuGrid, "display_name", "表示名")
+        ApplyHeader(menuGrid, "back_color", "背景色")
+        ApplyHeader(menuGrid, "is_enabled", "有効")
+        ClearMenuButtonFields()
+    End Sub
+
+    Private Sub MenuGrid_SelectionChanged(sender As Object, e As EventArgs)
+        If menuGrid.CurrentRow Is Nothing Then Return
+        Dim row = menuGrid.CurrentRow
+        editingMenuSortOrder = CInt(row.Cells("sort_order").Value)
+        menuSortOrderText.Text = row.Cells("sort_order").Value.ToString()
+        menuNameText.Text = row.Cells("display_name").Value.ToString()
+        menuEnabledCheck.Checked = CInt(row.Cells("is_enabled").Value) <> 0
+        Try
+            menuSelectedColor = ColorTranslator.FromHtml(row.Cells("back_color").Value.ToString())
+        Catch
+            menuSelectedColor = Color.White
+        End Try
+        menuColorPreviewPanel.BackColor = menuSelectedColor
+        menuColorHexText.Text = ColorTranslator.ToHtml(menuSelectedColor)
+    End Sub
+
+    ''' 色コードの手入力欄からフォーカスが外れたときに反映する。不正な値の場合は直前の色に戻す
+    Private Sub MenuColorHexText_Leave(sender As Object, e As EventArgs)
+        Try
+            Dim c = ColorTranslator.FromHtml(menuColorHexText.Text.Trim())
+            menuSelectedColor = c
+            menuColorPreviewPanel.BackColor = c
+        Catch
+            menuColorHexText.Text = ColorTranslator.ToHtml(menuSelectedColor)
+        End Try
+    End Sub
+
+    ''' Visual Studioのプロパティウィンドウと同じ配色パレット(カスタム/Web/システム)で色を選ぶ
+    Private Sub MenuColorPick_Click(sender As Object, e As EventArgs)
+        Dim picked = VsColorPicker.PickColor(menuSelectedColor)
+        If picked.HasValue Then
+            menuSelectedColor = picked.Value
+            menuColorPreviewPanel.BackColor = menuSelectedColor
+            menuColorHexText.Text = ColorTranslator.ToHtml(menuSelectedColor)
+        End If
+    End Sub
+
+    ''' 入力欄をクリアし、次の登録用に自動採番の表示順を候補として表示する(編集可能)
+    Private Sub ClearMenuButtonFields()
+        editingMenuSortOrder = Nothing
+        menuSortOrderText.Text = Database.GetNextMenuButtonSortOrder().ToString()
+        menuNameText.Clear()
+        menuSelectedColor = Color.White
+        menuColorPreviewPanel.BackColor = menuSelectedColor
+        menuColorHexText.Text = ColorTranslator.ToHtml(menuSelectedColor)
+        menuEnabledCheck.Checked = True
+        menuGrid.ClearSelection()
+    End Sub
+
+    Private Sub MenuNew_Click(sender As Object, e As EventArgs)
+        Dim newOrder As Integer
+        If Not Integer.TryParse(menuSortOrderText.Text, newOrder) Then
+            MessageBox.Show("表示順には数値を入力してください。")
+            Return
+        End If
+        Try
+            Database.InsertMenuButton(newOrder, menuNameText.Text.Trim(), ColorTranslator.ToHtml(menuSelectedColor), menuEnabledCheck.Checked)
+            ReloadMenuButtons()
+        Catch ex As Exception
+            MessageBox.Show("登録に失敗しました（表示順が重複している可能性があります）: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub MenuUpdate_Click(sender As Object, e As EventArgs)
+        If menuGrid.CurrentRow Is Nothing OrElse Not editingMenuSortOrder.HasValue Then
+            MessageBox.Show("更新対象をグリッドから選択してください。")
+            Return
+        End If
+        Dim newOrder As Integer
+        If Not Integer.TryParse(menuSortOrderText.Text, newOrder) Then
+            MessageBox.Show("表示順には数値を入力してください。")
+            Return
+        End If
+        Try
+            Database.UpdateMenuButton(editingMenuSortOrder.Value, newOrder, menuNameText.Text.Trim(), ColorTranslator.ToHtml(menuSelectedColor), menuEnabledCheck.Checked)
+            ReloadMenuButtons()
+        Catch ex As Exception
+            MessageBox.Show("更新に失敗しました（表示順が重複している可能性があります）: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub MenuDelete_Click(sender As Object, e As EventArgs)
+        If menuGrid.CurrentRow Is Nothing OrElse Not editingMenuSortOrder.HasValue Then
+            MessageBox.Show("削除対象をグリッドから選択してください。")
+            Return
+        End If
+        If MessageBox.Show($"メニューボタン「{menuNameText.Text}」を削除しますか？", "確認", MessageBoxButtons.YesNo) <> DialogResult.Yes Then Return
+        Try
+            Database.DeleteMenuButton(editingMenuSortOrder.Value)
+            ReloadMenuButtons()
         Catch ex As Exception
             MessageBox.Show("削除に失敗しました: " & ex.Message)
         End Try

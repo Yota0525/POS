@@ -80,9 +80,9 @@ Public Class ScreenSaverForm
         ' PictureBox1
         ' 
         PictureBox1.Image = My.Resources.Resources.EmiG3cvU8AAILk_
-        PictureBox1.Location = New Point(12, 54)
+        PictureBox1.Location = New Point(51, 109)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(948, 537)
+        PictureBox1.Size = New Size(948, 521)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
@@ -90,28 +90,28 @@ Public Class ScreenSaverForm
         ' info_label
         ' 
         info_label.AutoSize = True
-        info_label.Font = New Font("ＭＳ ゴシック", 36.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
-        info_label.ForeColor = Color.Red
-        info_label.Location = New Point(330, 594)
+        info_label.Font = New Font("ＭＳ ゴシック", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        info_label.ForeColor = Color.Black
+        info_label.Location = New Point(367, 52)
         info_label.Name = "info_label"
-        info_label.Size = New Size(363, 48)
+        info_label.Size = New Size(290, 37)
         info_label.TabIndex = 1
         info_label.Text = "画面をロック中"
         ' 
         ' desc_label
         ' 
         desc_label.AutoSize = True
-        desc_label.Font = New Font("ＭＳ ゴシック", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
-        desc_label.ForeColor = Color.Gray
-        desc_label.Location = New Point(151, 721)
+        desc_label.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        desc_label.ForeColor = Color.Black
+        desc_label.Location = New Point(244, 665)
         desc_label.Name = "desc_label"
-        desc_label.Size = New Size(723, 19)
+        desc_label.Size = New Size(536, 48)
         desc_label.TabIndex = 1
-        desc_label.Text = "ロックを解除するには画面をタッチし従業員コードをスキャンしてください"
+        desc_label.Text = "画面ロックの解除は画面をタップしてから、" & vbCrLf & "従業員コードをQRリーダーにかざしてください"
         ' 
         ' ScreenSaverForm
         ' 
-        BackColor = Color.White
+        BackColor = SystemColors.Control
         ClientSize = New Size(1024, 768)
         Controls.Add(desc_label)
         Controls.Add(info_label)
