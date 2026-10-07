@@ -9,6 +9,25 @@ Public Class MainMenuForm
     Private currentMenuPage As Integer = 0
     Private Const MenuButtonsPerPage As Integer = 9
 
+    ' クリックされた部屋ボタンの番号(0〜34)。未選択時は-1
+    Private selected_room_button As Integer = -1
+
+    ''' room_button_0〜room_button_34すべてで共有するクリックハンドラ。
+    ''' ボタン名(room_button_N)からNを取り出してselected_room_buttonに設定する。
+    Private Sub RoomButton_Click(sender As Object, e As EventArgs) Handles _
+        room_button_0.Click, room_button_1.Click, room_button_2.Click, room_button_3.Click, room_button_4.Click,
+        room_button_5.Click, room_button_6.Click, room_button_7.Click, room_button_8.Click, room_button_9.Click,
+        room_button_10.Click, room_button_11.Click, room_button_12.Click, room_button_13.Click, room_button_14.Click,
+        room_button_15.Click, room_button_16.Click, room_button_17.Click, room_button_18.Click, room_button_19.Click,
+        room_button_20.Click, room_button_21.Click, room_button_22.Click, room_button_23.Click, room_button_24.Click,
+        room_button_25.Click, room_button_26.Click, room_button_27.Click, room_button_28.Click, room_button_29.Click,
+        room_button_30.Click, room_button_31.Click, room_button_32.Click, room_button_33.Click, room_button_34.Click
+        Dim btnName = DirectCast(sender, Control).Name
+        selected_room_button = CInt(btnName.Substring("room_button_".Length))
+
+        MsgBox(selected_room_button & " selected!")
+    End Sub
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         Database.InitializeDatabase()
         UpdateRoomButtonTexts()
@@ -171,9 +190,37 @@ Public Class MainMenuForm
     Private Sub menu_button_6_Click(sender As Object, e As EventArgs) Handles menu_button_6.Click
         Select Case currentMenuPage
             Case 3
+                ' MainMenuForm → overlay → cashCountForm の順でオーナーをつなげ、重なり順を確実にする
+                Dim overlay As New OverlayForm()
+                overlay.Show(Me)
+                overlay.Refresh()
+
                 Using cashCountForm As New CashCountCheckForm()
-                    cashCountForm.ShowDialog(Me)
+                    cashCountForm.OverlayToClose = overlay
+                    cashCountForm.ShowDialog(overlay)
                 End Using
+        End Select
+    End Sub
+
+    Private Sub menu_button_5_Click(sender As Object, e As EventArgs) Handles menu_button_5.Click
+        Select Case currentMenuPage
+            'Case 3
+            '    OverlayForm.Show()
+        End Select
+    End Sub
+
+    Private Sub menu_button_0_Click(sender As Object, e As EventArgs) Handles menu_button_0.Click
+        Select Case currentMenuPage
+            Case 0
+                If selected_room_button = -1 Then
+                    Using enterRoomForm As New EnterRoomForm()
+                        enterRoomForm.ShowDialog(Me)
+                    End Using
+                Else
+                    Using enterRoomForm As New EnterRoomForm(selected_room_button + 1)
+                        enterRoomForm.ShowDialog(Me)
+                    End Using
+                End If
         End Select
     End Sub
 End Class
