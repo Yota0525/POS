@@ -22,7 +22,7 @@ Partial Class EnterRoomForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        backbutton = New Button()
+        back_button = New Button()
         Label1 = New Label()
         TextBox1 = New TextBox()
         Label2 = New Label()
@@ -31,13 +31,13 @@ Partial Class EnterRoomForm
         TextBox3 = New TextBox()
         Label4 = New Label()
         Label5 = New Label()
-        registerbutton = New Button()
+        register_button = New Button()
         TextBox4 = New TextBox()
         Label12 = New Label()
         ComboBox1 = New ComboBox()
         Label14 = New Label()
         TextBox11 = New TextBox()
-        Button1 = New Button()
+        description_button = New Button()
         Label6 = New Label()
         Label7 = New Label()
         TextBox5 = New TextBox()
@@ -59,23 +59,48 @@ Partial Class EnterRoomForm
         ComboBox4 = New ComboBox()
         ComboBox6 = New ComboBox()
         TextBox10 = New TextBox()
-        Button2 = New Button()
+        enter_count_button = New Button()
         TextBox12 = New TextBox()
+        TextBox14 = New TextBox()
+        Label17 = New Label()
+        Label18 = New Label()
+        TextBox15 = New TextBox()
+        TextBox16 = New TextBox()
+        Label19 = New Label()
+        Label20 = New Label()
+        CheckBox1 = New CheckBox()
+        add_register_button = New Button()
+        GroupBox1 = New GroupBox()
+        key_button_0 = New Button()
+        key_panel = New Panel()
+        Button5 = New Button()
+        key_button_c = New Button()
+        key_button_7 = New Button()
+        key_button_8 = New Button()
+        key_button_9 = New Button()
+        key_button_4 = New Button()
+        key_button_5 = New Button()
+        key_button_6 = New Button()
+        key_button_1 = New Button()
+        key_button_2 = New Button()
+        key_button_3 = New Button()
+        GroupBox1.SuspendLayout()
+        key_panel.SuspendLayout()
         SuspendLayout()
         ' 
-        ' backbutton
+        ' back_button
         ' 
-        backbutton.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(128))
-        backbutton.FlatAppearance.BorderColor = Color.White
-        backbutton.FlatAppearance.BorderSize = 2
-        backbutton.FlatStyle = FlatStyle.Flat
-        backbutton.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        backbutton.Location = New Point(488, 692)
-        backbutton.Name = "backbutton"
-        backbutton.Size = New Size(122, 64)
-        backbutton.TabIndex = 0
-        backbutton.Text = "戻　る"
-        backbutton.UseVisualStyleBackColor = False
+        back_button.BackColor = Color.FromArgb(CByte(128), CByte(255), CByte(128))
+        back_button.FlatAppearance.BorderColor = Color.White
+        back_button.FlatAppearance.BorderSize = 2
+        back_button.FlatStyle = FlatStyle.Flat
+        back_button.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        back_button.Location = New Point(488, 692)
+        back_button.Name = "back_button"
+        back_button.Size = New Size(122, 64)
+        back_button.TabIndex = 0
+        back_button.Text = "戻　る"
+        back_button.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
@@ -180,19 +205,19 @@ Partial Class EnterRoomForm
         Label5.Text = "入室時間"
         Label5.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' registerbutton
+        ' register_button
         ' 
-        registerbutton.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
-        registerbutton.FlatAppearance.BorderColor = Color.White
-        registerbutton.FlatAppearance.BorderSize = 2
-        registerbutton.FlatStyle = FlatStyle.Flat
-        registerbutton.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        registerbutton.Location = New Point(8, 692)
-        registerbutton.Name = "registerbutton"
-        registerbutton.Size = New Size(122, 64)
-        registerbutton.TabIndex = 0
-        registerbutton.Text = "登　録"
-        registerbutton.UseVisualStyleBackColor = False
+        register_button.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(128))
+        register_button.FlatAppearance.BorderColor = Color.White
+        register_button.FlatAppearance.BorderSize = 2
+        register_button.FlatStyle = FlatStyle.Flat
+        register_button.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        register_button.Location = New Point(8, 692)
+        register_button.Name = "register_button"
+        register_button.Size = New Size(122, 64)
+        register_button.TabIndex = 0
+        register_button.Text = "登　録"
+        register_button.UseVisualStyleBackColor = False
         ' 
         ' TextBox4
         ' 
@@ -253,19 +278,19 @@ Partial Class EnterRoomForm
         TextBox11.Text = "00"
         TextBox11.TextAlign = HorizontalAlignment.Center
         ' 
-        ' Button1
+        ' description_button
         ' 
-        Button1.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
-        Button1.FlatAppearance.BorderColor = Color.White
-        Button1.FlatAppearance.BorderSize = 2
-        Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("ＭＳ ゴシック", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
-        Button1.Location = New Point(439, 80)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(150, 32)
-        Button1.TabIndex = 0
-        Button1.Text = "備考"
-        Button1.UseVisualStyleBackColor = False
+        description_button.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
+        description_button.FlatAppearance.BorderColor = Color.White
+        description_button.FlatAppearance.BorderSize = 2
+        description_button.FlatStyle = FlatStyle.Flat
+        description_button.Font = New Font("ＭＳ ゴシック", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        description_button.Location = New Point(439, 80)
+        description_button.Name = "description_button"
+        description_button.Size = New Size(150, 32)
+        description_button.TabIndex = 0
+        description_button.Text = "備考"
+        description_button.UseVisualStyleBackColor = False
         ' 
         ' Label6
         ' 
@@ -519,19 +544,19 @@ Partial Class EnterRoomForm
         TextBox10.TabIndex = 2
         TextBox10.Text = "一般"
         ' 
-        ' Button2
+        ' enter_count_button
         ' 
-        Button2.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(192))
-        Button2.FlatAppearance.BorderColor = Color.White
-        Button2.FlatAppearance.BorderSize = 2
-        Button2.FlatStyle = FlatStyle.Flat
-        Button2.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Button2.Location = New Point(154, 151)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(122, 64)
-        Button2.TabIndex = 0
-        Button2.Text = "人数入力"
-        Button2.UseVisualStyleBackColor = False
+        enter_count_button.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(192))
+        enter_count_button.FlatAppearance.BorderColor = Color.White
+        enter_count_button.FlatAppearance.BorderSize = 2
+        enter_count_button.FlatStyle = FlatStyle.Flat
+        enter_count_button.Font = New Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        enter_count_button.Location = New Point(154, 151)
+        enter_count_button.Name = "enter_count_button"
+        enter_count_button.Size = New Size(131, 64)
+        enter_count_button.TabIndex = 0
+        enter_count_button.Text = "人数入力"
+        enter_count_button.UseVisualStyleBackColor = False
         ' 
         ' TextBox12
         ' 
@@ -541,7 +566,309 @@ Partial Class EnterRoomForm
         TextBox12.Name = "TextBox12"
         TextBox12.Size = New Size(64, 32)
         TextBox12.TabIndex = 2
-        TextBox12.Text = "一般"
+        TextBox12.Text = "0"
+        TextBox12.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TextBox14
+        ' 
+        TextBox14.BorderStyle = BorderStyle.FixedSingle
+        TextBox14.Font = New Font("ＭＳ ゴシック", 18.5F)
+        TextBox14.Location = New Point(433, 148)
+        TextBox14.Name = "TextBox14"
+        TextBox14.Size = New Size(64, 32)
+        TextBox14.TabIndex = 2
+        TextBox14.Text = "0"
+        TextBox14.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.BackColor = Color.Teal
+        Label17.FlatStyle = FlatStyle.System
+        Label17.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        Label17.Location = New Point(323, 151)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(106, 24)
+        Label17.TabIndex = 1
+        Label17.Text = "20歳以上"
+        Label17.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.BackColor = Color.Teal
+        Label18.FlatStyle = FlatStyle.System
+        Label18.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        Label18.Location = New Point(311, 185)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(118, 24)
+        Label18.TabIndex = 1
+        Label18.Text = "7歳～15歳"
+        Label18.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' TextBox15
+        ' 
+        TextBox15.BorderStyle = BorderStyle.FixedSingle
+        TextBox15.Font = New Font("ＭＳ ゴシック", 18.5F)
+        TextBox15.Location = New Point(631, 183)
+        TextBox15.Name = "TextBox15"
+        TextBox15.Size = New Size(64, 32)
+        TextBox15.TabIndex = 2
+        TextBox15.Text = "0"
+        TextBox15.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TextBox16
+        ' 
+        TextBox16.BorderStyle = BorderStyle.FixedSingle
+        TextBox16.Font = New Font("ＭＳ ゴシック", 18.5F)
+        TextBox16.Location = New Point(631, 148)
+        TextBox16.Name = "TextBox16"
+        TextBox16.Size = New Size(64, 32)
+        TextBox16.TabIndex = 2
+        TextBox16.Text = "0"
+        TextBox16.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.BackColor = Color.Teal
+        Label19.FlatStyle = FlatStyle.System
+        Label19.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        Label19.Location = New Point(497, 151)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(130, 24)
+        Label19.TabIndex = 1
+        Label19.Text = "18歳～19歳"
+        Label19.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.BackColor = Color.Teal
+        Label20.FlatStyle = FlatStyle.System
+        Label20.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        Label20.Location = New Point(533, 185)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(94, 24)
+        Label20.TabIndex = 1
+        Label20.Text = "6歳以下"
+        Label20.TextAlign = ContentAlignment.MiddleRight
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.BackColor = Color.Teal
+        CheckBox1.FlatAppearance.BorderColor = Color.White
+        CheckBox1.FlatAppearance.CheckedBackColor = Color.White
+        CheckBox1.FlatAppearance.MouseDownBackColor = Color.White
+        CheckBox1.FlatAppearance.MouseOverBackColor = Color.White
+        CheckBox1.FlatStyle = FlatStyle.System
+        CheckBox1.Font = New Font("ＭＳ ゴシック", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        CheckBox1.Location = New Point(514, 123)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Size(173, 26)
+        CheckBox1.TabIndex = 4
+        CheckBox1.Text = "高校生がいる"
+        CheckBox1.UseVisualStyleBackColor = False
+        ' 
+        ' add_register_button
+        ' 
+        add_register_button.BackColor = Color.FromArgb(CByte(255), CByte(192), CByte(255))
+        add_register_button.FlatAppearance.BorderColor = Color.White
+        add_register_button.FlatAppearance.BorderSize = 2
+        add_register_button.FlatStyle = FlatStyle.Flat
+        add_register_button.Font = New Font("ＭＳ ゴシック", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        add_register_button.Location = New Point(6, 15)
+        add_register_button.Name = "add_register_button"
+        add_register_button.Size = New Size(115, 32)
+        add_register_button.TabIndex = 0
+        add_register_button.Text = "切替登録"
+        add_register_button.UseVisualStyleBackColor = False
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.Controls.Add(add_register_button)
+        GroupBox1.Location = New Point(456, 212)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(556, 174)
+        GroupBox1.TabIndex = 6
+        GroupBox1.TabStop = False
+        ' 
+        ' key_button_0
+        ' 
+        key_button_0.BackColor = Color.White
+        key_button_0.FlatAppearance.BorderColor = Color.Gray
+        key_button_0.FlatStyle = FlatStyle.Flat
+        key_button_0.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_0.Location = New Point(3, 207)
+        key_button_0.Name = "key_button_0"
+        key_button_0.Size = New Size(79, 65)
+        key_button_0.TabIndex = 7
+        key_button_0.Text = "0"
+        key_button_0.UseVisualStyleBackColor = False
+        ' 
+        ' key_panel
+        ' 
+        key_panel.BackColor = SystemColors.Control
+        key_panel.Controls.Add(key_button_3)
+        key_panel.Controls.Add(key_button_6)
+        key_panel.Controls.Add(key_button_2)
+        key_panel.Controls.Add(key_button_5)
+        key_panel.Controls.Add(key_button_9)
+        key_panel.Controls.Add(key_button_1)
+        key_panel.Controls.Add(key_button_8)
+        key_panel.Controls.Add(key_button_4)
+        key_panel.Controls.Add(key_button_c)
+        key_panel.Controls.Add(key_button_7)
+        key_panel.Controls.Add(Button5)
+        key_panel.Controls.Add(key_button_0)
+        key_panel.Location = New Point(633, 480)
+        key_panel.Name = "key_panel"
+        key_panel.Size = New Size(250, 276)
+        key_panel.TabIndex = 8
+        ' 
+        ' Button5
+        ' 
+        Button5.BackColor = Color.White
+        Button5.Enabled = False
+        Button5.FlatAppearance.BorderColor = Color.Gray
+        Button5.FlatStyle = FlatStyle.Flat
+        Button5.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        Button5.Location = New Point(85, 207)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(79, 65)
+        Button5.TabIndex = 7
+        Button5.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_c
+        ' 
+        key_button_c.BackColor = Color.White
+        key_button_c.FlatAppearance.BorderColor = Color.Gray
+        key_button_c.FlatStyle = FlatStyle.Flat
+        key_button_c.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_c.Location = New Point(167, 207)
+        key_button_c.Name = "key_button_c"
+        key_button_c.Size = New Size(79, 65)
+        key_button_c.TabIndex = 7
+        key_button_c.Text = "C"
+        key_button_c.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_7
+        ' 
+        key_button_7.BackColor = Color.White
+        key_button_7.FlatAppearance.BorderColor = Color.Gray
+        key_button_7.FlatStyle = FlatStyle.Flat
+        key_button_7.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_7.Location = New Point(3, 139)
+        key_button_7.Name = "key_button_7"
+        key_button_7.Size = New Size(79, 65)
+        key_button_7.TabIndex = 7
+        key_button_7.Text = "7"
+        key_button_7.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_8
+        ' 
+        key_button_8.BackColor = Color.White
+        key_button_8.FlatAppearance.BorderColor = Color.Gray
+        key_button_8.FlatStyle = FlatStyle.Flat
+        key_button_8.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_8.Location = New Point(85, 139)
+        key_button_8.Name = "key_button_8"
+        key_button_8.Size = New Size(79, 65)
+        key_button_8.TabIndex = 7
+        key_button_8.Text = "8"
+        key_button_8.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_9
+        ' 
+        key_button_9.BackColor = Color.White
+        key_button_9.FlatAppearance.BorderColor = Color.Gray
+        key_button_9.FlatStyle = FlatStyle.Flat
+        key_button_9.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_9.Location = New Point(167, 139)
+        key_button_9.Name = "key_button_9"
+        key_button_9.Size = New Size(79, 65)
+        key_button_9.TabIndex = 7
+        key_button_9.Text = "9"
+        key_button_9.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_4
+        ' 
+        key_button_4.BackColor = Color.White
+        key_button_4.FlatAppearance.BorderColor = Color.Gray
+        key_button_4.FlatStyle = FlatStyle.Flat
+        key_button_4.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_4.Location = New Point(3, 71)
+        key_button_4.Name = "key_button_4"
+        key_button_4.Size = New Size(79, 65)
+        key_button_4.TabIndex = 7
+        key_button_4.Text = "4"
+        key_button_4.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_5
+        ' 
+        key_button_5.BackColor = Color.White
+        key_button_5.FlatAppearance.BorderColor = Color.Gray
+        key_button_5.FlatStyle = FlatStyle.Flat
+        key_button_5.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_5.Location = New Point(85, 71)
+        key_button_5.Name = "key_button_5"
+        key_button_5.Size = New Size(79, 65)
+        key_button_5.TabIndex = 7
+        key_button_5.Text = "5"
+        key_button_5.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_6
+        ' 
+        key_button_6.BackColor = Color.White
+        key_button_6.FlatAppearance.BorderColor = Color.Gray
+        key_button_6.FlatStyle = FlatStyle.Flat
+        key_button_6.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_6.Location = New Point(167, 71)
+        key_button_6.Name = "key_button_6"
+        key_button_6.Size = New Size(79, 65)
+        key_button_6.TabIndex = 7
+        key_button_6.Text = "6"
+        key_button_6.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_1
+        ' 
+        key_button_1.BackColor = Color.White
+        key_button_1.FlatAppearance.BorderColor = Color.Gray
+        key_button_1.FlatStyle = FlatStyle.Flat
+        key_button_1.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_1.Location = New Point(3, 3)
+        key_button_1.Name = "key_button_1"
+        key_button_1.Size = New Size(79, 65)
+        key_button_1.TabIndex = 7
+        key_button_1.Text = "1"
+        key_button_1.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_2
+        ' 
+        key_button_2.BackColor = Color.White
+        key_button_2.FlatAppearance.BorderColor = Color.Gray
+        key_button_2.FlatStyle = FlatStyle.Flat
+        key_button_2.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_2.Location = New Point(85, 3)
+        key_button_2.Name = "key_button_2"
+        key_button_2.Size = New Size(79, 65)
+        key_button_2.TabIndex = 7
+        key_button_2.Text = "2"
+        key_button_2.UseVisualStyleBackColor = False
+        ' 
+        ' key_button_3
+        ' 
+        key_button_3.BackColor = Color.White
+        key_button_3.FlatAppearance.BorderColor = Color.Gray
+        key_button_3.FlatStyle = FlatStyle.Flat
+        key_button_3.Font = New Font("ＭＳ ゴシック", 36F, FontStyle.Regular, GraphicsUnit.Point, CByte(128))
+        key_button_3.Location = New Point(167, 3)
+        key_button_3.Name = "key_button_3"
+        key_button_3.Size = New Size(79, 65)
+        key_button_3.TabIndex = 7
+        key_button_3.Text = "3"
+        key_button_3.UseVisualStyleBackColor = False
         ' 
         ' EnterRoomForm
         ' 
@@ -549,6 +876,8 @@ Partial Class EnterRoomForm
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Teal
         ClientSize = New Size(1024, 768)
+        Controls.Add(key_panel)
+        Controls.Add(CheckBox1)
         Controls.Add(ComboBox3)
         Controls.Add(ComboBox6)
         Controls.Add(ComboBox5)
@@ -556,6 +885,10 @@ Partial Class EnterRoomForm
         Controls.Add(ComboBox2)
         Controls.Add(ComboBox1)
         Controls.Add(TextBox3)
+        Controls.Add(Label20)
+        Controls.Add(Label18)
+        Controls.Add(Label19)
+        Controls.Add(Label17)
         Controls.Add(Label14)
         Controls.Add(Label12)
         Controls.Add(Label13)
@@ -569,7 +902,10 @@ Partial Class EnterRoomForm
         Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label6)
+        Controls.Add(TextBox16)
         Controls.Add(Label3)
+        Controls.Add(TextBox15)
+        Controls.Add(TextBox14)
         Controls.Add(TextBox12)
         Controls.Add(TextBox10)
         Controls.Add(TextBox2)
@@ -584,21 +920,24 @@ Partial Class EnterRoomForm
         Controls.Add(TextBox11)
         Controls.Add(TextBox1)
         Controls.Add(Label1)
-        Controls.Add(Button1)
-        Controls.Add(Button2)
-        Controls.Add(registerbutton)
-        Controls.Add(backbutton)
+        Controls.Add(description_button)
+        Controls.Add(enter_count_button)
+        Controls.Add(register_button)
+        Controls.Add(back_button)
+        Controls.Add(GroupBox1)
         FormBorderStyle = FormBorderStyle.None
         Name = "EnterRoomForm"
         StartPosition = FormStartPosition.Manual
         Text = "EnterRoomForm"
         TopMost = True
         WindowState = FormWindowState.Maximized
+        GroupBox1.ResumeLayout(False)
+        key_panel.ResumeLayout(False)
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents backbutton As Button
+    Friend WithEvents back_button As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label2 As Label
@@ -607,13 +946,13 @@ Partial Class EnterRoomForm
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents registerbutton As Button
+    Friend WithEvents register_button As Button
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label12 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label14 As Label
     Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents description_button As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents TextBox5 As TextBox
@@ -635,7 +974,30 @@ Partial Class EnterRoomForm
     Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents ComboBox6 As ComboBox
     Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents enter_count_button As Button
     Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents add_register_button As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents key_button_0 As Button
+    Friend WithEvents key_panel As Panel
+    Friend WithEvents key_button_9 As Button
+    Friend WithEvents key_button_8 As Button
+    Friend WithEvents key_button_c As Button
+    Friend WithEvents key_button_7 As Button
+    Friend WithEvents Button5 As Button
+    Friend WithEvents key_button_3 As Button
+    Friend WithEvents key_button_6 As Button
+    Friend WithEvents key_button_2 As Button
+    Friend WithEvents key_button_5 As Button
+    Friend WithEvents key_button_1 As Button
+    Friend WithEvents key_button_4 As Button
 
 End Class

@@ -17,7 +17,7 @@ Public Class EnterRoomForm
         Me.Bounds = Screen.PrimaryScreen.Bounds
     End Sub
 
-    Private Sub backbutton_Click(sender As Object, e As EventArgs) Handles backbutton.Click
+    Private Sub backbutton_Click(sender As Object, e As EventArgs) Handles back_button.Click
         Me.Close()
     End Sub
 End Class
