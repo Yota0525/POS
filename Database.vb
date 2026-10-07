@@ -8,7 +8,10 @@ Public Module Database
 
     Public ReadOnly Property DbPath As String
         Get
-            Return IO.Path.Combine(Application.StartupPath, DbFileName)
+            ' bin\Debug\net8.0-windows から3つ上がるとプロジェクトルート(.vbprojのある場所)になる。
+            ' ここに置くことでgit管理下に入り、チームでデータを共有できる(bin/はgitignoreされているため)。
+            Dim projectRoot = IO.Path.GetFullPath(IO.Path.Combine(Application.StartupPath, "..", "..", ".."))
+            Return IO.Path.Combine(projectRoot, DbFileName)
         End Get
     End Property
 
