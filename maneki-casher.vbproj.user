@@ -4,9 +4,6 @@
     <Compile Update="CashCountCheckForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="EnterRoomForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="MainMenuForm.vb">
       <SubType>Form</SubType>
     </Compile>
