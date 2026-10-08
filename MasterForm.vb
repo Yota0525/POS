@@ -22,6 +22,8 @@ Public Class MasterForm
     Private rtGrid As DataGridView
     Private rtCodeText As TextBox
     Private rtNameText As TextBox
+    Private rtFeeNumeric As NumericUpDown
+    Private rtShortNameText As TextBox
 
     ' --- 部屋タブ ---
     Private roomGrid As DataGridView
@@ -42,6 +44,31 @@ Public Class MasterForm
     ' グリッドで選択中の行の表示順(元の値)。更新時に主キーを特定するために使う。新規時はNothing
     Private editingMenuSortOrder As Integer?
 
+    ' --- 利用者区分タブ ---
+    Private categoryGrid As DataGridView
+    Private categoryCodeText As TextBox
+    Private categoryNameText As TextBox
+
+    ' --- 会員ランクタブ ---
+    Private rankGrid As DataGridView
+    Private rankCodeText As TextBox
+    Private rankNameText As TextBox
+    Private rankDiscountText As TextBox
+
+    ' --- コースタブ ---
+    Private courseGrid As DataGridView
+    Private courseCodeText As TextBox
+    Private courseNameText As TextBox
+    Private courseTimeSystemNumeric As NumericUpDown
+    Private courseFeeNumeric As NumericUpDown
+
+    ' --- オプションタブ ---
+    Private optionGrid As DataGridView
+    Private optionCodeText As TextBox
+    Private optionNameText As TextBox
+    Private optionFeeNumeric As NumericUpDown
+    Private optionShortNameText As TextBox
+
     Public Sub New()
         Me.Text = "マスタ管理"
         Me.Size = New Size(920, 650)
@@ -56,12 +83,20 @@ Public Class MasterForm
         BuildRoomTypeTab()
         BuildRoomTab()
         BuildMenuButtonTab()
+        BuildMemberCategoryTab()
+        BuildMemberRankTab()
+        BuildCourseTab()
+        BuildOptionTab()
 
         ReloadManufacturers()
         ReloadModels()
         ReloadRoomTypes()
         ReloadRooms()
         ReloadMenuButtons()
+        ReloadMemberCategories()
+        ReloadMemberRanks()
+        ReloadCourses()
+        ReloadOptions()
     End Sub
 
     Private Sub ApplyHeader(grid As DataGridView, columnName As String, header As String)
@@ -309,7 +344,11 @@ Public Class MasterForm
         Dim lblCode As New Label() With {.Text = "種別コード", .Location = New Point(10, 13), .AutoSize = True}
         rtCodeText = New TextBox() With {.Location = New Point(120, 10), .Width = 150, .Enabled = False} ' 自動採番のため手入力不可
         Dim lblName As New Label() With {.Text = "名前", .Location = New Point(290, 13), .AutoSize = True}
-        rtNameText = New TextBox() With {.Location = New Point(340, 10), .Width = 300}
+        rtNameText = New TextBox() With {.Location = New Point(340, 10), .Width = 250}
+        Dim lblFee As New Label() With {.Text = "料金", .Location = New Point(600, 13), .AutoSize = True}
+        rtFeeNumeric = New NumericUpDown() With {.Location = New Point(650, 10), .Width = 70, .Minimum = 0, .Maximum = 999999}
+        Dim lblShort As New Label() With {.Text = "短縮名", .Location = New Point(730, 13), .AutoSize = True}
+        rtShortNameText = New TextBox() With {.Location = New Point(790, 10), .Width = 60} ' ボタン表示用の短縮名(例: ボタンの先頭1文字に使用)
 
         Dim btnNew As New Button() With {.Text = "新規登録", .Location = New Point(10, 48), .Width = 100}
         Dim btnUpdate As New Button() With {.Text = "更新", .Location = New Point(120, 48), .Width = 100}
@@ -321,7 +360,7 @@ Public Class MasterForm
         AddHandler btnDelete.Click, AddressOf RtDelete_Click
         AddHandler btnClear.Click, Sub() ClearRoomTypeFields()
 
-        editPanel.Controls.AddRange({lblCode, rtCodeText, lblName, rtNameText, btnNew, btnUpdate, btnDelete, btnClear})
+        editPanel.Controls.AddRange({lblCode, rtCodeText, lblName, rtNameText, lblFee, rtFeeNumeric, lblShort, rtShortNameText, btnNew, btnUpdate, btnDelete, btnClear})
         page.Controls.Add(editPanel)
 
         rtGrid = MakeGrid()
@@ -333,6 +372,8 @@ Public Class MasterForm
         rtGrid.DataSource = Database.GetAllRoomTypes()
         ApplyHeader(rtGrid, "room_type_code", "コード")
         ApplyHeader(rtGrid, "name", "名前")
+        ApplyHeader(rtGrid, "fee", "料金")
+        ApplyHeader(rtGrid, "short_name", "短縮名")
         ClearRoomTypeFields()
     End Sub
 
@@ -341,12 +382,16 @@ Public Class MasterForm
         Dim row = rtGrid.CurrentRow
         rtCodeText.Text = row.Cells("room_type_code").Value.ToString()
         rtNameText.Text = row.Cells("name").Value.ToString()
+        rtFeeNumeric.Value = CDec(row.Cells("fee").Value)
+        rtShortNameText.Text = row.Cells("short_name").Value.ToString()
     End Sub
 
     ''' 入力欄をクリアし、次に登録される自動採番コードを表示する
     Private Sub ClearRoomTypeFields()
         rtCodeText.Text = Database.GetNextRoomTypeCode()
         rtNameText.Clear()
+        rtFeeNumeric.Value = 0
+        rtShortNameText.Clear()
         rtGrid.ClearSelection()
     End Sub
 
@@ -356,7 +401,7 @@ Public Class MasterForm
             Return
         End If
         Try
-            Database.InsertRoomType(rtCodeText.Text.Trim(), rtNameText.Text.Trim())
+            Database.InsertRoomType(rtCodeText.Text.Trim(), rtNameText.Text.Trim(), CInt(rtFeeNumeric.Value), rtShortNameText.Text.Trim())
             ReloadRoomTypes()
             ClearRoomTypeFields()
         Catch ex As Exception
@@ -370,7 +415,7 @@ Public Class MasterForm
             Return
         End If
         Try
-            Database.UpdateRoomType(rtCodeText.Text.Trim(), rtNameText.Text.Trim())
+            Database.UpdateRoomType(rtCodeText.Text.Trim(), rtNameText.Text.Trim(), CInt(rtFeeNumeric.Value), rtShortNameText.Text.Trim())
             ReloadRoomTypes()
             ClearRoomTypeFields()
         Catch ex As Exception
@@ -670,6 +715,403 @@ Public Class MasterForm
             ReloadMenuButtons()
         Catch ex As Exception
             MessageBox.Show("削除に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    ' =====================================================================
+    ' 利用者区分管理
+    ' =====================================================================
+
+    Private Sub BuildMemberCategoryTab()
+        Dim page As New TabPage("利用者区分管理")
+        tabControl.TabPages.Add(page)
+
+        Dim editPanel = MakeEditPanel()
+
+        Dim lblCode As New Label() With {.Text = "区分コード", .Location = New Point(10, 13), .AutoSize = True}
+        categoryCodeText = New TextBox() With {.Location = New Point(100, 10), .Width = 100, .Enabled = False}
+        Dim lblName As New Label() With {.Text = "区分名", .Location = New Point(220, 13), .AutoSize = True}
+        categoryNameText = New TextBox() With {.Location = New Point(280, 10), .Width = 300}
+
+        Dim btnNew As New Button() With {.Text = "新規登録", .Location = New Point(10, 48), .Width = 100}
+        Dim btnUpdate As New Button() With {.Text = "更新", .Location = New Point(120, 48), .Width = 100}
+        Dim btnDelete As New Button() With {.Text = "削除", .Location = New Point(230, 48), .Width = 100}
+        Dim btnClear As New Button() With {.Text = "クリア", .Location = New Point(340, 48), .Width = 100}
+
+        AddHandler btnNew.Click, AddressOf CategoryNew_Click
+        AddHandler btnUpdate.Click, AddressOf CategoryUpdate_Click
+        AddHandler btnDelete.Click, AddressOf CategoryDelete_Click
+        AddHandler btnClear.Click, Sub() ClearCategoryFields()
+
+        editPanel.Controls.AddRange({lblCode, categoryCodeText, lblName, categoryNameText, btnNew, btnUpdate, btnDelete, btnClear})
+        page.Controls.Add(editPanel)
+
+        categoryGrid = MakeGrid()
+        AddHandler categoryGrid.SelectionChanged, AddressOf CategoryGrid_SelectionChanged
+        page.Controls.Add(categoryGrid)
+    End Sub
+
+    Private Sub ReloadMemberCategories()
+        categoryGrid.DataSource = Database.GetAllMemberCategories()
+        ApplyHeader(categoryGrid, "category_code", "コード")
+        ApplyHeader(categoryGrid, "category_name", "区分名")
+        ClearCategoryFields()
+    End Sub
+
+    Private Sub CategoryGrid_SelectionChanged(sender As Object, e As EventArgs)
+        If categoryGrid.CurrentRow Is Nothing Then Return
+        Dim row = categoryGrid.CurrentRow
+        categoryCodeText.Text = row.Cells("category_code").Value.ToString()
+        categoryNameText.Text = row.Cells("category_name").Value.ToString()
+    End Sub
+
+    Private Sub ClearCategoryFields()
+        categoryCodeText.Text = Database.GetNextMemberCategoryCode()
+        categoryNameText.Clear()
+        categoryGrid.ClearSelection()
+    End Sub
+
+    Private Sub CategoryNew_Click(sender As Object, e As EventArgs)
+        If String.IsNullOrWhiteSpace(categoryNameText.Text) Then
+            MessageBox.Show("区分名を入力してください。")
+            Return
+        End If
+        Try
+            Database.InsertMemberCategory(categoryCodeText.Text.Trim(), categoryNameText.Text.Trim())
+            ReloadMemberCategories()
+        Catch ex As Exception
+            MessageBox.Show("登録に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub CategoryUpdate_Click(sender As Object, e As EventArgs)
+        If categoryGrid.CurrentRow Is Nothing Then
+            MessageBox.Show("更新対象をグリッドから選択してください。")
+            Return
+        End If
+        Try
+            Database.UpdateMemberCategory(categoryCodeText.Text.Trim(), categoryNameText.Text.Trim())
+            ReloadMemberCategories()
+        Catch ex As Exception
+            MessageBox.Show("更新に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub CategoryDelete_Click(sender As Object, e As EventArgs)
+        If categoryGrid.CurrentRow Is Nothing Then
+            MessageBox.Show("削除対象をグリッドから選択してください。")
+            Return
+        End If
+        If MessageBox.Show($"利用者区分「{categoryNameText.Text}」を削除しますか？", "確認", MessageBoxButtons.YesNo) <> DialogResult.Yes Then Return
+        Try
+            Database.DeleteMemberCategory(categoryCodeText.Text.Trim())
+            ReloadMemberCategories()
+        Catch ex As Exception
+            MessageBox.Show("削除に失敗しました（会員から参照されている可能性があります）: " & ex.Message)
+        End Try
+    End Sub
+
+    ' =====================================================================
+    ' 会員ランク管理
+    ' =====================================================================
+
+    Private Sub BuildMemberRankTab()
+        Dim page As New TabPage("会員ランク管理")
+        tabControl.TabPages.Add(page)
+
+        Dim editPanel = MakeEditPanel()
+
+        Dim lblCode As New Label() With {.Text = "ランクコード", .Location = New Point(10, 13), .AutoSize = True}
+        rankCodeText = New TextBox() With {.Location = New Point(110, 10), .Width = 100, .Enabled = False}
+        Dim lblName As New Label() With {.Text = "ランク名", .Location = New Point(230, 13), .AutoSize = True}
+        rankNameText = New TextBox() With {.Location = New Point(300, 10), .Width = 200}
+        Dim lblDiscount As New Label() With {.Text = "割引等", .Location = New Point(520, 13), .AutoSize = True}
+        rankDiscountText = New TextBox() With {.Location = New Point(580, 10), .Width = 280}
+
+        Dim btnNew As New Button() With {.Text = "新規登録", .Location = New Point(10, 48), .Width = 100}
+        Dim btnUpdate As New Button() With {.Text = "更新", .Location = New Point(120, 48), .Width = 100}
+        Dim btnDelete As New Button() With {.Text = "削除", .Location = New Point(230, 48), .Width = 100}
+        Dim btnClear As New Button() With {.Text = "クリア", .Location = New Point(340, 48), .Width = 100}
+
+        AddHandler btnNew.Click, AddressOf RankNew_Click
+        AddHandler btnUpdate.Click, AddressOf RankUpdate_Click
+        AddHandler btnDelete.Click, AddressOf RankDelete_Click
+        AddHandler btnClear.Click, Sub() ClearRankFields()
+
+        editPanel.Controls.AddRange({lblCode, rankCodeText, lblName, rankNameText, lblDiscount, rankDiscountText, btnNew, btnUpdate, btnDelete, btnClear})
+        page.Controls.Add(editPanel)
+
+        rankGrid = MakeGrid()
+        AddHandler rankGrid.SelectionChanged, AddressOf RankGrid_SelectionChanged
+        page.Controls.Add(rankGrid)
+    End Sub
+
+    Private Sub ReloadMemberRanks()
+        rankGrid.DataSource = Database.GetAllMemberRanks()
+        ApplyHeader(rankGrid, "rank_code", "コード")
+        ApplyHeader(rankGrid, "rank_name", "ランク名")
+        ApplyHeader(rankGrid, "discount_note", "割引等")
+        ClearRankFields()
+    End Sub
+
+    Private Sub RankGrid_SelectionChanged(sender As Object, e As EventArgs)
+        If rankGrid.CurrentRow Is Nothing Then Return
+        Dim row = rankGrid.CurrentRow
+        rankCodeText.Text = row.Cells("rank_code").Value.ToString()
+        rankNameText.Text = row.Cells("rank_name").Value.ToString()
+        rankDiscountText.Text = If(IsDBNull(row.Cells("discount_note").Value), "", row.Cells("discount_note").Value.ToString())
+    End Sub
+
+    Private Sub ClearRankFields()
+        rankCodeText.Text = Database.GetNextMemberRankCode()
+        rankNameText.Clear()
+        rankDiscountText.Clear()
+        rankGrid.ClearSelection()
+    End Sub
+
+    Private Sub RankNew_Click(sender As Object, e As EventArgs)
+        If String.IsNullOrWhiteSpace(rankNameText.Text) Then
+            MessageBox.Show("ランク名を入力してください。")
+            Return
+        End If
+        Try
+            Database.InsertMemberRank(rankCodeText.Text.Trim(), rankNameText.Text.Trim(), rankDiscountText.Text.Trim())
+            ReloadMemberRanks()
+        Catch ex As Exception
+            MessageBox.Show("登録に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub RankUpdate_Click(sender As Object, e As EventArgs)
+        If rankGrid.CurrentRow Is Nothing Then
+            MessageBox.Show("更新対象をグリッドから選択してください。")
+            Return
+        End If
+        Try
+            Database.UpdateMemberRank(rankCodeText.Text.Trim(), rankNameText.Text.Trim(), rankDiscountText.Text.Trim())
+            ReloadMemberRanks()
+        Catch ex As Exception
+            MessageBox.Show("更新に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub RankDelete_Click(sender As Object, e As EventArgs)
+        If rankGrid.CurrentRow Is Nothing Then
+            MessageBox.Show("削除対象をグリッドから選択してください。")
+            Return
+        End If
+        If MessageBox.Show($"会員ランク「{rankNameText.Text}」を削除しますか？", "確認", MessageBoxButtons.YesNo) <> DialogResult.Yes Then Return
+        Try
+            Database.DeleteMemberRank(rankCodeText.Text.Trim())
+            ReloadMemberRanks()
+        Catch ex As Exception
+            MessageBox.Show("削除に失敗しました（会員から参照されている可能性があります）: " & ex.Message)
+        End Try
+    End Sub
+
+    ' =====================================================================
+    ' コース管理
+    ' =====================================================================
+
+    Private Sub BuildCourseTab()
+        Dim page As New TabPage("コース管理")
+        tabControl.TabPages.Add(page)
+
+        Dim editPanel = MakeEditPanel()
+
+        Dim lblCode As New Label() With {.Text = "コースコード", .Location = New Point(10, 13), .AutoSize = True}
+        courseCodeText = New TextBox() With {.Location = New Point(110, 10), .Width = 80, .Enabled = False}
+        Dim lblName As New Label() With {.Text = "コース名", .Location = New Point(210, 13), .AutoSize = True}
+        courseNameText = New TextBox() With {.Location = New Point(280, 10), .Width = 200}
+        Dim lblTimeSystem As New Label() With {.Text = "時間制区分", .Location = New Point(500, 13), .AutoSize = True}
+        courseTimeSystemNumeric = New NumericUpDown() With {.Location = New Point(580, 10), .Width = 60, .Minimum = 0, .Maximum = 99}
+        Dim lblFee As New Label() With {.Text = "料金", .Location = New Point(660, 13), .AutoSize = True}
+        courseFeeNumeric = New NumericUpDown() With {.Location = New Point(700, 10), .Width = 80, .Minimum = 0, .Maximum = 999999}
+
+        Dim btnNew As New Button() With {.Text = "新規登録", .Location = New Point(10, 48), .Width = 100}
+        Dim btnUpdate As New Button() With {.Text = "更新", .Location = New Point(120, 48), .Width = 100}
+        Dim btnDelete As New Button() With {.Text = "削除", .Location = New Point(230, 48), .Width = 100}
+        Dim btnClear As New Button() With {.Text = "クリア", .Location = New Point(340, 48), .Width = 100}
+
+        AddHandler btnNew.Click, AddressOf CourseNew_Click
+        AddHandler btnUpdate.Click, AddressOf CourseUpdate_Click
+        AddHandler btnDelete.Click, AddressOf CourseDelete_Click
+        AddHandler btnClear.Click, Sub() ClearCourseFields()
+
+        editPanel.Controls.AddRange({lblCode, courseCodeText, lblName, courseNameText, lblTimeSystem, courseTimeSystemNumeric, lblFee, courseFeeNumeric, btnNew, btnUpdate, btnDelete, btnClear})
+        page.Controls.Add(editPanel)
+
+        courseGrid = MakeGrid()
+        AddHandler courseGrid.SelectionChanged, AddressOf CourseGrid_SelectionChanged
+        page.Controls.Add(courseGrid)
+    End Sub
+
+    Private Sub ReloadCourses()
+        courseGrid.DataSource = Database.GetAllCourses()
+        ApplyHeader(courseGrid, "course_code", "コード")
+        ApplyHeader(courseGrid, "course_name", "コース名")
+        ApplyHeader(courseGrid, "time_system_type", "時間制区分")
+        ApplyHeader(courseGrid, "fee", "料金")
+        ClearCourseFields()
+    End Sub
+
+    Private Sub CourseGrid_SelectionChanged(sender As Object, e As EventArgs)
+        If courseGrid.CurrentRow Is Nothing Then Return
+        Dim row = courseGrid.CurrentRow
+        courseCodeText.Text = row.Cells("course_code").Value.ToString()
+        courseNameText.Text = row.Cells("course_name").Value.ToString()
+        courseTimeSystemNumeric.Value = CDec(row.Cells("time_system_type").Value)
+        courseFeeNumeric.Value = CDec(row.Cells("fee").Value)
+    End Sub
+
+    Private Sub ClearCourseFields()
+        courseCodeText.Text = Database.GetNextCourseCode()
+        courseNameText.Clear()
+        courseTimeSystemNumeric.Value = 0
+        courseFeeNumeric.Value = 0
+        courseGrid.ClearSelection()
+    End Sub
+
+    Private Sub CourseNew_Click(sender As Object, e As EventArgs)
+        If String.IsNullOrWhiteSpace(courseNameText.Text) Then
+            MessageBox.Show("コース名を入力してください。")
+            Return
+        End If
+        Try
+            Database.InsertCourse(courseCodeText.Text.Trim(), courseNameText.Text.Trim(), CInt(courseTimeSystemNumeric.Value), CInt(courseFeeNumeric.Value))
+            ReloadCourses()
+        Catch ex As Exception
+            MessageBox.Show("登録に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub CourseUpdate_Click(sender As Object, e As EventArgs)
+        If courseGrid.CurrentRow Is Nothing Then
+            MessageBox.Show("更新対象をグリッドから選択してください。")
+            Return
+        End If
+        Try
+            Database.UpdateCourse(courseCodeText.Text.Trim(), courseNameText.Text.Trim(), CInt(courseTimeSystemNumeric.Value), CInt(courseFeeNumeric.Value))
+            ReloadCourses()
+        Catch ex As Exception
+            MessageBox.Show("更新に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub CourseDelete_Click(sender As Object, e As EventArgs)
+        If courseGrid.CurrentRow Is Nothing Then
+            MessageBox.Show("削除対象をグリッドから選択してください。")
+            Return
+        End If
+        If MessageBox.Show($"コース「{courseNameText.Text}」を削除しますか？", "確認", MessageBoxButtons.YesNo) <> DialogResult.Yes Then Return
+        Try
+            Database.DeleteCourse(courseCodeText.Text.Trim())
+            ReloadCourses()
+        Catch ex As Exception
+            MessageBox.Show("削除に失敗しました（入室情報から参照されている可能性があります）: " & ex.Message)
+        End Try
+    End Sub
+
+    ' =====================================================================
+    ' オプション管理
+    ' =====================================================================
+
+    Private Sub BuildOptionTab()
+        Dim page As New TabPage("オプション管理")
+        tabControl.TabPages.Add(page)
+
+        Dim editPanel = MakeEditPanel()
+
+        Dim lblCode As New Label() With {.Text = "オプションコード", .Location = New Point(10, 13), .AutoSize = True}
+        optionCodeText = New TextBox() With {.Location = New Point(130, 10), .Width = 80, .Enabled = False}
+        Dim lblName As New Label() With {.Text = "オプション名", .Location = New Point(230, 13), .AutoSize = True}
+        optionNameText = New TextBox() With {.Location = New Point(330, 10), .Width = 200}
+        Dim lblFee As New Label() With {.Text = "料金", .Location = New Point(550, 13), .AutoSize = True}
+        optionFeeNumeric = New NumericUpDown() With {.Location = New Point(590, 10), .Width = 80, .Minimum = 0, .Maximum = 999999}
+        Dim lblShort As New Label() With {.Text = "短縮名", .Location = New Point(690, 13), .AutoSize = True}
+        optionShortNameText = New TextBox() With {.Location = New Point(750, 10), .Width = 60} ' ボタン表示用の短縮名
+
+        Dim btnNew As New Button() With {.Text = "新規登録", .Location = New Point(10, 48), .Width = 100}
+        Dim btnUpdate As New Button() With {.Text = "更新", .Location = New Point(120, 48), .Width = 100}
+        Dim btnDelete As New Button() With {.Text = "削除", .Location = New Point(230, 48), .Width = 100}
+        Dim btnClear As New Button() With {.Text = "クリア", .Location = New Point(340, 48), .Width = 100}
+
+        AddHandler btnNew.Click, AddressOf OptionNew_Click
+        AddHandler btnUpdate.Click, AddressOf OptionUpdate_Click
+        AddHandler btnDelete.Click, AddressOf OptionDelete_Click
+        AddHandler btnClear.Click, Sub() ClearOptionFields()
+
+        editPanel.Controls.AddRange({lblCode, optionCodeText, lblName, optionNameText, lblFee, optionFeeNumeric, lblShort, optionShortNameText, btnNew, btnUpdate, btnDelete, btnClear})
+        page.Controls.Add(editPanel)
+
+        optionGrid = MakeGrid()
+        AddHandler optionGrid.SelectionChanged, AddressOf OptionGrid_SelectionChanged
+        page.Controls.Add(optionGrid)
+    End Sub
+
+    Private Sub ReloadOptions()
+        optionGrid.DataSource = Database.GetAllOptions()
+        ApplyHeader(optionGrid, "option_code", "コード")
+        ApplyHeader(optionGrid, "option_name", "オプション名")
+        ApplyHeader(optionGrid, "fee", "料金")
+        ApplyHeader(optionGrid, "short_name", "短縮名")
+        ClearOptionFields()
+    End Sub
+
+    Private Sub OptionGrid_SelectionChanged(sender As Object, e As EventArgs)
+        If optionGrid.CurrentRow Is Nothing Then Return
+        Dim row = optionGrid.CurrentRow
+        optionCodeText.Text = row.Cells("option_code").Value.ToString()
+        optionNameText.Text = row.Cells("option_name").Value.ToString()
+        optionFeeNumeric.Value = CDec(row.Cells("fee").Value)
+        optionShortNameText.Text = row.Cells("short_name").Value.ToString()
+    End Sub
+
+    Private Sub ClearOptionFields()
+        optionCodeText.Text = Database.GetNextOptionCode()
+        optionNameText.Clear()
+        optionFeeNumeric.Value = 0
+        optionShortNameText.Clear()
+        optionGrid.ClearSelection()
+    End Sub
+
+    Private Sub OptionNew_Click(sender As Object, e As EventArgs)
+        If String.IsNullOrWhiteSpace(optionNameText.Text) Then
+            MessageBox.Show("オプション名を入力してください。")
+            Return
+        End If
+        Try
+            Database.InsertOption(optionCodeText.Text.Trim(), optionNameText.Text.Trim(), CInt(optionFeeNumeric.Value), optionShortNameText.Text.Trim())
+            ReloadOptions()
+        Catch ex As Exception
+            MessageBox.Show("登録に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub OptionUpdate_Click(sender As Object, e As EventArgs)
+        If optionGrid.CurrentRow Is Nothing Then
+            MessageBox.Show("更新対象をグリッドから選択してください。")
+            Return
+        End If
+        Try
+            Database.UpdateOption(optionCodeText.Text.Trim(), optionNameText.Text.Trim(), CInt(optionFeeNumeric.Value), optionShortNameText.Text.Trim())
+            ReloadOptions()
+        Catch ex As Exception
+            MessageBox.Show("更新に失敗しました: " & ex.Message)
+        End Try
+    End Sub
+
+    Private Sub OptionDelete_Click(sender As Object, e As EventArgs)
+        If optionGrid.CurrentRow Is Nothing Then
+            MessageBox.Show("削除対象をグリッドから選択してください。")
+            Return
+        End If
+        If MessageBox.Show($"オプション「{optionNameText.Text}」を削除しますか？", "確認", MessageBoxButtons.YesNo) <> DialogResult.Yes Then Return
+        Try
+            Database.DeleteOption(optionCodeText.Text.Trim())
+            ReloadOptions()
+        Catch ex As Exception
+            MessageBox.Show("削除に失敗しました（入室情報から参照されている可能性があります）: " & ex.Message)
         End Try
     End Sub
 

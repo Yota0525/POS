@@ -24,51 +24,51 @@ Partial Class EnterRoomForm
     Private Sub InitializeComponent()
         back_button = New Button()
         Label1 = New Label()
-        TextBox1 = New TextBox()
+        entry_time = New TextBox()
         Label2 = New Label()
-        TextBox2 = New TextBox()
+        member_code = New TextBox()
         Label3 = New Label()
-        TextBox3 = New TextBox()
+        member_rank = New TextBox()
         Label4 = New Label()
         Label5 = New Label()
         register_button = New Button()
-        TextBox4 = New TextBox()
+        exit_time = New TextBox()
         Label12 = New Label()
-        ComboBox1 = New ComboBox()
+        course_combo = New ComboBox()
         Label14 = New Label()
-        TextBox11 = New TextBox()
+        room_no = New TextBox()
         description_button = New Button()
         Label6 = New Label()
         Label7 = New Label()
-        TextBox5 = New TextBox()
+        use_time = New TextBox()
         Label13 = New Label()
-        TextBox13 = New TextBox()
+        additional_ability = New TextBox()
         Label8 = New Label()
-        ComboBox2 = New ComboBox()
+        maker_combo = New ComboBox()
         Label15 = New Label()
-        ComboBox5 = New ComboBox()
+        roomtype_combo = New ComboBox()
         Label9 = New Label()
-        ComboBox3 = New ComboBox()
+        service_combo = New ComboBox()
         Label10 = New Label()
-        TextBox6 = New TextBox()
-        TextBox7 = New TextBox()
-        TextBox8 = New TextBox()
-        TextBox9 = New TextBox()
+        price_1 = New TextBox()
+        price_2 = New TextBox()
+        price_3 = New TextBox()
+        price_4 = New TextBox()
         Label11 = New Label()
         Label16 = New Label()
-        ComboBox4 = New ComboBox()
-        ComboBox6 = New ComboBox()
-        TextBox10 = New TextBox()
+        machine_combo = New ComboBox()
+        option_combo = New ComboBox()
+        member_category = New TextBox()
         enter_count_button = New Button()
-        TextBox12 = New TextBox()
-        TextBox14 = New TextBox()
+        age_7to15 = New TextBox()
+        age_20 = New TextBox()
         Label17 = New Label()
         Label18 = New Label()
-        TextBox15 = New TextBox()
-        TextBox16 = New TextBox()
+        age_6 = New TextBox()
+        age_18to19 = New TextBox()
         Label19 = New Label()
         Label20 = New Label()
-        CheckBox1 = New CheckBox()
+        high_school = New CheckBox()
         add_register_button = New Button()
         GroupBox1 = New GroupBox()
         key_button_0 = New Button()
@@ -116,16 +116,16 @@ Partial Class EnterRoomForm
         Label1.Text = "部屋No"
         Label1.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' TextBox1
+        ' entry_time
         ' 
-        TextBox1.BorderStyle = BorderStyle.FixedSingle
-        TextBox1.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox1.Location = New Point(133, 280)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(88, 32)
-        TextBox1.TabIndex = 2
-        TextBox1.Text = "00:00"
-        TextBox1.TextAlign = HorizontalAlignment.Center
+        entry_time.BorderStyle = BorderStyle.FixedSingle
+        entry_time.Font = New Font("ＭＳ ゴシック", 18.5F)
+        entry_time.Location = New Point(133, 280)
+        entry_time.Name = "entry_time"
+        entry_time.Size = New Size(88, 32)
+        entry_time.TabIndex = 2
+        entry_time.Text = "00:00"
+        entry_time.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label2
         ' 
@@ -141,16 +141,16 @@ Partial Class EnterRoomForm
         Label2.Text = "会　員"
         Label2.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' TextBox2
+        ' member_code
         ' 
-        TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox2.Location = New Point(133, 45)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(303, 32)
-        TextBox2.TabIndex = 2
-        TextBox2.Text = "A1520080096099836B"
-        TextBox2.TextAlign = HorizontalAlignment.Center
+        member_code.BorderStyle = BorderStyle.FixedSingle
+        member_code.Font = New Font("ＭＳ ゴシック", 18.5F)
+        member_code.Location = New Point(133, 45)
+        member_code.Name = "member_code"
+        member_code.Size = New Size(303, 32)
+        member_code.TabIndex = 2
+        member_code.Text = "A1520080096099836B"
+        member_code.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label3
         ' 
@@ -166,16 +166,16 @@ Partial Class EnterRoomForm
         Label3.Text = "ランク"
         Label3.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' TextBox3
+        ' member_rank
         ' 
-        TextBox3.BorderStyle = BorderStyle.FixedSingle
-        TextBox3.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox3.Location = New Point(133, 80)
-        TextBox3.Name = "TextBox3"
-        TextBox3.Size = New Size(303, 32)
-        TextBox3.TabIndex = 2
-        TextBox3.Text = "レギュラー会員"
-        TextBox3.TextAlign = HorizontalAlignment.Center
+        member_rank.BorderStyle = BorderStyle.FixedSingle
+        member_rank.Font = New Font("ＭＳ ゴシック", 18.5F)
+        member_rank.Location = New Point(133, 80)
+        member_rank.Name = "member_rank"
+        member_rank.Size = New Size(303, 32)
+        member_rank.TabIndex = 2
+        member_rank.Text = "レギュラー会員"
+        member_rank.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label4
         ' 
@@ -219,16 +219,16 @@ Partial Class EnterRoomForm
         register_button.Text = "登　録"
         register_button.UseVisualStyleBackColor = False
         ' 
-        ' TextBox4
+        ' exit_time
         ' 
-        TextBox4.BorderStyle = BorderStyle.FixedSingle
-        TextBox4.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox4.Location = New Point(339, 280)
-        TextBox4.Name = "TextBox4"
-        TextBox4.Size = New Size(97, 32)
-        TextBox4.TabIndex = 2
-        TextBox4.Text = "00:00"
-        TextBox4.TextAlign = HorizontalAlignment.Center
+        exit_time.BorderStyle = BorderStyle.FixedSingle
+        exit_time.Font = New Font("ＭＳ ゴシック", 18.5F)
+        exit_time.Location = New Point(339, 280)
+        exit_time.Name = "exit_time"
+        exit_time.Size = New Size(97, 32)
+        exit_time.TabIndex = 2
+        exit_time.Text = "00:00"
+        exit_time.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label12
         ' 
@@ -244,16 +244,16 @@ Partial Class EnterRoomForm
         Label12.Text = "退室時間"
         Label12.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' ComboBox1
+        ' course_combo
         ' 
-        ComboBox1.FlatStyle = FlatStyle.Flat
-        ComboBox1.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"時間制料金", "時間制料金1名", "昼フリータイム", "昼フリータイム1名", "0円コース", "ｲﾝﾊﾞｳﾝﾄﾞｿﾌﾄ飲放", "ｲﾝﾊﾞｳﾝﾄﾞｱﾙｺｰﾙ飲放", "ｲﾝﾊﾞｳﾝﾄﾞﾌｰﾄﾞ＆ｿﾌﾄ-2H", "ｲﾝﾊﾞｳﾝﾄﾞﾌｰﾄﾞ＆ｱﾙ-2H", "宴会コース2時間", "宴会コース3時間"})
-        ComboBox1.Location = New Point(133, 318)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(303, 31)
-        ComboBox1.TabIndex = 3
+        course_combo.FlatStyle = FlatStyle.Flat
+        course_combo.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
+        course_combo.FormattingEnabled = True
+        course_combo.Items.AddRange(New Object() {"時間制料金", "時間制料金1名", "昼フリータイム", "昼フリータイム1名", "0円コース", "ｲﾝﾊﾞｳﾝﾄﾞｿﾌﾄ飲放", "ｲﾝﾊﾞｳﾝﾄﾞｱﾙｺｰﾙ飲放", "ｲﾝﾊﾞｳﾝﾄﾞﾌｰﾄﾞ＆ｿﾌﾄ-2H", "ｲﾝﾊﾞｳﾝﾄﾞﾌｰﾄﾞ＆ｱﾙ-2H", "宴会コース2時間", "宴会コース3時間"})
+        course_combo.Location = New Point(133, 318)
+        course_combo.Name = "course_combo"
+        course_combo.Size = New Size(303, 31)
+        course_combo.TabIndex = 3
         ' 
         ' Label14
         ' 
@@ -268,16 +268,16 @@ Partial Class EnterRoomForm
         Label14.Text = "分"
         Label14.TextAlign = ContentAlignment.MiddleLeft
         ' 
-        ' TextBox11
+        ' room_no
         ' 
-        TextBox11.BorderStyle = BorderStyle.FixedSingle
-        TextBox11.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox11.Location = New Point(133, 9)
-        TextBox11.Name = "TextBox11"
-        TextBox11.Size = New Size(88, 32)
-        TextBox11.TabIndex = 2
-        TextBox11.Text = "00"
-        TextBox11.TextAlign = HorizontalAlignment.Center
+        room_no.BorderStyle = BorderStyle.FixedSingle
+        room_no.Font = New Font("ＭＳ ゴシック", 18.5F)
+        room_no.Location = New Point(133, 9)
+        room_no.Name = "room_no"
+        room_no.Size = New Size(88, 32)
+        room_no.TabIndex = 2
+        room_no.Text = "00"
+        room_no.TextAlign = HorizontalAlignment.Center
         ' 
         ' description_button
         ' 
@@ -318,19 +318,19 @@ Partial Class EnterRoomForm
         Label7.Padding = New Padding(5, 3, 5, 3)
         Label7.Size = New Size(118, 32)
         Label7.TabIndex = 1
-        Label7.Text = "入室時間"
+        Label7.Text = "利用時間"
         Label7.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' TextBox5
+        ' use_time
         ' 
-        TextBox5.BorderStyle = BorderStyle.FixedSingle
-        TextBox5.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox5.Location = New Point(133, 354)
-        TextBox5.Name = "TextBox5"
-        TextBox5.Size = New Size(97, 32)
-        TextBox5.TabIndex = 2
-        TextBox5.Text = "00:00"
-        TextBox5.TextAlign = HorizontalAlignment.Center
+        use_time.BorderStyle = BorderStyle.FixedSingle
+        use_time.Font = New Font("ＭＳ ゴシック", 18.5F)
+        use_time.Location = New Point(133, 354)
+        use_time.Name = "use_time"
+        use_time.Size = New Size(97, 32)
+        use_time.TabIndex = 2
+        use_time.Text = "00:00"
+        use_time.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label13
         ' 
@@ -346,16 +346,16 @@ Partial Class EnterRoomForm
         Label13.Text = "延長"
         Label13.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' TextBox13
+        ' additional_ability
         ' 
-        TextBox13.BorderStyle = BorderStyle.FixedSingle
-        TextBox13.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox13.Location = New Point(323, 354)
-        TextBox13.Name = "TextBox13"
-        TextBox13.Size = New Size(113, 32)
-        TextBox13.TabIndex = 2
-        TextBox13.Text = "可能"
-        TextBox13.TextAlign = HorizontalAlignment.Center
+        additional_ability.BorderStyle = BorderStyle.FixedSingle
+        additional_ability.Font = New Font("ＭＳ ゴシック", 18.5F)
+        additional_ability.Location = New Point(323, 354)
+        additional_ability.Name = "additional_ability"
+        additional_ability.Size = New Size(113, 32)
+        additional_ability.TabIndex = 2
+        additional_ability.Text = "可能"
+        additional_ability.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label8
         ' 
@@ -371,16 +371,16 @@ Partial Class EnterRoomForm
         Label8.Text = "機種ﾒｰｶｰ"
         Label8.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' ComboBox2
+        ' maker_combo
         ' 
-        ComboBox2.FlatStyle = FlatStyle.Flat
-        ComboBox2.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Items.AddRange(New Object() {"JOYSOUND", "DAM", "E-bo"})
-        ComboBox2.Location = New Point(133, 392)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(266, 31)
-        ComboBox2.TabIndex = 3
+        maker_combo.FlatStyle = FlatStyle.Flat
+        maker_combo.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
+        maker_combo.FormattingEnabled = True
+        maker_combo.Items.AddRange(New Object() {"JOYSOUND", "DAM", "E-bo"})
+        maker_combo.Location = New Point(133, 392)
+        maker_combo.Name = "maker_combo"
+        maker_combo.Size = New Size(266, 31)
+        maker_combo.TabIndex = 3
         ' 
         ' Label15
         ' 
@@ -396,16 +396,16 @@ Partial Class EnterRoomForm
         Label15.Text = "コンセプト"
         Label15.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' ComboBox5
+        ' roomtype_combo
         ' 
-        ComboBox5.FlatStyle = FlatStyle.Flat
-        ComboBox5.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
-        ComboBox5.FormattingEnabled = True
-        ComboBox5.Items.AddRange(New Object() {"パーティールーム", "ミラPon!"})
-        ComboBox5.Location = New Point(133, 430)
-        ComboBox5.Name = "ComboBox5"
-        ComboBox5.Size = New Size(266, 31)
-        ComboBox5.TabIndex = 3
+        roomtype_combo.FlatStyle = FlatStyle.Flat
+        roomtype_combo.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
+        roomtype_combo.FormattingEnabled = True
+        roomtype_combo.Items.AddRange(New Object() {"パーティールーム", "ミラPon!"})
+        roomtype_combo.Location = New Point(133, 430)
+        roomtype_combo.Name = "roomtype_combo"
+        roomtype_combo.Size = New Size(266, 31)
+        roomtype_combo.TabIndex = 3
         ' 
         ' Label9
         ' 
@@ -421,15 +421,15 @@ Partial Class EnterRoomForm
         Label9.Text = "サービス"
         Label9.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' ComboBox3
+        ' service_combo
         ' 
-        ComboBox3.FlatStyle = FlatStyle.Flat
-        ComboBox3.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Location = New Point(133, 466)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(115, 31)
-        ComboBox3.TabIndex = 3
+        service_combo.FlatStyle = FlatStyle.Flat
+        service_combo.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
+        service_combo.FormattingEnabled = True
+        service_combo.Location = New Point(133, 466)
+        service_combo.Name = "service_combo"
+        service_combo.Size = New Size(115, 31)
+        service_combo.TabIndex = 3
         ' 
         ' Label10
         ' 
@@ -445,49 +445,49 @@ Partial Class EnterRoomForm
         Label10.Text = "予定金額"
         Label10.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' TextBox6
+        ' price_1
         ' 
-        TextBox6.BorderStyle = BorderStyle.FixedSingle
-        TextBox6.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox6.Location = New Point(133, 502)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(152, 32)
-        TextBox6.TabIndex = 2
-        TextBox6.Text = "0"
-        TextBox6.TextAlign = HorizontalAlignment.Right
+        price_1.BorderStyle = BorderStyle.FixedSingle
+        price_1.Font = New Font("ＭＳ ゴシック", 18.5F)
+        price_1.Location = New Point(133, 502)
+        price_1.Name = "price_1"
+        price_1.Size = New Size(152, 32)
+        price_1.TabIndex = 2
+        price_1.Text = "0"
+        price_1.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox7
+        ' price_2
         ' 
-        TextBox7.BorderStyle = BorderStyle.FixedSingle
-        TextBox7.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox7.Location = New Point(286, 502)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(113, 32)
-        TextBox7.TabIndex = 2
-        TextBox7.Text = "0"
-        TextBox7.TextAlign = HorizontalAlignment.Right
+        price_2.BorderStyle = BorderStyle.FixedSingle
+        price_2.Font = New Font("ＭＳ ゴシック", 18.5F)
+        price_2.Location = New Point(286, 502)
+        price_2.Name = "price_2"
+        price_2.Size = New Size(113, 32)
+        price_2.TabIndex = 2
+        price_2.Text = "0"
+        price_2.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox8
+        ' price_3
         ' 
-        TextBox8.BorderStyle = BorderStyle.FixedSingle
-        TextBox8.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox8.Location = New Point(400, 502)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(113, 32)
-        TextBox8.TabIndex = 2
-        TextBox8.Text = "0"
-        TextBox8.TextAlign = HorizontalAlignment.Right
+        price_3.BorderStyle = BorderStyle.FixedSingle
+        price_3.Font = New Font("ＭＳ ゴシック", 18.5F)
+        price_3.Location = New Point(400, 502)
+        price_3.Name = "price_3"
+        price_3.Size = New Size(113, 32)
+        price_3.TabIndex = 2
+        price_3.Text = "0"
+        price_3.TextAlign = HorizontalAlignment.Right
         ' 
-        ' TextBox9
+        ' price_4
         ' 
-        TextBox9.BorderStyle = BorderStyle.FixedSingle
-        TextBox9.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox9.Location = New Point(514, 502)
-        TextBox9.Name = "TextBox9"
-        TextBox9.Size = New Size(113, 32)
-        TextBox9.TabIndex = 2
-        TextBox9.Text = "0"
-        TextBox9.TextAlign = HorizontalAlignment.Right
+        price_4.BorderStyle = BorderStyle.FixedSingle
+        price_4.Font = New Font("ＭＳ ゴシック", 18.5F)
+        price_4.Location = New Point(514, 502)
+        price_4.Name = "price_4"
+        price_4.Size = New Size(113, 32)
+        price_4.TabIndex = 2
+        price_4.Text = "0"
+        price_4.TextAlign = HorizontalAlignment.Right
         ' 
         ' Label11
         ' 
@@ -517,35 +517,35 @@ Partial Class EnterRoomForm
         Label16.Text = "オプション"
         Label16.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' ComboBox4
+        ' machine_combo
         ' 
-        ComboBox4.FlatStyle = FlatStyle.Flat
-        ComboBox4.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
-        ComboBox4.FormattingEnabled = True
-        ComboBox4.Location = New Point(527, 392)
-        ComboBox4.Name = "ComboBox4"
-        ComboBox4.Size = New Size(266, 31)
-        ComboBox4.TabIndex = 3
+        machine_combo.FlatStyle = FlatStyle.Flat
+        machine_combo.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
+        machine_combo.FormattingEnabled = True
+        machine_combo.Location = New Point(527, 392)
+        machine_combo.Name = "machine_combo"
+        machine_combo.Size = New Size(266, 31)
+        machine_combo.TabIndex = 3
         ' 
-        ' ComboBox6
+        ' option_combo
         ' 
-        ComboBox6.FlatStyle = FlatStyle.Flat
-        ComboBox6.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
-        ComboBox6.FormattingEnabled = True
-        ComboBox6.Location = New Point(527, 430)
-        ComboBox6.Name = "ComboBox6"
-        ComboBox6.Size = New Size(266, 31)
-        ComboBox6.TabIndex = 3
+        option_combo.FlatStyle = FlatStyle.Flat
+        option_combo.Font = New Font("ＭＳ ゴシック", 17.25F, FontStyle.Bold)
+        option_combo.FormattingEnabled = True
+        option_combo.Location = New Point(527, 430)
+        option_combo.Name = "option_combo"
+        option_combo.Size = New Size(266, 31)
+        option_combo.TabIndex = 3
         ' 
-        ' TextBox10
+        ' member_category
         ' 
-        TextBox10.BorderStyle = BorderStyle.FixedSingle
-        TextBox10.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox10.Location = New Point(439, 45)
-        TextBox10.Name = "TextBox10"
-        TextBox10.Size = New Size(184, 32)
-        TextBox10.TabIndex = 2
-        TextBox10.Text = "一般"
+        member_category.BorderStyle = BorderStyle.FixedSingle
+        member_category.Font = New Font("ＭＳ ゴシック", 18.5F)
+        member_category.Location = New Point(439, 45)
+        member_category.Name = "member_category"
+        member_category.Size = New Size(184, 32)
+        member_category.TabIndex = 2
+        member_category.Text = "一般"
         ' 
         ' enter_count_button
         ' 
@@ -561,27 +561,27 @@ Partial Class EnterRoomForm
         enter_count_button.Text = "人数入力"
         enter_count_button.UseVisualStyleBackColor = False
         ' 
-        ' TextBox12
+        ' age_7to15
         ' 
-        TextBox12.BorderStyle = BorderStyle.FixedSingle
-        TextBox12.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox12.Location = New Point(433, 183)
-        TextBox12.Name = "TextBox12"
-        TextBox12.Size = New Size(64, 32)
-        TextBox12.TabIndex = 2
-        TextBox12.Text = "0"
-        TextBox12.TextAlign = HorizontalAlignment.Center
+        age_7to15.BorderStyle = BorderStyle.FixedSingle
+        age_7to15.Font = New Font("ＭＳ ゴシック", 18.5F)
+        age_7to15.Location = New Point(433, 183)
+        age_7to15.Name = "age_7to15"
+        age_7to15.Size = New Size(64, 32)
+        age_7to15.TabIndex = 2
+        age_7to15.Text = "0"
+        age_7to15.TextAlign = HorizontalAlignment.Center
         ' 
-        ' TextBox14
+        ' age_20
         ' 
-        TextBox14.BorderStyle = BorderStyle.FixedSingle
-        TextBox14.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox14.Location = New Point(433, 148)
-        TextBox14.Name = "TextBox14"
-        TextBox14.Size = New Size(64, 32)
-        TextBox14.TabIndex = 2
-        TextBox14.Text = "0"
-        TextBox14.TextAlign = HorizontalAlignment.Center
+        age_20.BorderStyle = BorderStyle.FixedSingle
+        age_20.Font = New Font("ＭＳ ゴシック", 18.5F)
+        age_20.Location = New Point(433, 148)
+        age_20.Name = "age_20"
+        age_20.Size = New Size(64, 32)
+        age_20.TabIndex = 2
+        age_20.Text = "0"
+        age_20.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label17
         ' 
@@ -609,27 +609,27 @@ Partial Class EnterRoomForm
         Label18.Text = "7歳～15歳"
         Label18.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' TextBox15
+        ' age_6
         ' 
-        TextBox15.BorderStyle = BorderStyle.FixedSingle
-        TextBox15.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox15.Location = New Point(631, 183)
-        TextBox15.Name = "TextBox15"
-        TextBox15.Size = New Size(64, 32)
-        TextBox15.TabIndex = 2
-        TextBox15.Text = "0"
-        TextBox15.TextAlign = HorizontalAlignment.Center
+        age_6.BorderStyle = BorderStyle.FixedSingle
+        age_6.Font = New Font("ＭＳ ゴシック", 18.5F)
+        age_6.Location = New Point(631, 183)
+        age_6.Name = "age_6"
+        age_6.Size = New Size(64, 32)
+        age_6.TabIndex = 2
+        age_6.Text = "0"
+        age_6.TextAlign = HorizontalAlignment.Center
         ' 
-        ' TextBox16
+        ' age_18to19
         ' 
-        TextBox16.BorderStyle = BorderStyle.FixedSingle
-        TextBox16.Font = New Font("ＭＳ ゴシック", 18.5F)
-        TextBox16.Location = New Point(631, 148)
-        TextBox16.Name = "TextBox16"
-        TextBox16.Size = New Size(64, 32)
-        TextBox16.TabIndex = 2
-        TextBox16.Text = "0"
-        TextBox16.TextAlign = HorizontalAlignment.Center
+        age_18to19.BorderStyle = BorderStyle.FixedSingle
+        age_18to19.Font = New Font("ＭＳ ゴシック", 18.5F)
+        age_18to19.Location = New Point(631, 148)
+        age_18to19.Name = "age_18to19"
+        age_18to19.Size = New Size(64, 32)
+        age_18to19.TabIndex = 2
+        age_18to19.Text = "0"
+        age_18to19.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label19
         ' 
@@ -657,22 +657,22 @@ Partial Class EnterRoomForm
         Label20.Text = "6歳以下"
         Label20.TextAlign = ContentAlignment.MiddleRight
         ' 
-        ' CheckBox1
+        ' high_school
         ' 
-        CheckBox1.AutoSize = True
-        CheckBox1.BackColor = Color.Teal
-        CheckBox1.FlatAppearance.BorderColor = Color.White
-        CheckBox1.FlatAppearance.CheckedBackColor = Color.White
-        CheckBox1.FlatAppearance.MouseDownBackColor = Color.White
-        CheckBox1.FlatAppearance.MouseOverBackColor = Color.White
-        CheckBox1.FlatStyle = FlatStyle.System
-        CheckBox1.Font = New Font("ＭＳ ゴシック", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
-        CheckBox1.Location = New Point(514, 123)
-        CheckBox1.Name = "CheckBox1"
-        CheckBox1.Size = New Size(173, 26)
-        CheckBox1.TabIndex = 4
-        CheckBox1.Text = "高校生がいる"
-        CheckBox1.UseVisualStyleBackColor = False
+        high_school.AutoSize = True
+        high_school.BackColor = Color.Teal
+        high_school.FlatAppearance.BorderColor = Color.White
+        high_school.FlatAppearance.CheckedBackColor = Color.White
+        high_school.FlatAppearance.MouseDownBackColor = Color.White
+        high_school.FlatAppearance.MouseOverBackColor = Color.White
+        high_school.FlatStyle = FlatStyle.System
+        high_school.Font = New Font("ＭＳ ゴシック", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(128))
+        high_school.Location = New Point(514, 123)
+        high_school.Name = "high_school"
+        high_school.Size = New Size(173, 26)
+        high_school.TabIndex = 4
+        high_school.Text = "高校生がいる"
+        high_school.UseVisualStyleBackColor = False
         ' 
         ' add_register_button
         ' 
@@ -880,14 +880,14 @@ Partial Class EnterRoomForm
         BackColor = Color.Teal
         ClientSize = New Size(1024, 768)
         Controls.Add(key_panel)
-        Controls.Add(CheckBox1)
-        Controls.Add(ComboBox3)
-        Controls.Add(ComboBox6)
-        Controls.Add(ComboBox5)
-        Controls.Add(ComboBox4)
-        Controls.Add(ComboBox2)
-        Controls.Add(ComboBox1)
-        Controls.Add(TextBox3)
+        Controls.Add(high_school)
+        Controls.Add(service_combo)
+        Controls.Add(option_combo)
+        Controls.Add(roomtype_combo)
+        Controls.Add(machine_combo)
+        Controls.Add(maker_combo)
+        Controls.Add(course_combo)
+        Controls.Add(member_rank)
         Controls.Add(Label20)
         Controls.Add(Label18)
         Controls.Add(Label19)
@@ -905,23 +905,23 @@ Partial Class EnterRoomForm
         Controls.Add(Label5)
         Controls.Add(Label4)
         Controls.Add(Label6)
-        Controls.Add(TextBox16)
+        Controls.Add(age_18to19)
         Controls.Add(Label3)
-        Controls.Add(TextBox15)
-        Controls.Add(TextBox14)
-        Controls.Add(TextBox12)
-        Controls.Add(TextBox10)
-        Controls.Add(TextBox2)
-        Controls.Add(TextBox9)
-        Controls.Add(TextBox8)
-        Controls.Add(TextBox7)
-        Controls.Add(TextBox6)
-        Controls.Add(TextBox13)
-        Controls.Add(TextBox5)
-        Controls.Add(TextBox4)
+        Controls.Add(age_6)
+        Controls.Add(age_20)
+        Controls.Add(age_7to15)
+        Controls.Add(member_category)
+        Controls.Add(member_code)
+        Controls.Add(price_4)
+        Controls.Add(price_3)
+        Controls.Add(price_2)
+        Controls.Add(price_1)
+        Controls.Add(additional_ability)
+        Controls.Add(use_time)
+        Controls.Add(exit_time)
         Controls.Add(Label2)
-        Controls.Add(TextBox11)
-        Controls.Add(TextBox1)
+        Controls.Add(room_no)
+        Controls.Add(entry_time)
         Controls.Add(Label1)
         Controls.Add(description_button)
         Controls.Add(enter_count_button)
@@ -942,51 +942,51 @@ Partial Class EnterRoomForm
 
     Friend WithEvents back_button As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents entry_time As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents member_code As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents member_rank As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents register_button As Button
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents exit_time As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents course_combo As ComboBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents room_no As TextBox
     Friend WithEvents description_button As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents use_time As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents additional_ability As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents maker_combo As ComboBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents roomtype_combo As ComboBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents service_combo As ComboBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents price_1 As TextBox
+    Friend WithEvents price_2 As TextBox
+    Friend WithEvents price_3 As TextBox
+    Friend WithEvents price_4 As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents ComboBox4 As ComboBox
-    Friend WithEvents ComboBox6 As ComboBox
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents machine_combo As ComboBox
+    Friend WithEvents option_combo As ComboBox
+    Friend WithEvents member_category As TextBox
     Friend WithEvents enter_count_button As Button
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents age_7to15 As TextBox
+    Friend WithEvents age_20 As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox15 As TextBox
-    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents age_6 As TextBox
+    Friend WithEvents age_18to19 As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents high_school As CheckBox
     Friend WithEvents add_register_button As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents key_button_0 As Button

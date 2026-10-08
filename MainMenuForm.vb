@@ -1,4 +1,5 @@
-﻿Imports System.Linq
+﻿Imports System.Data
+Imports System.Linq
 
 Public Class MainMenuForm
 
@@ -68,8 +69,12 @@ Public Class MainMenuForm
         Next
     End Sub
 
-    ''' DBの部屋情報をもとに、各room_buttonの1行目(部屋番号・機種名)と3行目(収容人数)を更新する。
+    Private ReadOnly OccupiedWithinTimeColor As Color = Color.FromArgb(128, 255, 255)
+    Private ReadOnly OccupiedOverTimeColor As Color = Color.FromArgb(255, 128, 255)
+
+    ''' DBの部屋情報・入室情報をもとに、各room_buttonの表示(テキスト4行・背景色・有効/無効)を更新する。
     ''' ボタンの画面上の並び順(上→下、左→右)と、DBの部屋番号の昇順を対応させている。
+    ''' date_time_timerから毎秒呼び出され、使用中の部屋は残り時間/超過時間がリアルタイムに更新される。
     Private Sub UpdateRoomButtonTexts()
         Dim roomButtons = Me.Controls.OfType(Of MultiLineButton)().
             OrderBy(Function(b) b.Top).
@@ -78,19 +83,83 @@ Public Class MainMenuForm
 
         Dim rooms = Database.GetAllRooms() ' room_noの昇順
 
-        Dim count = Math.Min(roomButtons.Count, rooms.Rows.Count)
-        For i = 0 To count - 1
-            Dim roomNo = CInt(rooms.Rows(i)("room_no"))
-            Dim modelName = rooms.Rows(i)("model_name").ToString()
-            Dim capacityMin = CInt(rooms.Rows(i)("capacity_min"))
-            Dim capacityMax = CInt(rooms.Rows(i)("capacity_max"))
+        ' 部屋番号 → 使用中の入室情報 のルックアップ
+        Dim activeByRoom As New Dictionary(Of Integer, DataRow)
+        For Each row As DataRow In Database.GetActiveEntries().Rows
+            activeByRoom(CInt(row("room_no"))) = row
+        Next
+
+        For i = 0 To roomButtons.Count - 1
             Dim btn = roomButtons(i)
 
-            If btn.Lines.Count > 0 Then btn.Lines(0).Text = $"{roomNo:00} {modelName}　＊＊"
-            If btn.Lines.Count > 2 Then btn.Lines(2).Text = $"  0人 ( {capacityMin:00}- {capacityMax:00})"
+            If i >= rooms.Rows.Count Then
+                ' 対応する部屋情報が無いボタンはテキストを消して無効化する
+                For Each line In btn.Lines
+                    line.Text = ""
+                Next
+                btn.BackColor = Color.Gray
+                btn.Enabled = False
+                btn.Invalidate()
+                Continue For
+            End If
+
+            Dim roomRow = rooms.Rows(i)
+            Dim roomNo = CInt(roomRow("room_no"))
+            Dim modelName = roomRow("model_name").ToString()
+            Dim capacityMin = CInt(roomRow("capacity_min"))
+            Dim capacityMax = CInt(roomRow("capacity_max"))
+            Dim roomTypeShortName = roomRow("room_type_short_name").ToString()
+
+            btn.Enabled = True
+
+            If activeByRoom.ContainsKey(roomNo) Then
+                Dim entry = activeByRoom(roomNo)
+                Dim entryTime = CDate(entry("entry_time"))
+                Dim usageMinutes = If(IsDBNull(entry("usage_minutes")), 0, CInt(entry("usage_minutes")))
+                Dim plannedExit = entryTime.AddMinutes(usageMinutes)
+                Dim now = DateTime.Now
+
+                Dim courseName = entry("course_name").ToString()
+                Dim courseShort = courseName.Substring(0, Math.Min(2, courseName.Length))
+
+                Dim optionShortName = If(IsDBNull(entry("option_short_name")), "", entry("option_short_name").ToString())
+
+                Dim totalCount =
+                    NzInt(entry("count_adult")) +
+                    NzInt(entry("count_age_7_15")) +
+                    NzInt(entry("count_age_18_19")) +
+                    NzInt(entry("count_child"))
+
+                Dim minutesText As Integer
+                If now <= plannedExit Then
+                    minutesText = CInt(Math.Floor((plannedExit - now).TotalMinutes))
+                    btn.BackColor = OccupiedWithinTimeColor
+                Else
+                    minutesText = CInt(Math.Floor((now - plannedExit).TotalMinutes))
+                    btn.BackColor = OccupiedOverTimeColor
+                End If
+
+                btn.Lines(0).Text = $"{roomNo:00} {modelName.PadRight(8)} {courseShort}"
+                btn.Lines(1).Text = $" {entryTime:HH:mm}～{plannedExit:HH:mm}  {minutesText}分"
+                btn.Lines(2).Text = $"  {totalCount}人( {capacityMin}～ {capacityMax})"
+                btn.Lines(3).Text = $" {optionShortName}"
+            Else
+                btn.BackColor = Color.White
+
+                btn.Lines(0).Text = $"{roomNo:00} {modelName}"
+                btn.Lines(1).Text = ""
+                btn.Lines(2).Text = $"     {capacityMin}～ {capacityMax}名"
+                btn.Lines(3).Text = $"          {roomTypeShortName}"
+            End If
+
             btn.Invalidate()
         Next
     End Sub
+
+    Private Function NzInt(value As Object) As Integer
+        If IsDBNull(value) Then Return 0
+        Return CInt(value)
+    End Function
 
     ''' DBのメニューボタン情報(表示名・背景色)をもとに、現在のページ分(9個)をmenu_button_0〜8に反映する。
     ''' 登録数がボタン数に満たないスロットは非表示相当(無効化・空表示)にする。
@@ -160,6 +229,8 @@ Public Class MainMenuForm
             Case 0
                 operation_week_label.Text = "曜日区分:日・祝"
         End Select
+
+        UpdateRoomButtonTexts()
     End Sub
 
     ' 実際のPOS画面には配置しないマスタ管理画面を、Ctrl+Shift+Mで開く
