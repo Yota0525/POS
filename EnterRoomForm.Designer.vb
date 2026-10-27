@@ -149,7 +149,6 @@ Partial Class EnterRoomForm
         member_code.Name = "member_code"
         member_code.Size = New Size(303, 32)
         member_code.TabIndex = 2
-        member_code.Text = "A1520080096099836B"
         member_code.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label3
@@ -174,7 +173,6 @@ Partial Class EnterRoomForm
         member_rank.Name = "member_rank"
         member_rank.Size = New Size(303, 32)
         member_rank.TabIndex = 2
-        member_rank.Text = "レギュラー会員"
         member_rank.TextAlign = HorizontalAlignment.Center
         ' 
         ' Label4
@@ -545,7 +543,6 @@ Partial Class EnterRoomForm
         member_category.Name = "member_category"
         member_category.Size = New Size(184, 32)
         member_category.TabIndex = 2
-        member_category.Text = "一般"
         ' 
         ' enter_count_button
         ' 

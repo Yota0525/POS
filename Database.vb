@@ -91,7 +91,9 @@ Public Module Database
                         course_code TEXT PRIMARY KEY,
                         course_name TEXT NOT NULL,
                         time_system_type INTEGER NOT NULL,
-                        fee INTEGER NOT NULL
+                        fee INTEGER NOT NULL,
+                        start_time TEXT NOT NULL DEFAULT '00:00',
+                        end_time TEXT NOT NULL DEFAULT '23:59'
                     );
 
                     CREATE TABLE IF NOT EXISTS options (
@@ -142,6 +144,8 @@ Public Module Database
             AddColumnIfMissing(conn, "room_types", "fee", "INTEGER NOT NULL DEFAULT 0")
             AddColumnIfMissing(conn, "room_types", "short_name", "TEXT NOT NULL DEFAULT ''")
             AddColumnIfMissing(conn, "options", "short_name", "TEXT NOT NULL DEFAULT ''")
+            AddColumnIfMissing(conn, "courses", "start_time", "TEXT NOT NULL DEFAULT '00:00'")
+            AddColumnIfMissing(conn, "courses", "end_time", "TEXT NOT NULL DEFAULT '23:59'")
         End Using
     End Sub
 
@@ -229,14 +233,16 @@ Public Module Database
         End Using
     End Sub
 
-    Public Sub InsertCourse(courseCode As String, courseName As String, timeSystemType As Integer, fee As Integer)
+    Public Sub InsertCourse(courseCode As String, courseName As String, timeSystemType As Integer, fee As Integer, startTime As String, endTime As String)
         Using conn = GetConnection()
             Using cmd = conn.CreateCommand()
-                cmd.CommandText = "INSERT INTO courses (course_code, course_name, time_system_type, fee) VALUES ($code, $name, $type, $fee)"
+                cmd.CommandText = "INSERT INTO courses (course_code, course_name, time_system_type, fee, start_time, end_time) VALUES ($code, $name, $type, $fee, $start, $end)"
                 cmd.Parameters.AddWithValue("$code", courseCode)
                 cmd.Parameters.AddWithValue("$name", courseName)
                 cmd.Parameters.AddWithValue("$type", timeSystemType)
                 cmd.Parameters.AddWithValue("$fee", fee)
+                cmd.Parameters.AddWithValue("$start", startTime)
+                cmd.Parameters.AddWithValue("$end", endTime)
                 cmd.ExecuteNonQuery()
             End Using
         End Using
@@ -330,14 +336,16 @@ Public Module Database
         End Using
     End Sub
 
-    Public Sub UpdateCourse(courseCode As String, courseName As String, timeSystemType As Integer, fee As Integer)
+    Public Sub UpdateCourse(courseCode As String, courseName As String, timeSystemType As Integer, fee As Integer, startTime As String, endTime As String)
         Using conn = GetConnection()
             Using cmd = conn.CreateCommand()
-                cmd.CommandText = "UPDATE courses SET course_name = $name, time_system_type = $type, fee = $fee WHERE course_code = $code"
+                cmd.CommandText = "UPDATE courses SET course_name = $name, time_system_type = $type, fee = $fee, start_time = $start, end_time = $end WHERE course_code = $code"
                 cmd.Parameters.AddWithValue("$code", courseCode)
                 cmd.Parameters.AddWithValue("$name", courseName)
                 cmd.Parameters.AddWithValue("$type", timeSystemType)
                 cmd.Parameters.AddWithValue("$fee", fee)
+                cmd.Parameters.AddWithValue("$start", startTime)
+                cmd.Parameters.AddWithValue("$end", endTime)
                 cmd.ExecuteNonQuery()
             End Using
         End Using
@@ -605,7 +613,7 @@ Public Module Database
     End Function
 
     Public Function GetAllCourses() As DataTable
-        Return GetTable("SELECT course_code, course_name, time_system_type, fee FROM courses ORDER BY course_code")
+        Return GetTable("SELECT course_code, course_name, time_system_type, fee, start_time, end_time FROM courses ORDER BY course_code")
     End Function
 
     Public Function GetAllOptions() As DataTable

@@ -14,6 +14,9 @@ Public Class EnterRoomForm
         RoomNo = roomNo
     End Sub
 
+    ' コース一覧をキャッシュしておき、入室時間が変わるたびに時間帯で絞り込む
+    Private allCourses As DataTable
+
     Private Sub EnterRoomForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         ' 端末ごとに解像度が違うため、実際の画面サイズに確実に合わせる
         Me.Bounds = Screen.PrimaryScreen.Bounds
@@ -26,7 +29,8 @@ Public Class EnterRoomForm
         entry_time.Text = DateTime.Now.ToString("HH:mm")
 
         ' コース・機種メーカー・部屋種別(コンセプト)・オプションをDBから読み込む
-        LoadComboBox(course_combo, Database.GetAllCourses(), "course_name", "course_code")
+        allCourses = Database.GetAllCourses()
+        RefreshCourseCombo()
         LoadComboBox(maker_combo, Database.GetAllManufacturers(), "manufacturer_name", "manufacturer_code")
         LoadComboBox(roomtype_combo, Database.GetAllRoomTypes(), "name", "room_type_code")
         LoadComboBox(option_combo, Database.GetAllOptions(), "option_name", "option_code")
@@ -44,6 +48,62 @@ Public Class EnterRoomForm
         combo.ValueMember = valueMember
     End Sub
 
+    ''' 入室時間欄を編集し終えたら、その時間帯で選べるコースを再計算する
+    Private Sub entry_time_Leave(sender As Object, e As EventArgs) Handles entry_time.Leave
+        RefreshCourseCombo()
+    End Sub
+
+    ''' 入室時間欄(entry_time)の時刻をもとに、開始・終了時間の範囲内にあるコースだけをcourse_comboに表示する
+    Private Sub RefreshCourseCombo()
+        If allCourses Is Nothing Then Return
+
+        Dim currentTime = GetEntryTimeOfDay()
+        Dim filtered = allCourses.Clone()
+        For Each row As DataRow In allCourses.Rows
+            Dim startTs = ParseTimeSpan(row("start_time").ToString())
+            Dim endTs = ParseTimeSpan(row("end_time").ToString())
+            If IsTimeInRange(currentTime, startTs, endTs) Then
+                filtered.ImportRow(row)
+            End If
+        Next
+
+        Dim previousSelection = course_combo.SelectedValue
+        course_combo.DataSource = filtered
+        course_combo.DisplayMember = "course_name"
+        course_combo.ValueMember = "course_code"
+
+        ' 絞り込み後も選べるコードであれば選択を維持する
+        If previousSelection IsNot Nothing Then
+            course_combo.SelectedValue = previousSelection
+        End If
+    End Sub
+
+    ''' entry_timeのテキスト(HH:mm)を時刻に変換する。不正な場合は現在時刻を使う
+    Private Function GetEntryTimeOfDay() As TimeSpan
+        Dim parsed As DateTime
+        If DateTime.TryParse(entry_time.Text, parsed) Then
+            Return parsed.TimeOfDay
+        End If
+        Return DateTime.Now.TimeOfDay
+    End Function
+
+    Private Function ParseTimeSpan(text As String) As TimeSpan
+        Dim parsed As DateTime
+        If DateTime.TryParse(text, parsed) Then
+            Return parsed.TimeOfDay
+        End If
+        Return TimeSpan.Zero
+    End Function
+
+    ''' startがendより後の場合は日をまたぐ範囲(例: 22:00〜05:00)として扱う
+    Private Function IsTimeInRange(t As TimeSpan, start As TimeSpan, [end] As TimeSpan) As Boolean
+        If start <= [end] Then
+            Return t >= start AndAlso t <= [end]
+        Else
+            Return t >= start OrElse t <= [end]
+        End If
+    End Function
+
     Private Sub maker_combo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles maker_combo.SelectedIndexChanged
         RefreshModelCombo()
     End Sub
@@ -59,7 +119,7 @@ Public Class EnterRoomForm
     End Sub
 
     ''' 会員コードの入力が終わったら、区分・ランクを参照して表示する
-    Private Sub member_code_Leave(sender As Object, e As EventArgs) Handles member_code.Leave]
+    Private Sub member_code_Leave(sender As Object, e As EventArgs) Handles member_code.Leave
         If String.IsNullOrWhiteSpace(member_code.Text) Then
             member_rank.Clear()
             member_category.Clear()

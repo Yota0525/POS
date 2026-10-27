@@ -61,6 +61,8 @@ Public Class MasterForm
     Private courseNameText As TextBox
     Private courseTimeSystemNumeric As NumericUpDown
     Private courseFeeNumeric As NumericUpDown
+    Private courseStartTimePicker As DateTimePicker
+    Private courseEndTimePicker As DateTimePicker
 
     ' --- オプションタブ ---
     Private optionGrid As DataGridView
@@ -917,7 +919,8 @@ Public Class MasterForm
         Dim page As New TabPage("コース管理")
         tabControl.TabPages.Add(page)
 
-        Dim editPanel = MakeEditPanel()
+        ' このタブは項目が多いので、共通のMakeEditPanel(高さ90固定)より高いパネルを使う
+        Dim editPanel As New Panel() With {.Dock = DockStyle.Bottom, .Height = 130}
 
         Dim lblCode As New Label() With {.Text = "コースコード", .Location = New Point(10, 13), .AutoSize = True}
         courseCodeText = New TextBox() With {.Location = New Point(110, 10), .Width = 80, .Enabled = False}
@@ -928,17 +931,22 @@ Public Class MasterForm
         Dim lblFee As New Label() With {.Text = "料金", .Location = New Point(660, 13), .AutoSize = True}
         courseFeeNumeric = New NumericUpDown() With {.Location = New Point(700, 10), .Width = 80, .Minimum = 0, .Maximum = 999999}
 
-        Dim btnNew As New Button() With {.Text = "新規登録", .Location = New Point(10, 48), .Width = 100}
-        Dim btnUpdate As New Button() With {.Text = "更新", .Location = New Point(120, 48), .Width = 100}
-        Dim btnDelete As New Button() With {.Text = "削除", .Location = New Point(230, 48), .Width = 100}
-        Dim btnClear As New Button() With {.Text = "クリア", .Location = New Point(340, 48), .Width = 100}
+        Dim lblStart As New Label() With {.Text = "開始時間", .Location = New Point(10, 51), .AutoSize = True}
+        courseStartTimePicker = New DateTimePicker() With {.Location = New Point(100, 48), .Width = 90, .Format = DateTimePickerFormat.Custom, .CustomFormat = "HH:mm", .ShowUpDown = True}
+        Dim lblEnd As New Label() With {.Text = "終了時間", .Location = New Point(220, 51), .AutoSize = True}
+        courseEndTimePicker = New DateTimePicker() With {.Location = New Point(310, 48), .Width = 90, .Format = DateTimePickerFormat.Custom, .CustomFormat = "HH:mm", .ShowUpDown = True}
+
+        Dim btnNew As New Button() With {.Text = "新規登録", .Location = New Point(10, 86), .Width = 100}
+        Dim btnUpdate As New Button() With {.Text = "更新", .Location = New Point(120, 86), .Width = 100}
+        Dim btnDelete As New Button() With {.Text = "削除", .Location = New Point(230, 86), .Width = 100}
+        Dim btnClear As New Button() With {.Text = "クリア", .Location = New Point(340, 86), .Width = 100}
 
         AddHandler btnNew.Click, AddressOf CourseNew_Click
         AddHandler btnUpdate.Click, AddressOf CourseUpdate_Click
         AddHandler btnDelete.Click, AddressOf CourseDelete_Click
         AddHandler btnClear.Click, Sub() ClearCourseFields()
 
-        editPanel.Controls.AddRange({lblCode, courseCodeText, lblName, courseNameText, lblTimeSystem, courseTimeSystemNumeric, lblFee, courseFeeNumeric, btnNew, btnUpdate, btnDelete, btnClear})
+        editPanel.Controls.AddRange({lblCode, courseCodeText, lblName, courseNameText, lblTimeSystem, courseTimeSystemNumeric, lblFee, courseFeeNumeric, lblStart, courseStartTimePicker, lblEnd, courseEndTimePicker, btnNew, btnUpdate, btnDelete, btnClear})
         page.Controls.Add(editPanel)
 
         courseGrid = MakeGrid()
@@ -952,6 +960,8 @@ Public Class MasterForm
         ApplyHeader(courseGrid, "course_name", "コース名")
         ApplyHeader(courseGrid, "time_system_type", "時間制区分")
         ApplyHeader(courseGrid, "fee", "料金")
+        ApplyHeader(courseGrid, "start_time", "開始時間")
+        ApplyHeader(courseGrid, "end_time", "終了時間")
         ClearCourseFields()
     End Sub
 
@@ -962,13 +972,26 @@ Public Class MasterForm
         courseNameText.Text = row.Cells("course_name").Value.ToString()
         courseTimeSystemNumeric.Value = CDec(row.Cells("time_system_type").Value)
         courseFeeNumeric.Value = CDec(row.Cells("fee").Value)
+        courseStartTimePicker.Value = ParseTimeOfDay(row.Cells("start_time").Value.ToString())
+        courseEndTimePicker.Value = ParseTimeOfDay(row.Cells("end_time").Value.ToString())
     End Sub
+
+    ''' "HH:mm"文字列を今日の日付のDateTimeに変換する(DateTimePicker表示用)
+    Private Function ParseTimeOfDay(text As String) As DateTime
+        Dim parsed As DateTime
+        If DateTime.TryParse(text, parsed) Then
+            Return DateTime.Today.Add(parsed.TimeOfDay)
+        End If
+        Return DateTime.Today
+    End Function
 
     Private Sub ClearCourseFields()
         courseCodeText.Text = Database.GetNextCourseCode()
         courseNameText.Clear()
         courseTimeSystemNumeric.Value = 0
         courseFeeNumeric.Value = 0
+        courseStartTimePicker.Value = DateTime.Today
+        courseEndTimePicker.Value = DateTime.Today.AddHours(23).AddMinutes(59)
         courseGrid.ClearSelection()
     End Sub
 
@@ -978,7 +1001,8 @@ Public Class MasterForm
             Return
         End If
         Try
-            Database.InsertCourse(courseCodeText.Text.Trim(), courseNameText.Text.Trim(), CInt(courseTimeSystemNumeric.Value), CInt(courseFeeNumeric.Value))
+            Database.InsertCourse(courseCodeText.Text.Trim(), courseNameText.Text.Trim(), CInt(courseTimeSystemNumeric.Value), CInt(courseFeeNumeric.Value),
+                                   courseStartTimePicker.Value.ToString("HH:mm"), courseEndTimePicker.Value.ToString("HH:mm"))
             ReloadCourses()
         Catch ex As Exception
             MessageBox.Show("登録に失敗しました: " & ex.Message)
@@ -991,7 +1015,8 @@ Public Class MasterForm
             Return
         End If
         Try
-            Database.UpdateCourse(courseCodeText.Text.Trim(), courseNameText.Text.Trim(), CInt(courseTimeSystemNumeric.Value), CInt(courseFeeNumeric.Value))
+            Database.UpdateCourse(courseCodeText.Text.Trim(), courseNameText.Text.Trim(), CInt(courseTimeSystemNumeric.Value), CInt(courseFeeNumeric.Value),
+                                   courseStartTimePicker.Value.ToString("HH:mm"), courseEndTimePicker.Value.ToString("HH:mm"))
             ReloadCourses()
         Catch ex As Exception
             MessageBox.Show("更新に失敗しました: " & ex.Message)
