@@ -84,6 +84,8 @@ Partial Class EnterRoomForm
         key_button_c = New Button()
         key_button_7 = New Button()
         Button5 = New Button()
+        TextBox1 = New TextBox()
+        Label21 = New Label()
         GroupBox1.SuspendLayout()
         key_panel.SuspendLayout()
         SuspendLayout()
@@ -95,7 +97,7 @@ Partial Class EnterRoomForm
         back_button.FlatAppearance.BorderSize = 2
         back_button.FlatStyle = FlatStyle.Flat
         back_button.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        back_button.Location = New Point(488, 692)
+        back_button.Location = New Point(455, 692)
         back_button.Name = "back_button"
         back_button.Size = New Size(122, 64)
         back_button.TabIndex = 0
@@ -449,7 +451,7 @@ Partial Class EnterRoomForm
         price_1.Font = New Font("ＭＳ ゴシック", 18.5F)
         price_1.Location = New Point(133, 502)
         price_1.Name = "price_1"
-        price_1.Size = New Size(152, 32)
+        price_1.Size = New Size(169, 32)
         price_1.TabIndex = 2
         price_1.Text = "0"
         price_1.TextAlign = HorizontalAlignment.Right
@@ -458,9 +460,9 @@ Partial Class EnterRoomForm
         ' 
         price_2.BorderStyle = BorderStyle.FixedSingle
         price_2.Font = New Font("ＭＳ ゴシック", 18.5F)
-        price_2.Location = New Point(286, 502)
+        price_2.Location = New Point(303, 502)
         price_2.Name = "price_2"
-        price_2.Size = New Size(113, 32)
+        price_2.Size = New Size(96, 32)
         price_2.TabIndex = 2
         price_2.Text = "0"
         price_2.TextAlign = HorizontalAlignment.Right
@@ -471,7 +473,7 @@ Partial Class EnterRoomForm
         price_3.Font = New Font("ＭＳ ゴシック", 18.5F)
         price_3.Location = New Point(400, 502)
         price_3.Name = "price_3"
-        price_3.Size = New Size(113, 32)
+        price_3.Size = New Size(96, 32)
         price_3.TabIndex = 2
         price_3.Text = "0"
         price_3.TextAlign = HorizontalAlignment.Right
@@ -480,9 +482,9 @@ Partial Class EnterRoomForm
         ' 
         price_4.BorderStyle = BorderStyle.FixedSingle
         price_4.Font = New Font("ＭＳ ゴシック", 18.5F)
-        price_4.Location = New Point(514, 502)
+        price_4.Location = New Point(497, 502)
         price_4.Name = "price_4"
-        price_4.Size = New Size(113, 32)
+        price_4.Size = New Size(96, 32)
         price_4.TabIndex = 2
         price_4.Text = "0"
         price_4.TextAlign = HorizontalAlignment.Right
@@ -690,7 +692,7 @@ Partial Class EnterRoomForm
         GroupBox1.Controls.Add(add_register_button)
         GroupBox1.Location = New Point(456, 212)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(556, 174)
+        GroupBox1.Size = New Size(393, 174)
         GroupBox1.TabIndex = 6
         GroupBox1.TabStop = False
         ' 
@@ -722,7 +724,7 @@ Partial Class EnterRoomForm
         key_panel.Controls.Add(key_button_7)
         key_panel.Controls.Add(Button5)
         key_panel.Controls.Add(key_button_0)
-        key_panel.Location = New Point(633, 480)
+        key_panel.Location = New Point(599, 480)
         key_panel.Name = "key_panel"
         key_panel.Size = New Size(250, 276)
         key_panel.TabIndex = 8
@@ -870,6 +872,29 @@ Partial Class EnterRoomForm
         Button5.TabIndex = 7
         Button5.UseVisualStyleBackColor = False
         ' 
+        ' TextBox1
+        ' 
+        TextBox1.BorderStyle = BorderStyle.FixedSingle
+        TextBox1.Font = New Font("ＭＳ ゴシック", 18.5F)
+        TextBox1.Location = New Point(722, 45)
+        TextBox1.Name = "TextBox1"
+        TextBox1.Size = New Size(127, 32)
+        TextBox1.TabIndex = 2
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.BackColor = Color.Silver
+        Label21.BorderStyle = BorderStyle.FixedSingle
+        Label21.Font = New Font("ＭＳ ゴシック", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label21.Location = New Point(625, 45)
+        Label21.Name = "Label21"
+        Label21.Padding = New Padding(5, 3, 5, 3)
+        Label21.Size = New Size(94, 32)
+        Label21.TabIndex = 1
+        Label21.Text = "会員数"
+        Label21.TextAlign = ContentAlignment.MiddleCenter
+        ' 
         ' EnterRoomForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -896,6 +921,7 @@ Partial Class EnterRoomForm
         Controls.Add(Label15)
         Controls.Add(Label11)
         Controls.Add(Label8)
+        Controls.Add(Label21)
         Controls.Add(Label10)
         Controls.Add(Label9)
         Controls.Add(Label7)
@@ -907,6 +933,7 @@ Partial Class EnterRoomForm
         Controls.Add(age_6)
         Controls.Add(age_20)
         Controls.Add(age_7to15)
+        Controls.Add(TextBox1)
         Controls.Add(member_category)
         Controls.Add(member_code)
         Controls.Add(price_4)
@@ -999,5 +1026,7 @@ Partial Class EnterRoomForm
     Friend WithEvents key_button_5 As Button
     Friend WithEvents key_button_1 As Button
     Friend WithEvents key_button_4 As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label21 As Label
 
 End Class

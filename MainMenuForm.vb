@@ -260,6 +260,14 @@ Public Class MainMenuForm
 
     Private Sub menu_button_6_Click(sender As Object, e As EventArgs) Handles menu_button_6.Click
         Select Case currentMenuPage
+            Case 0
+                Me.TopMost = False
+                Using masterForm As New MasterForm()
+                    masterForm.ShowDialog(Me)
+                End Using
+                Me.TopMost = True
+                UpdateRoomButtonTexts()
+                RefreshMenuButtons()
             Case 3
                 ' MainMenuForm → overlay → cashCountForm の順でオーナーをつなげ、重なり順を確実にする
                 Dim overlay As New OverlayForm()
